@@ -1,0 +1,8 @@
+<template>
+<v-app>
+  <div id="book">
+  <h1>book</h1>
+</div>
+</v-app>
+
+</template>
