@@ -16,7 +16,7 @@
         <li><a href="#">客製專區</a></li>
         <li><a href="#">店家資訊</a></li>
       </ul>
-      <v-btn icon class="mx-5">
+      <v-btn icon class="mx-5" :ripple="false">
         <v-icon
           large
           color="primary"
