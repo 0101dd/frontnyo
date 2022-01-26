@@ -14,6 +14,14 @@ const routes = [
     }
   },
   {
+    path: '/register',
+    name: 'Register',
+    component: () => import(/* webpackChunkName: "register" */ '../views/Register.vue'),
+    meta: {
+      title: '註冊｜書畫齋'
+    }
+  },
+  {
     path: '/book',
     name: 'Book',
     component: () => import(/* webpackChunkName: "book" */ '../views/Book.vue'),
