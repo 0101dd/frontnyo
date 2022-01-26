@@ -13,6 +13,10 @@
 	margin: 0;
 }
 
+.overlay-left,  .overlay-right,  .overlay-top,  .overlay-bottom   {
+  background: var(--secondary) !important;
+}
+
 p {
   padding: 0;
 }

@@ -73,9 +73,11 @@
         </v-list>
       </v-menu>
     </v-app-bar>
-        <v-main>
-      <router-view></router-view>
-    </v-main>
+      <v-main>
+        <vue-page-transition>
+          <router-view></router-view>
+        </vue-page-transition>
+      </v-main>
     <!-- footer---------------------- -->
     <v-footer
       padless

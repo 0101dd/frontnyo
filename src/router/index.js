@@ -10,7 +10,8 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '書畫齋'
+      title: '書畫齋',
+      transition: 'flip-x'
     }
   },
   {
@@ -18,7 +19,8 @@ const routes = [
     name: 'Register',
     component: () => import(/* webpackChunkName: "register" */ '../views/Register.vue'),
     meta: {
-      title: '註冊｜書畫齋'
+      title: '註冊｜書畫齋',
+      transition: 'zoom'
     }
   },
   {
@@ -26,7 +28,8 @@ const routes = [
     name: 'Book',
     component: () => import(/* webpackChunkName: "book" */ '../views/Book.vue'),
     meta: {
-      title: '精選字帖｜書畫齋'
+      title: '精選字帖｜書畫齋',
+      transition: 'overlay-left-right'
     }
   }
 ]
