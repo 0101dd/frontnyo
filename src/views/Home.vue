@@ -5,6 +5,7 @@
       <p id="target" v-split-characters>書法是一種書寫的藝術，書法縱向穿透兩個層面：「使用」與「審美」；橫向跨越文字兩個層面：「文字」、「繪畫」。書法除了是書法家用以創作的主要表現和作品形式，也是一種研究書寫者心理與性格的工具。各地域依其在地歷史與文化發展出自有的書法特色，而書法至今仍廣泛應用於生活與藝術文化等層面。</p>
     </div>
   </div>
+  <!-- <video src="../assets/Ink Drop 2.mp4" autoplay muted loop></video> -->
   <!-- 精選字帖-------------------------- -->
   <div class="book">
     <h1>精選字帖</h1>
@@ -37,7 +38,8 @@ export default {
   mounted () {
     gsap.set('#target span', {
       position: 'relative',
-      display: 'inline-block'
+      display: 'inline-block',
+      zIndex: '11'
     })
     gsap.from('#target span', {
       stagger: {
@@ -91,6 +93,18 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+video {
+  position: absolute;
+  bottom: 1160px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  filter:grayscale(1);
+  /* z-index: -11; */
 }
 
 .banner {
