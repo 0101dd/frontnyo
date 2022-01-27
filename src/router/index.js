@@ -11,7 +11,7 @@ const routes = [
     component: Home,
     meta: {
       title: '書畫齋',
-      transition: 'flip-x'
+      transition: 'fade-in-down'
     }
   },
   {
@@ -20,7 +20,25 @@ const routes = [
     component: () => import(/* webpackChunkName: "register" */ '../views/Register.vue'),
     meta: {
       title: '註冊｜書畫齋',
-      transition: 'zoom'
+      transition: 'overlay-down-full'
+    }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue'),
+    meta: {
+      title: '登入｜書畫齋',
+      transition: 'overlay-down-full'
+    }
+  },
+  {
+    path: '/maobi',
+    name: 'Maobi',
+    component: () => import(/* webpackChunkName: "maobi" */ '../views/Maobi.vue'),
+    meta: {
+      title: '毛筆介紹｜書畫齋',
+      transition: 'overlay-down-full'
     }
   },
   {

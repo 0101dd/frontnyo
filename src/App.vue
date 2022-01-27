@@ -6,8 +6,8 @@
     color="transparent"
     style="width: 100vw;"
     class="d-flex justify-end">
-    <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
-    </v-img></router-link>
+    <!-- <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
+    </v-img></router-link> -->
       <ul>
         <li><router-link to="/book">精選字帖</router-link></li>
         <v-menu
@@ -23,7 +23,7 @@
         <v-list>
           <v-list-item class="d-flex flex-column">
             <v-list-item-content>
-            <v-list-item-title>毛筆介紹</v-list-item-title>
+            <v-list-item-title><router-link to="/maobi">毛筆介紹</router-link></v-list-item-title>
             </v-list-item-content>
             <v-list-item-content>
             <v-list-item-title>墨汁介紹</v-list-item-title>
@@ -64,7 +64,7 @@
             <v-list-item-title>會員主頁</v-list-item-title>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item-title>登入</v-list-item-title>
+            <v-list-item-title><router-link to="/login">登入</router-link></v-list-item-title>
             </v-list-item-content>
             <v-list-item-content>
             <v-list-item-title><router-link to="/register">註冊</router-link></v-list-item-title>
@@ -72,6 +72,8 @@
           </v-list-item>
         </v-list>
       </v-menu>
+      <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer; position: absolute; left: -40%; top: 10px;">
+    </v-img></router-link>
     </v-app-bar>
       <v-main>
         <vue-page-transition>
@@ -105,7 +107,7 @@
         </v-btn>
       </v-card-title>
 
-      <v-card-text class="py-2 white--text text-center">
+      <v-card-text class="py-2 text-center white--text">
         {{ new Date().getFullYear() }} / {{ new Date().getMonth() + 1}} — <strong>dd0101</strong>
       </v-card-text>
     </v-card>
@@ -163,7 +165,13 @@ ul {
 }
 
 .v-card__title {
-  background: rgba(0, 0, 0, 0.185);
+  color: white;
+  background: var(--secondary);
+}
+
+.v-card__text {
+  color: white;
+  background: var(--primary);
 }
 
 .v-menu__content {

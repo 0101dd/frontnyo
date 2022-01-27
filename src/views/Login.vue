@@ -3,12 +3,12 @@
   <div id="register">
     <div class="overlay">
       <v-img
-      src="../assets/meihua.png"
-      width="70%"
-      height="100%"
-      style="position: relative; right: 100px;"
-      id="hua"
-      >
+        src="../assets/zhuzi.png"
+        width="40%"
+        height="100%"
+        style="position: relative; left: 62%;"
+        id="zhuzi"
+       >
       </v-img>
       <!-- 【v-model綁定】 -->
       <v-form>
@@ -34,20 +34,13 @@
           @click:append="show1 = !show1"
         >
         </v-text-field>
-        <p>信箱</p>
-        <v-text-field
-          v-model="email"
-          :rules="emailRules"
-          label="請輸入信箱"
-          required
-        ></v-text-field>
         <v-btn
           color="primary"
           rounded
           :ripple="false"
-          style="align-self: flex-end;"
+          class="mt-6"
         >
-          註冊
+          登入
         </v-btn>
       </div>
       </v-form>
@@ -57,7 +50,6 @@
 </template>
 
 <script>
-import validator from 'validator'
 
 export default {
   data () {
@@ -65,17 +57,12 @@ export default {
       value: '',
       show1: false,
       password: '',
-      email: '',
       passwordRules: {
         required: value => !!value || '密碼爲必填'
       },
       nameRules: [
         v => !!v || '帳號爲必填',
         v => (v.length >= 4 && v.length <= 20) || '帳號至少 4 個字數'
-      ],
-      emailRules: [
-        v => !!v || '信箱爲必填',
-        v => (validator.isEmail(v)) || '信箱格式不正確'
       ]
     }
   },
@@ -105,9 +92,9 @@ export default {
   justify-content: center;
 }
 
-#hua {
+#zhuzi {
   transition: 2s ease-in-out;
-  transform-origin: left;
+  transform-origin: bottom;
 }
 
 .overlay {
@@ -116,9 +103,9 @@ export default {
   overflow: hidden;
   position: relative;
   z-index: 0;
-  // background-color: #ffffff7e;
   border-radius: 10px;
   // display: flex;
+  // justify-content: flex-end;
   &::before {
     content: '';
     filter: blur(5px);
@@ -140,10 +127,10 @@ export default {
     z-index: -1;
   }
 
-  &:hover #hua{
-    transform-origin: left;
+  &:hover #zhuzi{
+    transform-origin: bottom;
     transition: 2s ease-in-out;
-    transform: rotate(3deg);
+    transform: rotate(-3deg);
   }
 }
 
@@ -153,12 +140,7 @@ export default {
   font-weight: bolder;
   position: absolute;
   top: 20%;
-  right: 7%;
-  display: flex;
-  flex-direction: column;
+  left: 17%;
 }
 
-.v-input {
-  color: red;
-}
 </style>
