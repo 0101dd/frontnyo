@@ -1,32 +1,13 @@
 :root {
   --primary: #202938;
   --secondary: #1D2025;
-  --waring: #45312A;
+  --warning: #45312A;
   --accent: #DED7B9;
   --info: #D58E40;
   --error: #7e2f28;
 }
 
-* {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
+// page-transition setting
 .overlay-left,  .overlay-right,  .overlay-top,  .overlay-bottom   {
   background: var(--secondary) !important;
-}
-
-p {
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-h1 {
-  color: var(--primary);
-  font-size: 5rem;
-  font-weight: bolder;
 }

@@ -1,2 +1,46 @@
 @import '_reset.scss';
 @import '_variables.scss';
+
+// ----------------------------
+
+* {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+  padding: 0;
+  line-height: 2;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 5rem;
+  font-weight: bolder;
+  font-family: 'HanyiSentyTang';
+}
+
+h3 {
+  color: var(--warning);
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: inline;
+  font-family: 'HanyiSentyTang';
+}
+
+h4 {
+  color: var(--secondary);
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-left: 15px;
+  font-family: 'HanyiSentyTang';
+}
