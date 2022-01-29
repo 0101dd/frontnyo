@@ -19,13 +19,13 @@
     <div
       class="container d-flex flex-column"
       style="transform: translate3d(0, 0, 15px); width: 65vw; height: 100%; padding-top: 10rem;"
-    >
+      >
       <div class="row">
         <div class="col text-center">
           <h1>毛筆三大種類</h1>
-          <h3>羊毫、狼毫、兼毫</h3>
+          <h3 class="subtitle">羊毫、狼毫、兼毫</h3>
           <p
-            class="mt-5 mx-auto font-weight-bold text-center"
+            class="mt-5 mx-auto font-weight-bold text-center title-p"
             style="width: 70%;"
           >
             依據毛料跟筆性的不同，我們可以把毛筆粗分為3大類 羊毫筆、狼毫筆跟兼毫筆。
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="row mt-16">
-        <div class="col-5">
+        <div class="col-5 t1">
           <h3>羊毫筆</h3>
           <h4>溫潤豐厚，細柔如水</h4>
           <p class="mt-5">羊毫筆性軟，堅中帶柔，含墨量大，適合寫外觀柔軟的字，譬如楷書。<br><br> 羊毫筆以山羊毛為主要原料，筆性柔軟而細膩，寫出來的字圓潤豐滿，毫毛較長，適合寫匾額聯幅等大字。也因為羊毫柔軟而無鋒的特性，比較不能展現書法的筆力，歷代書法家較少使用。</p>
@@ -44,14 +44,14 @@
       </div>
       <div class="row">
         <v-spacer></v-spacer>
-        <div class="col-5">
+        <div class="col-5 t2">
           <h3>狼毫筆</h3>
           <h4>剛勁俐落，工整流麗</h4>
           <p class="mt-5">狼毫彈性佳，筆性堅挺，適合寫看起來較硬挺的字，如隸書跟篆書，繪畫方面，也可適合畫山水、蘭竹。<br><br> 狼毫筆的特色是鋒銳筆健，運筆頓挫使轉，揮灑乾淨俐落，可以寫工整流麗的字體。傳說王羲之的蘭亭序就是用堅挺的狼毫筆寫的，所以不少晉代二王(王羲之、王獻之)書體的追隨者，都多用狼毫。</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-5">
+        <div class="col-5 t3">
           <h3>兼毫筆</h3>
           <h4>軟硬適中，運筆流暢</h4>
           <p class="mt-5">兼毫筆大多由狼毫跟羊毫混合而成，內狼外羊的組合，讓兼毫筆同時具備狼毫挺健，羊毫柔軟的雙重特色，最適合初學者使用。</p>
@@ -62,7 +62,7 @@
       </div>
       <div class="row">
         <v-spacer></v-spacer>
-        <div class="col-5">
+        <div class="col-5 t4">
           <h3>初學者推薦</h3>
           <h4>如意、兼毫對筆</h4>
           <p class="mt-5">初學書法的入門者，建議使用兼具狼毫跟羊毫的特色的兼毫筆，彈性跟吸水性都適中。</p>
@@ -117,12 +117,14 @@
       </div>
     </div>
   </div>
-  <!-- footer圖片------------------------ -->
 </v-app>
 </template>
 
 <script>
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default {
   mounted () {
@@ -142,6 +144,56 @@ export default {
       delay: 1,
       y: '1000px'
     })
+    gsap.from('h1', {
+      duration: 0.5,
+      ease: 'none',
+      opacity: 0,
+      delay: 2.5
+    })
+    gsap.from('.subtitle', {
+      duration: 0.5,
+      ease: 'none',
+      opacity: 0,
+      delay: 2.7
+    })
+    gsap.from('.title-p', {
+      duration: 0.5,
+      ease: 'none',
+      opacity: 0,
+      delay: 2.9
+    })
+    const tl1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.t1',
+        endTrigger: '.t4',
+        start: 'top 70%',
+        end: 'bottom 40%',
+        scrub: 1,
+        markers: false
+      },
+      defaults: {
+        duration: 1,
+        ease: 'power1'
+      }
+    })
+
+    tl1
+      .from('.t1', {
+        y: 100,
+        opacity: 0
+      })
+      .from('.t2', {
+        y: 100,
+        opacity: 0
+      })
+      .from('.t3', {
+        y: 100,
+        opacity: 0
+      })
+      .from('.t4', {
+        y: 100,
+        opacity: 0
+      })
   }
 }
 </script>

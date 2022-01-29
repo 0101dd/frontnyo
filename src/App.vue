@@ -26,13 +26,13 @@
             <v-list-item-title><router-link to="/maobi">毛筆介紹</router-link></v-list-item-title>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item-title>墨汁介紹</v-list-item-title>
+            <v-list-item-title><router-link to="/mozhi">墨汁介紹</router-link></v-list-item-title>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item-title>紙</v-list-item-title>
+            <v-list-item-title><router-link to="/zhi">紙類介紹</router-link></v-list-item-title>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item-title>字帖</v-list-item-title>
+            <v-list-item-title><router-link to="/xuexi">學習方法</router-link></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>

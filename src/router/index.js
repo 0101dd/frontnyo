@@ -42,6 +42,33 @@ const routes = [
     }
   },
   {
+    path: '/mozhi',
+    name: 'Mozhi',
+    component: () => import(/* webpackChunkName: "mozhi" */ '../views/Mozhi.vue'),
+    meta: {
+      title: '墨汁介紹｜書畫齋',
+      transition: 'overlay-down-full'
+    }
+  },
+  {
+    path: '/zhi',
+    name: 'Zhi',
+    component: () => import(/* webpackChunkName: "zhi" */ '../views/Zhi.vue'),
+    meta: {
+      title: '紙類介紹｜書畫齋',
+      transition: 'overlay-down-full'
+    }
+  },
+  {
+    path: '/xuexi',
+    name: 'Xuexi',
+    component: () => import(/* webpackChunkName: "xuexi" */ '../views/Xuexi.vue'),
+    meta: {
+      title: '學習方法｜書畫齋',
+      transition: 'overlay-down-full'
+    }
+  },
+  {
     path: '/book',
     name: 'Book',
     component: () => import(/* webpackChunkName: "book" */ '../views/Book.vue'),
