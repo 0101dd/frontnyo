@@ -76,6 +76,15 @@ const routes = [
       title: '精選字帖｜書畫齋',
       transition: 'overlay-left-right'
     }
+  },
+  {
+    path: '/shupu',
+    name: 'Shupu',
+    component: () => import(/* webpackChunkName: "shupu" */ '../views/Shupu.vue'),
+    meta: {
+      title: '書譜｜書彙齋',
+      transition: 'overlay-left-right'
+    }
   }
 ]
 

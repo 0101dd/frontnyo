@@ -27,6 +27,13 @@ h1 {
   font-family: 'HanyiSentyTang';
 }
 
+h2 {
+  color: var(--secondary);
+  font-size: 4rem;
+  font-weight: normal;
+  font-family: 'HanyiSentyTang';
+}
+
 h3 {
   color: var(--warning);
   font-size: 3rem;
@@ -40,5 +47,12 @@ h4 {
   font-size: 1.5rem;
   font-weight: normal;
   margin-left: 15px;
+  font-family: 'HanyiSentyTang';
+}
+
+h5 {
+  color: var(--secondary);
+  font-size: 1.3rem;
+  font-weight: normal;
   font-family: 'HanyiSentyTang';
 }
