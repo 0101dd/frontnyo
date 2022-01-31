@@ -13,10 +13,10 @@
       </v-carousel>
       <div class="container">
         <div class="content">
-          <h3>唐 西元618-907</h3>
           <h2>孫過庭</h2>
           <h1>書譜</h1>
           <h5>卷 紙本 縱：26.5公分 橫：900.8公分</h5>
+          <hr>
           <div class="row">
             <div class="col">
               <p>孫過庭（活動於七世紀後期），一說名虔禮，字過庭，河南陳留人，一說名過庭，字虔禮，浙江富陽人。根據本卷自題，為吳郡人，名過庭。出身寒微，遲至不惑之年始出任率府錄事參軍之職，以性高潔遭讒議而去官。之後，遂專注於書法研究。</p>
@@ -158,5 +158,29 @@ export default {
 
 p {
   text-indent: 2.5rem;
+}
+
+h5 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  &::before {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: var(--info);
+  }
+}
+
+hr {
+  margin-bottom: 20px;
+  border: 1px solid #00000052;
 }
 </style>

@@ -85,6 +85,78 @@ const routes = [
       title: '書譜｜書彙齋',
       transition: 'overlay-left-right'
     }
+  },
+  {
+    path: '/zixutie',
+    name: 'Zixutie',
+    component: () => import(/* webpackChunkName: "zixutie" */ '../views/Zixutie.vue'),
+    meta: {
+      title: '自序帖｜書彙齋',
+      transition: 'overlay-left-right'
+    }
+  },
+  {
+    path: '/kuaixue',
+    name: 'Kuaixue',
+    component: () => import(/* webpackChunkName: "kuaixue" */ '../views/Kuaixue.vue'),
+    meta: {
+      title: '快雪時晴帖｜書彙齋',
+      transition: 'overlay-left-right'
+    }
+  },
+  {
+    path: '/dutong',
+    name: 'Dutong',
+    component: () => import(/* webpackChunkName: "dutong" */ '../views/Dutong.vue'),
+    meta: {
+      title: '肚痛帖｜書彙齋',
+      transition: 'overlay-left-right'
+    }
+  },
+  {
+    path: '/huaqi',
+    name: 'Huaqi',
+    component: () => import(/* webpackChunkName: "huaqi" */ '../views/Huaqi.vue'),
+    meta: {
+      title: '花氣熏人帖｜書彙齋',
+      transition: 'overlay-left-right'
+    }
+  },
+  {
+    path: '/hanshi',
+    name: 'Hanshi',
+    component: () => import(/* webpackChunkName: "hanshi" */ '../views/Hanshi.vue'),
+    meta: {
+      title: '黃州寒食帖｜書彙齋',
+      transition: 'overlay-left-right'
+    }
+  },
+  {
+    path: '/nongfangshi',
+    name: 'Nongfangshi',
+    component: () => import(/* webpackChunkName: "nongfangshi" */ '../views/Nongfangshi.vue'),
+    meta: {
+      title: '穠芳詩帖｜書彙齋',
+      transition: 'overlay-left-right'
+    }
+  },
+  {
+    path: '/qianziwen',
+    name: 'Qianziwen',
+    component: () => import(/* webpackChunkName: "qianziwen" */ '../views/Qianziwen.vue'),
+    meta: {
+      title: '千字文｜書彙齋',
+      transition: 'overlay-left-right'
+    }
+  },
+  {
+    path: '/question',
+    name: 'Question',
+    component: () => import(/* webpackChunkName: "question" */ '../views/Question.vue'),
+    meta: {
+      title: '常見問題｜書彙齋',
+      transition: 'overlay-left-right'
+    }
   }
 ]
 

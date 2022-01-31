@@ -43,12 +43,12 @@ export default {
       cards: [
         { title: '書譜', author: '孫過庭', src: 'https://upload.cc/i1/2022/01/29/PvboRT.jpg', page: '/shupu' },
         { title: '自序帖', author: '懷素', src: 'https://upload.cc/i1/2022/01/29/sdvpf5.jpg', page: '/zixutie' },
-        { title: '快雪時晴帖', author: '王羲之', src: 'https://upload.cc/i1/2022/01/29/PvboRT.jpg', page: '/kuaixue' },
-        { title: '肚痛帖', author: '張旭', src: 'https://upload.cc/i1/2022/01/29/sdvpf5.jpg', page: '/dutong' },
-        { title: '十七帖', author: '王羲之', src: 'https://upload.cc/i1/2022/01/29/PvboRT.jpg', page: '/shiqi' },
-        { title: '黃州寒食帖', author: '蘇軾', src: 'https://upload.cc/i1/2022/01/29/sdvpf5.jpg', page: '/hanshi' },
-        { title: '穠芳詩帖', author: '趙', src: 'https://upload.cc/i1/2022/01/29/PvboRT.jpg', page: '/nongfangshi' },
-        { title: '真草千字文', author: '智永', src: 'https://upload.cc/i1/2022/01/29/sdvpf5.jpg', page: '/qianziwen' }
+        { title: '快雪時晴帖', author: '王羲之', src: 'https://theme.npm.edu.tw/selection/att/collection/04001001/17010057.jpg', page: '/kuaixue' },
+        { title: '肚痛帖', author: '張旭', src: 'https://upload.cc/i1/2022/01/31/W0dz6D.jpg', page: '/dutong' },
+        { title: '七言詩（花氣薰人帖）', author: '黃庭堅', src: 'https://theme.npm.edu.tw/selection/att/collection/04001006/%E5%9B%9B-1.jpg', page: '/huaqi' },
+        { title: '黃州寒食帖', author: '蘇軾', src: 'https://theme.npm.edu.tw/selection/att/collection/04001005/17010135.jpg', page: '/hanshi' },
+        { title: '穠芳詩帖', author: '趙佶', src: 'https://theme.npm.edu.tw/selection/att/collection/04001007/17010210.jpg', page: '/nongfangshi' },
+        { title: '真草千字文', author: '智永', src: 'https://upload.cc/i1/2022/01/31/xbaG78.jpg', page: '/qianziwen' }
       ]
     }
   }

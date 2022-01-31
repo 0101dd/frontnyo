@@ -38,7 +38,7 @@
         </v-list>
         </v-menu>
         <li><a href="#">作品專區</a></li>
-        <li><a href="#">常見問題</a></li>
+        <li><router-link to="/question">常見問題</router-link></li>
         <li><a href="#">客製專區</a></li>
         <li><a href="#">店家資訊</a></li>
       </ul>
