@@ -3,25 +3,50 @@
   <div id="question">
     <v-container>
       <div class="list">
-    <v-expansion-panel
-      v-for="(item,i) in 5"
-      :key="i"
-    >
-      <v-expansion-panel-header>
-        Item
-      </v-expansion-panel-header>
-      <v-expansion-panel-content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </v-expansion-panel-content>
-    </v-expansion-panel>
+        <v-expansion-panels focusable multiple>
+          <v-expansion-panel
+            v-for="(item,i) in items"
+            :key="i"
+          >
+            <v-expansion-panel-header
+              expand-icon="mdi-menu-down"
+              color="accent"
+              class="font-weight-black"
+              style="color: var(--warning);"
+            >
+            {{ item.ques }}
+            </v-expansion-panel-header>
+            <v-expansion-panel-content>
+              {{ item.ans }}
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-expansion-panels>
       </div>
-
     </v-container>
   </div>
 </v-app>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      items: [
+        { ques: '第一個問題？', ans: 'first question.' },
+        { ques: '第二個問題？', ans: 'seconde question.' },
+        { ques: '第三個問題', ans: 'third question.' }
+      ]
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
+#question {
+  background:
+  linear-gradient(transparent,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.35)),
+  url('https://theme.npm.edu.tw/selection/att/collection/04000980/17010201.jpg') no-repeat center/cover;
+}
 .list {
   width: 65%;
 }
