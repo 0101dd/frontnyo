@@ -1,5 +1,6 @@
 @import '_reset.scss';
 @import '_variables.scss';
+@import '_mixins.scss';
 
 // ----------------------------
 
@@ -55,4 +56,44 @@ h5 {
   font-size: 1.3rem;
   font-weight: normal;
   font-family: 'HanyiSentyTang';
+}
+
+#router-ink {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-2%);
+  height: 100%;
+  width: 2500%;
+  background: url(../assets/ink.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  animation: thisOne 1.8s steps(24);
+}
+
+@keyframes thisOne {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    -moz-transform: translateY(-50%) translateX(-2%);
+    -ms-transform: translateY(-50%) translateX(-2%);
+    -o-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+    z-index: 22;
+  }
+  50% {
+    -webkit-transform: translateY(-50%) translateX(-98%);
+    -moz-transform: translateY(-50%) translateX(-98%);
+    -ms-transform: translateY(-50%) translateX(-98%);
+    -o-transform: translateY(-50%) translateX(-98%);
+    transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    -moz-transform: translateY(-50%) translateX(-2%);
+    -ms-transform: translateY(-50%) translateX(-2%);
+    -o-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    // z-index: -11;
+  }
 }

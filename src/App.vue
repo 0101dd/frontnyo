@@ -76,9 +76,13 @@
     </v-img></router-link>
     </v-app-bar>
       <v-main>
-        <vue-page-transition>
-          <router-view></router-view>
-        </vue-page-transition>
+        <transition name="animation">
+          <router-view
+          >
+          </router-view>
+        </transition>
+            <!-- <vue-page-transition> -->
+        <!-- </vue-page-transition> -->
       </v-main>
     <!-- footer---------------------- -->
     <v-footer
@@ -116,7 +120,9 @@
 </template>
 
 <script>
+
 export default {
+
   data () {
     return {
       icons: [
@@ -131,6 +137,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// .animation-enter-active {
+//   animation: thisOne 1.2s steps(24);
+// }
+
+.router {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@keyframes thisOne {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    -moz-transform: translateY(-50%) translateX(-2%);
+    -ms-transform: translateY(-50%) translateX(-2%);
+    -o-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+  }
+  50% {
+    -webkit-transform: translateY(-50%) translateX(-98%);
+    -moz-transform: translateY(-50%) translateX(-98%);
+    -ms-transform: translateY(-50%) translateX(-98%);
+    -o-transform: translateY(-50%) translateX(-98%);
+    transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    -moz-transform: translateY(-50%) translateX(-2%);
+    -ms-transform: translateY(-50%) translateX(-2%);
+    -o-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+  }
+}
 
 ul {
   li {

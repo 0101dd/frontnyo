@@ -1,37 +1,39 @@
 <!-- 首頁******************************************************************* -->
 <template>
 <v-app style="background: white;" class="text-center">
-  <div class="banner">
-    <div class="container">
-      <p id="target" v-split-characters>書法是一種書寫的藝術，書法縱向穿透兩個層面：「使用」與「審美」；橫向跨越文字兩個層面：「文字」、「繪畫」。書法除了是書法家用以創作的主要表現和作品形式，也是一種研究書寫者心理與性格的工具。各地域依其在地歷史與文化發展出自有的書法特色，而書法至今仍廣泛應用於生活與藝術文化等層面。</p>
+  <div id="home">
+    <div class="banner">
+      <div class="container">
+        <p id="target" v-split-characters>書法是一種書寫的藝術，書法縱向穿透兩個層面：「使用」與「審美」；橫向跨越文字兩個層面：「文字」、「繪畫」。書法除了是書法家用以創作的主要表現和作品形式，也是一種研究書寫者心理與性格的工具。各地域依其在地歷史與文化發展出自有的書法特色，而書法至今仍廣泛應用於生活與藝術文化等層面。</p>
+      </div>
     </div>
-  </div>
-  <!-- 影片遮罩 -->
-  <!-- <video src="../assets/Ink Drop 2.mp4" autoplay muted loop></video> -->
-  <!-- 精選字帖-------------------------- -->
-  <div class="book">
-    <h1>精選字帖</h1>
-  </div>
-  <!-- 書法入門-------------------------- -->
-      <h1>書法入門</h1>
-  <div class="information">
-    <div class="container">
-        <div class="box"></div>
-        <!-- <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div> -->
+    <!-- 影片遮罩 -->
+    <!-- <video src="../assets/Ink Drop 2.mp4" autoplay muted loop></video> -->
+    <!-- 精選字帖-------------------------- -->
+    <div class="book">
+      <h1>精選字帖</h1>
     </div>
-  </div>
-  <!-- 客製專區-------------------------- -->
-  <div class="shop">
-    <h1>客製專區</h1>
-  </div>
-  <div class="blank"></div>
-  <!-- footer圖片------------------------ -->
-  <div class="footer-img">
-    <v-img class="cloud1" src="../assets/yun1.png"></v-img>
-    <v-img class="cloud2" src="../assets/yun2.png"></v-img>
-    <v-img class="cloud3" src="../assets/yun3.png"></v-img>
+    <!-- 書法入門-------------------------- -->
+        <h1>書法入門</h1>
+    <div class="information">
+      <div class="container">
+          <div class="box"></div>
+          <!-- <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div> -->
+      </div>
+    </div>
+    <!-- 客製專區-------------------------- -->
+    <div class="shop">
+      <h1>客製專區</h1>
+    </div>
+    <div class="blank"></div>
+    <!-- footer圖片------------------------ -->
+    <div class="footer-img">
+      <v-img class="cloud1" src="../assets/yun1.png"></v-img>
+      <v-img class="cloud2" src="../assets/yun2.png"></v-img>
+      <v-img class="cloud3" src="../assets/yun3.png"></v-img>
+    </div>
   </div>
 </v-app>
 </template>

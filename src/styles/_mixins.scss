@@ -1,0 +1,33 @@
+// @mixin inkTransition {
+//   @-webkit-keyframes #{$inkTransition} {
+//     @content;
+// }
+// @-moz-keyframes #{$inkTransition} {
+//     @content;
+// }
+// @-o-keyframes #{$inkTransition} {
+//     @content;
+// }
+// @keyframes #{$inkTransition} {
+//     @content;
+// }
+// }
+
+@mixin animate {
+  animation: $ink 1.2s steps(24)
+}
+
+@mixin keyframes($ink){
+  @-webkit-keyframes #{$ink} {
+    @content;
+}
+@-moz-keyframes #{$ink} {
+    @content;
+}
+@-o-keyframes #{$ink} {
+    @content;
+}
+@keyframes #{$ink} {
+    @content;
+}
+}

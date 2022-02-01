@@ -1,6 +1,8 @@
 <template>
 <v-app>
+  <!-- <RouterTransition></RouterTransition> -->
   <div id="question">
+    <div id="router-ink"></div>
     <v-container>
       <div class="list">
         <v-expansion-panels focusable multiple>
@@ -28,7 +30,12 @@
 </template>
 
 <script>
+// import RouterTransition from '../components/RouterTransition.vue'
+
 export default {
+  // components: {
+  //   RouterTransition
+  // },
   data () {
     return {
       items: [
@@ -37,6 +44,9 @@ export default {
         { ques: '第三個問題', ans: 'third question.' }
       ]
     }
+  },
+  methods: {
+    remove () {}
   }
 }
 </script>
@@ -47,6 +57,7 @@ export default {
   linear-gradient(transparent,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.35)),
   url('https://theme.npm.edu.tw/selection/att/collection/04000980/17010201.jpg') no-repeat center/cover;
 }
+
 .list {
   width: 65%;
 }

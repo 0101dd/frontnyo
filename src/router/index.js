@@ -10,8 +10,8 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '書畫齋',
-      transition: 'fade-in-down'
+      title: '書畫齋'
+      // transition: 'fade-in-down'
     }
   },
   {
@@ -19,8 +19,8 @@ const routes = [
     name: 'Register',
     component: () => import(/* webpackChunkName: "register" */ '../views/Register.vue'),
     meta: {
-      title: '註冊｜書畫齋',
-      transition: 'overlay-down-full'
+      title: '註冊｜書畫齋'
+      //  transition: 'overlay-down-full'
     }
   },
   {
@@ -28,8 +28,8 @@ const routes = [
     name: 'Login',
     component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue'),
     meta: {
-      title: '登入｜書畫齋',
-      transition: 'overlay-down-full'
+      title: '登入｜書畫齋'
+      // transition: 'overlay-down-full'
     }
   },
   {
@@ -37,8 +37,8 @@ const routes = [
     name: 'Maobi',
     component: () => import(/* webpackChunkName: "maobi" */ '../views/Maobi.vue'),
     meta: {
-      title: '毛筆介紹｜書畫齋',
-      transition: 'overlay-down-full'
+      title: '毛筆介紹｜書畫齋'
+      // transition: 'overlay-down-full'
     }
   },
   {
@@ -46,8 +46,8 @@ const routes = [
     name: 'Mozhi',
     component: () => import(/* webpackChunkName: "mozhi" */ '../views/Mozhi.vue'),
     meta: {
-      title: '墨汁介紹｜書畫齋',
-      transition: 'overlay-down-full'
+      title: '墨汁介紹｜書畫齋'
+      // transition: 'overlay-down-full'
     }
   },
   {
@@ -55,8 +55,8 @@ const routes = [
     name: 'Zhi',
     component: () => import(/* webpackChunkName: "zhi" */ '../views/Zhi.vue'),
     meta: {
-      title: '紙類介紹｜書畫齋',
-      transition: 'overlay-down-full'
+      title: '紙類介紹｜書畫齋'
+      // transition: 'overlay-down-full'
     }
   },
   {
@@ -64,8 +64,8 @@ const routes = [
     name: 'Xuexi',
     component: () => import(/* webpackChunkName: "xuexi" */ '../views/Xuexi.vue'),
     meta: {
-      title: '學習方法｜書畫齋',
-      transition: 'overlay-down-full'
+      title: '學習方法｜書畫齋'
+      // transition: 'overlay-down-full'
     }
   },
   {
@@ -73,8 +73,8 @@ const routes = [
     name: 'Book',
     component: () => import(/* webpackChunkName: "book" */ '../views/Book.vue'),
     meta: {
-      title: '精選字帖｜書畫齋',
-      transition: 'overlay-left-right'
+      title: '精選字帖｜書畫齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -82,8 +82,8 @@ const routes = [
     name: 'Shupu',
     component: () => import(/* webpackChunkName: "shupu" */ '../views/Shupu.vue'),
     meta: {
-      title: '書譜｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '書譜｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -91,8 +91,8 @@ const routes = [
     name: 'Zixutie',
     component: () => import(/* webpackChunkName: "zixutie" */ '../views/Zixutie.vue'),
     meta: {
-      title: '自序帖｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '自序帖｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -100,8 +100,8 @@ const routes = [
     name: 'Kuaixue',
     component: () => import(/* webpackChunkName: "kuaixue" */ '../views/Kuaixue.vue'),
     meta: {
-      title: '快雪時晴帖｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '快雪時晴帖｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -109,8 +109,8 @@ const routes = [
     name: 'Dutong',
     component: () => import(/* webpackChunkName: "dutong" */ '../views/Dutong.vue'),
     meta: {
-      title: '肚痛帖｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '肚痛帖｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -118,8 +118,8 @@ const routes = [
     name: 'Huaqi',
     component: () => import(/* webpackChunkName: "huaqi" */ '../views/Huaqi.vue'),
     meta: {
-      title: '花氣熏人帖｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '花氣熏人帖｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -127,8 +127,8 @@ const routes = [
     name: 'Hanshi',
     component: () => import(/* webpackChunkName: "hanshi" */ '../views/Hanshi.vue'),
     meta: {
-      title: '黃州寒食帖｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '黃州寒食帖｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -136,8 +136,8 @@ const routes = [
     name: 'Nongfangshi',
     component: () => import(/* webpackChunkName: "nongfangshi" */ '../views/Nongfangshi.vue'),
     meta: {
-      title: '穠芳詩帖｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '穠芳詩帖｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -145,8 +145,8 @@ const routes = [
     name: 'Qianziwen',
     component: () => import(/* webpackChunkName: "qianziwen" */ '../views/Qianziwen.vue'),
     meta: {
-      title: '千字文｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '千字文｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   },
   {
@@ -154,8 +154,8 @@ const routes = [
     name: 'Question',
     component: () => import(/* webpackChunkName: "question" */ '../views/Question.vue'),
     meta: {
-      title: '常見問題｜書彙齋',
-      transition: 'overlay-left-right'
+      title: '常見問題｜書彙齋'
+      // transition: 'overlay-left-right'
     }
   }
 ]
