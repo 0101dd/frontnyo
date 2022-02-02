@@ -1,7 +1,7 @@
 <!-- 登入******************************************************************* -->
 <template>
 <v-app>
-  <div id="register">
+  <div id="login">
     <div class="overlay">
       <v-img
         src="../assets/zhuzi.png"
@@ -79,13 +79,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#register,
+#login,
 .overlay::before {
   background:
   url(../assets/zhuce-beging.jpg) no-repeat fixed 0 0 / cover;
 }
 
-#register {
+#login {
   width: 100vw;
   height: 100vh;
   display: flex;

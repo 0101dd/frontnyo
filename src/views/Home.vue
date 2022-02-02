@@ -1,6 +1,7 @@
 <!-- 首頁******************************************************************* -->
 <template>
 <v-app style="background: white;" class="text-center">
+<div id="router-ink"></div>
   <div id="home">
     <div class="banner">
       <div class="container">
@@ -12,15 +13,16 @@
     <!-- 精選字帖-------------------------- -->
     <div class="book">
       <h1>精選字帖</h1>
+      <bookswiper></bookswiper>
     </div>
     <!-- 書法入門-------------------------- -->
         <h1>書法入門</h1>
     <div class="information">
       <div class="container">
-          <div class="box"></div>
-          <!-- <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div> -->
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="box3"></div>
+          <div class="box4"></div>
       </div>
     </div>
     <!-- 客製專區-------------------------- -->
@@ -39,12 +41,16 @@
 </template>
 
 <script>
+import bookswiper from '../components/BookSwiper.vue'
 import { gsap } from 'gsap'
 import Vue from 'vue'
 import VueSplitCharacters from 'vue-split-characters'
 Vue.use(VueSplitCharacters)
 
 export default {
+  components: {
+    bookswiper
+  },
   mounted () {
     gsap.set('#target span', {
       position: 'relative',
@@ -136,7 +142,7 @@ video {
 }
 
 .book, .information, .shop  {
-  height: 500px;
+  height: 800px;
   z-index: 1;
 }
 
@@ -147,7 +153,10 @@ video {
   position: relative;
 }
 
-.box {
+.box1,
+.box2,
+.box3,
+.box4 {
   position: absolute;
   top: 0;
   left: 5%;
@@ -155,7 +164,33 @@ video {
   height: 300px;
   border-radius: 10px;
   border: 1px solid var(--secondary);
+  background: white;
+  cursor: pointer;
+  transition: 1s;
 }
+
+.box2 {
+  left: 20%;
+}
+
+.box3 {
+  left: 35%;
+}
+
+.box4 {
+  left: 50%;
+}
+
+.box1:hover+.box2 {
+  transition: 1s;
+  transform-origin: left;
+  transform: translateX(200px);
+}
+/* .box1:hover+.box2+.box3 {
+   transition: 1s;
+  transform-origin: left;
+  transform: translateX(200px);
+} */
 
 .footer-img {
   width: 100vw;

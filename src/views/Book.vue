@@ -1,6 +1,7 @@
 <!-- 字帖******************************************************************* -->
 <template>
 <v-app style="background: var(--accent);">
+    <div id="router-ink"></div>
   <div id="book">
     <v-container>
       <div class="row">

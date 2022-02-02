@@ -1,0 +1,84 @@
+@mixin xs {
+  @media (max-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@include xs {
+  // app-bar ------------------------------------
+  // .v-toolbar__content {
+  //   display: none
+  // }
+  // login --------------------------------------
+  #login {
+    #zhuzi {
+      left: 30% !important;
+      width: 70% !important;
+      filter: opacity(0.5);
+    }
+    .form-text {
+      width: 70% !important;
+    }
+    .v-btn {
+      margin: 40px 70px;
+    }
+    .overlay {
+      height: 50% !important;
+    }
+  }
+  // register -----------------------------------
+  #register {
+    #hua {
+      left: 0% !important;
+      bottom: 10%;
+      width: 100% !important;
+      filter: opacity(0.2);
+    }
+    .form-text {
+      width: 70% !important;
+      right: 13%;
+    }
+    .v-btn {
+      margin: 40px 100px;
+    }
+    .overlay {
+      height: 70% !important;
+    }
+  }
+  // book -----------------------------------
+  #book {
+    .container {
+      height: 100%;
+      margin-top: 5%;
+      margin-bottom: 100px;
+      .col {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
