@@ -157,6 +157,44 @@ const routes = [
       title: '常見問題｜書彙齋'
       // transition: 'overlay-left-right'
     }
+  },
+  {
+    path: '/store',
+    name: 'Store',
+    component: () => import(/* webpackChunkName: "store" */ '../views/Store.vue'),
+    meta: {
+      title: '店家資訊｜書彙齋'
+      // transition: 'overlay-left-right'
+    }
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: () => import(/* webpackChunkName: "dashboard" */ '../views/Dashboard.vue'),
+    meta: {
+      title: '會員｜書彙齋'
+      // transition: 'overlay-left-right'
+    },
+    children: [
+      {
+        path: 'pro',
+        name: 'Pro',
+        component: () => import(/* webpackChunkName: "dashboard" */ '../views/Pro.vue'),
+        meta: {
+          title: '會員主頁｜書彙齋',
+          transition: 'overlay-left-right'
+        }
+      },
+      {
+        path: 'order',
+        name: 'Order',
+        component: () => import(/* webpackChunkName: "dashboard" */ '../views/Order.vue'),
+        meta: {
+          title: '訂單｜書彙齋',
+          transition: 'overlay-left-right'
+        }
+      }
+    ]
   }
 ]
 
