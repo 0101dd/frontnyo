@@ -13,16 +13,94 @@
     <!-- 精選字帖-------------------------- -->
     <div class="book">
       <h1>精選字帖</h1>
+          <img src="https://upload.cc/i1/2022/02/04/HGpIA9.png" class="he" alt="dd">
       <bookswiper></bookswiper>
+      <kinesis-container>
+        <kinesis-element :strength="50">
+          <img src="../assets/tu.png" alt="tu" width="12%" style="position: absolute; left: 60px; top: -300px; transform: rotate(-5deg);">
+        </kinesis-element>
+      </kinesis-container>
     </div>
     <!-- 書法入門-------------------------- -->
         <h1>書法入門</h1>
     <div class="information">
       <div class="container">
-          <div class="box1"></div>
-          <div class="box2"></div>
-          <div class="box3"></div>
-          <div class="box4"></div>
+        <div class="box1">
+            <router-link to="/maobi">
+            <v-img
+              src="../assets/yazi.jpg"
+              width="100%"
+            ></v-img>
+            </router-link>
+
+            <img src="../assets/bi.png"
+              fluid
+              style="position: absolute; top: 10px; left: 50px; height: 100%;">
+            <div class="box1-text">
+              <ul>
+                <li>毛筆的種類</li>
+                <li>毛筆的挑選</li>
+                <li>毛筆的保養</li>
+              </ul>
+            </div>
+          </div>
+          <div class="box2">
+            <router-link to="/mozhi">
+            <v-img
+              src="../assets/heye1.jpg"
+              width="100%"
+            ></v-img>
+            </router-link>
+
+            <img src="../assets/mo.png"
+              fluid
+              style="position: absolute; top: 10px; left: 30px; height: 85%;">
+            <div class="box1-text">
+              <ul>
+                <li>毛筆的種類</li>
+                <li>毛筆的挑選</li>
+                <li>毛筆的保養</li>
+              </ul>
+            </div>
+          </div>
+          <div class="box3">
+            <router-link to="/zhi">
+            <v-img
+              src="../assets/juhua.jpg"
+              width="100%"
+            ></v-img>
+            </router-link>
+
+            <img src="../assets/zhi.png"
+              fluid
+              style="position: absolute; top: 10px; left: 10px; height: 75%;">
+            <div class="box1-text">
+              <ul>
+                <li>毛筆的種類</li>
+                <li>毛筆的挑選</li>
+                <li>毛筆的保養</li>
+              </ul>
+            </div>
+          </div>
+          <div class="box4">
+            <router-link to="/xuexi">
+            <v-img
+              src="../assets/heye2.jpg"
+              width="100%"
+            ></v-img>
+            </router-link>
+
+            <img src="../assets/zitie.png"
+              fluid
+              style="position: absolute; top: 10px; left: 10px; height: 75%;">
+            <div class="box1-text">
+              <ul>
+                <li>毛筆的種類</li>
+                <li>毛筆的挑選</li>
+                <li>毛筆的保養</li>
+              </ul>
+            </div>
+          </div>
       </div>
     </div>
     <!-- 客製專區-------------------------- -->
@@ -94,6 +172,13 @@ export default {
       ease: 'slow',
       x: '70%'
     })
+    gsap.to('.he', {
+      duration: 10,
+      repeat: -1,
+      ease: 'slow',
+      x: '-2050px',
+      y: '-300px'
+    })
   }
 }
 </script>
@@ -145,28 +230,50 @@ video {
   height: 800px;
   z-index: 1;
 }
+/* 精選字帖------------------------------------- */
+.he {
+  position: absolute;
+  right: 3%;
+  top: 33%;
+}
 
+/* 書法入門------------------------------------- */
 .information {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 50px;
+  margin-left: 250px;
+  height: 500px;
 }
 
 .box1,
 .box2,
 .box3,
 .box4 {
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 5%;
   width: 500px;
-  height: 300px;
+  height: 350px;
   border-radius: 10px;
-  border: 1px solid var(--secondary);
+  border: 3px solid var(--accent);
   background: white;
   cursor: pointer;
   transition: 1s;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.287));
+}
+
+.box1-text {
+  position: absolute;
+  right: 75px;
+  top: 70px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'HanyiSentyTang';
+  color: var(--secondary);
 }
 
 .box2 {
@@ -181,23 +288,12 @@ video {
   left: 50%;
 }
 
-.box1:hover+.box2 {
-  transition: 1s;
-  transform-origin: left;
-  transform: translateX(200px);
-}
-/* .box1:hover+.box2+.box3 {
-   transition: 1s;
-  transform-origin: left;
-  transform: translateX(200px);
-} */
-
 .footer-img {
   width: 100vw;
   height: 100%;
   position: absolute;
   bottom: 0;
-  z-index: 0;
+  /* z-index: 0; */
   background: url(../assets/shoue-ye-footer-beijing.png) no-repeat bottom/100%;
 }
 

@@ -6,31 +6,35 @@
     <v-container>
       <div class="row">
         <div
-          class="col"
-          v-for="card in cards"
-          :key="card.title"
-        >
-          <v-card
-            max-width="300"
-            class="elevation-5"
-          >
-        <router-link :to="card.page">
-        <v-img
-          :src="card.src"
-          width="100%"
-          fluid
-        ></v-img></router-link>
-        <v-card-text>
-          <p>{{ card.title }} &emsp; {{ card.author }}</p>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn icon class="btn">
-            <v-icon>mdi-bookmark</v-icon>
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+              class="col"
+              v-for="card in cards"
+              :key="card.title"
+            >
+          <kinesis-container>
+            <kinesis-element :strength="15" type="depth" style="display: flex; flex-wrap: wrap;">
+              <v-card
+                max-width="300"
+                class="elevation-5"
+              >
+            <router-link :to="card.page">
+            <v-img
+              :src="card.src"
+              width="100%"
+              fluid
+            ></v-img></router-link>
+            <v-card-text>
+              <p>{{ card.title }} &emsp; {{ card.author }}</p>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn icon class="btn">
+                <v-icon>mdi-bookmark</v-icon>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+          </kinesis-element>
+      </kinesis-container>
+            </div>
         </div>
-      </div>
     </v-container>
   </div>
 </v-app>

@@ -97,3 +97,57 @@ h5 {
     // z-index: -11;
   }
 }
+
+// [home] box hover --------------------------
+.box1:hover {
+  transition: 1s;
+  transform: translate(-20px, -10px);
+}
+.box1:hover+.box2 {
+  transition: 1s;
+  transform-origin: left;
+  transform: translateX(200px);
+}
+.box1:hover+.box2+.box3 {
+  transition-delay: 1s;
+  transition: 1s;
+  transform-origin: left;
+  transform: translateX(120px);
+}
+.box1:hover+.box2+.box3+.box4 {
+  transition-delay: 1s;
+  transition: 1s;
+  transform-origin: left;
+  transform: translateX(50px);
+}
+
+.box2:hover {
+  transition: 1s;
+  transform: translate(-50px, -10px);
+}
+.box2:hover.box1 {
+  transition: 1s;
+  transform: translateX(-50px);
+}
+.box2:hover+.box3 {
+  transition: 1s;
+  transform: translateX(150px);
+}
+.box2:hover+.box3+.box4 {
+  transition: 1s;
+  transform: translateX(50px);
+}
+
+.box3:hover {
+  transition: 1s;
+  transform: translate(-100px, -10px);
+}
+.box3:hover+.box4 {
+  transition: 1s;
+  transform: translateX(100px);
+}
+
+.box4:hover {
+  transition: 1s;
+  transform: translate(20px, -10px);
+}

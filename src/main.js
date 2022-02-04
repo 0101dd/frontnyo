@@ -6,7 +6,9 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import './styles/styles.scss'
 import VuePageTransition from 'vue-page-transition'
+import VueKinesis from 'vue-kinesis'
 
+Vue.use(VueKinesis)
 Vue.use(VuePageTransition)
 
 Vue.config.productionTip = false
