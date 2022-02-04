@@ -28,12 +28,13 @@ export default {
   data () {
     return {
       swiperOption: {
+        loop: true,
         effect: 'cube',
         grabCursor: true,
         cubeEffect: {
           shadow: true,
           slideShadows: true,
-          shadowOffset: 20,
+          shadowOffset: 80,
           shadowScale: 0.94
         },
         pagination: {
@@ -49,16 +50,16 @@ export default {
   .example-3d {
     position: relative;
     overflow: hidden;
-    height: 360px;
-    padding: 15px;
+    height: 800px;
+    // padding: 15px;
   }
 
   .swiper {
-    width: 300px !important;
-    height: 300px;
+    width: 700px !important;
+    height: 500px;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 40%;
+    top: 25%;
     margin-left: -150px;
     margin-top: -150px;
 
@@ -75,6 +76,8 @@ export default {
     }
 
     .swiper-pagination {
+        display: none;
+
       .swiper-pagination-bullet.swiper-pagination-bullet-active {
         background-color: white;
       }
