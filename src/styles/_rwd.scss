@@ -30,10 +30,35 @@
 
 @include xs {
   // app-bar ------------------------------------
-  // .v-toolbar__content {
-  //   display: none
-  // }
-  // login --------------------------------------
+  .v-toolbar__content {
+    display: none
+  }
+  // menu-sm -----------------------------------
+  #menu-sm {
+    display: block;
+  }
+  .menu-sm-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  // [app] footer-img---------------------------
+  .footer-img {
+    height: 10%;
+  }
+
+  // [home] -------------------------------------
+  #home {
+    .banner {
+      background: url(../assets/shou-ye-banner.png) no-repeat top/170% 100%;
+    }
+    #target {
+      line-height: 2;
+      font-size: 30px;
+    }
+  }
+
+  // [login] ---------------------------------
   #login {
     #zhuzi {
       left: 30% !important;

@@ -75,6 +75,35 @@
       <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer; position: absolute; left: -40%; top: 10px;">
     </v-img></router-link>
     </v-app-bar>
+    <!-- --------------------------------------------------------- -->
+    <div id="menu-sm" style="position: relative;">
+       <v-bottom-sheet v-model="sheet">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="secondary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+          icon
+          large
+          style="position: fixed; left: 540px; top: 780px; z-index: 111;"
+        >
+        <v-icon>mdi-menu</v-icon>
+        </v-btn>
+      </template>
+      <v-list>
+        <v-subheader>Open in</v-subheader>
+        <v-list-item
+          v-for="tile in tiles"
+          :key="tile.title"
+          @click="sheet = false"
+        >
+          <v-list-item-title>{{ tile.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-bottom-sheet>
+  </div>
+    <!-- --------------------------------------------------------- -->
       <v-main>
         <transition name="animation">
           <router-view
@@ -125,11 +154,17 @@ export default {
 
   data () {
     return {
+      sheet: false,
       icons: [
         'mdi-facebook',
         'mdi-twitter',
         'mdi-linkedin',
         'mdi-instagram'
+      ],
+      tile: [
+        { title: 'first' },
+        { title: 'second' },
+        { title: 'third' }
       ]
     }
   }

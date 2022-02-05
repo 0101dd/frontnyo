@@ -2,7 +2,7 @@
 @import '_variables.scss';
 @import '_rwd.scss';
 
-// ----------------------------
+// sweet alert ----------------------------
 .swal2-confirm {
   border-radius: 16px;
   border: none;
@@ -111,6 +111,13 @@ h5 {
   }
   100% {
     // z-index: -11;
+  }
+}
+
+#menu-sm {
+  display: none;
+  @include xs {
+    display: block;
   }
 }
 

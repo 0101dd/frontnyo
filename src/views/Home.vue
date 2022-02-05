@@ -17,7 +17,7 @@
       <bookswiper></bookswiper>
       <kinesis-container>
         <kinesis-element :strength="50">
-          <img src="../assets/tu.png" alt="tu" width="12%" style="position: absolute; left: 60px; top: -300px; transform: rotate(-5deg);">
+          <img src="../assets/tu.png" alt="tu" width="12%" style="position: absolute; left: 60px; top: -300px; transform: rotate(-5deg); z-index: 22;">
         </kinesis-element>
       </kinesis-container>
     </div>

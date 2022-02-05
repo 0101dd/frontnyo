@@ -47,10 +47,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+$breakpoint-xs: 600px;
+@mixin xs {
+  @media (max-width: $breakpoint-xs) {
+    @content;
+  }
+}
   .example-3d {
     position: relative;
     overflow: hidden;
     height: 800px;
+    z-index: 1;
     // padding: 15px;
   }
 
@@ -58,11 +66,14 @@ export default {
     width: 700px !important;
     height: 500px;
     position: absolute;
-    left: 40%;
+    left: 50%;
     top: 25%;
     margin-left: -150px;
     margin-top: -150px;
-
+    @include xs {
+      width: 300px !important;
+      height: 300px;
+    }
     .swiper-slide {
       display: flex;
       justify-content: center;
