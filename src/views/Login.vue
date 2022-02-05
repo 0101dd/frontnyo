@@ -12,11 +12,11 @@
        >
       </v-img>
       <!-- 【v-model綁定】 -->
-      <v-form>
+      <v-form v-model="valid" @submit.prevent="login" ref="form">
       <div class="form-text">
         <p>帳號</p>
         <v-text-field
-          v-model="value"
+          v-model="form.account"
           :rules="nameRules"
           :counter="15"
           label="請輸入帳號"
@@ -24,7 +24,7 @@
         ></v-text-field>
         <p>密碼</p>
         <v-text-field
-          v-model="password"
+          v-model="form.password"
           :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
           :rules="[passwordRules.required]"
           :type="show1 ? 'text' : 'password'"
@@ -36,6 +36,7 @@
         >
         </v-text-field>
         <v-btn
+          type="submit"
           color="primary"
           rounded
           :ripple="false"
@@ -55,11 +56,15 @@
 export default {
   data () {
     return {
-      value: '',
+      valid: true,
       show1: false,
-      password: '',
+      form: {
+        account: '',
+        password: ''
+      },
       passwordRules: {
-        required: value => !!value || '密碼爲必填'
+        required: value => !!value || '密碼爲必填',
+        length: v => (v.length >= 4 && v.length <= 20) || '帳號至少 4 個字數'
       },
       nameRules: [
         v => !!v || '帳號爲必填',
@@ -73,6 +78,11 @@ export default {
     },
     color () {
       return ['error', 'warning', 'success'][Math.floor(this.progress / 40)]
+    }
+  },
+  methods: {
+    login () {
+      this.$store.dispatch('user/login', this.form)
     }
   }
 }

@@ -101,8 +101,12 @@ export default {
         await this.api.post('/users', this.form)
         this.$swal({
           icon: 'success',
-          title: '成功',
-          text: '註冊成功'
+          iconColor: '#D58E40',
+          title: '註冊成功',
+          buttonsStyling: false,
+          background: '#DED7B9',
+          confirmButtonText: '關閉',
+          width: '20rem'
         })
         this.$router.push('/')
       } catch (error) {
@@ -110,7 +114,9 @@ export default {
         this.$swal({
           icon: 'error',
           title: '失敗',
-          text: error.response.data.message
+          text: error.response.data.message,
+          background: '#DED7B9',
+          confirmButtonText: '關閉'
         })
       }
     }

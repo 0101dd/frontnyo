@@ -9,14 +9,22 @@ export const login = async ({ commit }, form) => {
     router.push('/')
     swal.fire({
       icon: 'success',
-      title: '成功',
-      text: '登入成功'
+      iconColor: '#D58E40',
+      title: '登入成功',
+      buttonsStyling: false,
+      background: '#DED7B9',
+      confirmButtonText: '關閉',
+      width: '20rem'
     })
   } catch (error) {
     swal.fire({
       icon: 'error',
-      title: '失敗',
-      text: error.response.data.message
+      title: '登入失敗',
+      text: error.response.data.message,
+      buttonsStyling: false,
+      background: '#DED7B9',
+      confirmButtonText: '關閉',
+      width: '20rem'
     })
   }
 }

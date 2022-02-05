@@ -3,7 +3,23 @@
 @import '_rwd.scss';
 
 // ----------------------------
-
+.swal2-confirm {
+  border-radius: 16px;
+  border: none;
+  width: 55px;
+  height: 35px;
+  cursor: pointer;
+  color: var(--accent);
+  background: var(--primary);
+  transition: 0.5s;
+  &:hover {
+    color: var(--primary);
+    background: var(--accent);
+    border: 2px solid var(--primary);
+    transition: 0.5s;
+  }
+}
+// --------------------------
 * {
 	list-style: none;
 	padding: 0;

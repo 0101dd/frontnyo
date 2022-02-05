@@ -61,13 +61,13 @@
       <v-list>
           <v-list-item class="d-flex flex-column">
             <v-list-item-content>
-            <v-list-item-title><router-link to="/dashboard/pro">會員主頁</router-link></v-list-item-title>
+            <v-list-item to="/dashboard/pro">會員主頁</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item-title><router-link to="/login">登入</router-link></v-list-item-title>
+            <v-list-item to="/login">登入</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item-title><router-link to="/register">註冊</router-link></v-list-item-title>
+            <v-list-item to="/register">註冊</v-list-item>
             </v-list-item-content>
           </v-list-item>
         </v-list>
