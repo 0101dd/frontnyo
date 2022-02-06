@@ -22,7 +22,7 @@
             <v-expansion-panel-content>
               <div class="store-box">
                 <iframe :src="item.iframe" width="600" height="450" style="border:0; margin-top: 10px;" allowfullscreen="" loading="lazy"></iframe>
-                <div class="store-content ma-7">
+                <div class="store-content ma-sm-7">
                   地址：{{ item.address }} <br>
                   電話：{{ item.phone }} <br>
                   營業時間： <br>

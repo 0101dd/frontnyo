@@ -94,13 +94,23 @@
         color="accent"
        >
         <v-list style="background: var(--accent); padding: 50px 0 0 50px;">
-        <v-list-item-content
-          v-for="tile in tiles"
-          :key="tile"
-        >
-          <v-list-item
-          > {{ tile.title }}
-          </v-list-item>
+        <v-list-item-content>
+          <v-list-item @click="sheet = !sheet"><router-link to="/book">精選字帖</router-link></v-list-item>
+        </v-list-item-content>
+        <v-list-item-content>
+          <v-list-item>書法入門</v-list-item>
+        </v-list-item-content>
+        <v-list-item-content>
+          <v-list-item>作品專區</v-list-item>
+        </v-list-item-content>
+        <v-list-item-content>
+          <v-list-item><router-link to="/question">常見問題</router-link></v-list-item>
+        </v-list-item-content>
+        <v-list-item-content>
+          <v-list-item>客製專區</v-list-item>
+        </v-list-item-content>
+        <v-list-item-content>
+          <v-list-item><router-link to="/store">店家資訊</router-link></v-list-item>
         </v-list-item-content>
         </v-list>
         <v-btn
@@ -171,14 +181,6 @@ export default {
         'mdi-twitter',
         'mdi-linkedin',
         'mdi-instagram'
-      ],
-      tiles: [
-        { title: '精選字帖' },
-        { title: '書法入門' },
-        { title: '作品專區' },
-        { title: '常見問題' },
-        { title: '客製專區' },
-        { title: '店家資訊' }
       ]
     }
   }
