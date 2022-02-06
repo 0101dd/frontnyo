@@ -17,7 +17,8 @@
       <bookswiper></bookswiper>
       <kinesis-container>
         <kinesis-element :strength="50">
-          <img src="../assets/tu.png" alt="tu" width="12%" style="position: absolute; left: 60px; top: -300px; transform: rotate(-5deg); z-index: 22;">
+          <img src="../assets/tu.png" alt="tu" width="12%"
+          class="rabbit">
         </kinesis-element>
       </kinesis-container>
     </div>
@@ -44,63 +45,63 @@
               </ul>
             </div>
           </div>
-          <div class="box2">
-            <router-link to="/mozhi">
-            <v-img
-              src="../assets/heye1.jpg"
-              width="100%"
-            ></v-img>
-            </router-link>
+        <div class="box2">
+          <router-link to="/mozhi">
+          <v-img
+            src="../assets/heye1.jpg"
+            width="100%"
+          ></v-img>
+          </router-link>
 
-            <img src="../assets/mo.png"
-              fluid
-              style="position: absolute; top: 10px; left: 30px; height: 85%;">
-            <div class="box1-text">
-              <ul>
-                <li>毛筆的種類</li>
-                <li>毛筆的挑選</li>
-                <li>毛筆的保養</li>
-              </ul>
-            </div>
+          <img src="../assets/mo.png"
+            fluid
+            style="position: absolute; top: 10px; left: 30px; height: 85%;">
+          <div class="box1-text">
+            <ul>
+              <li>毛筆的種類</li>
+              <li>毛筆的挑選</li>
+              <li>毛筆的保養</li>
+            </ul>
           </div>
-          <div class="box3">
-            <router-link to="/zhi">
-            <v-img
-              src="../assets/juhua.jpg"
-              width="100%"
-            ></v-img>
-            </router-link>
+        </div>
+        <div class="box3">
+          <router-link to="/zhi">
+          <v-img
+            src="../assets/juhua.jpg"
+            width="100%"
+          ></v-img>
+          </router-link>
 
-            <img src="../assets/zhi.png"
-              fluid
-              style="position: absolute; top: 10px; left: 10px; height: 75%;">
-            <div class="box1-text">
-              <ul>
-                <li>毛筆的種類</li>
-                <li>毛筆的挑選</li>
-                <li>毛筆的保養</li>
-              </ul>
-            </div>
+          <img src="../assets/zhi.png"
+            fluid
+            style="position: absolute; top: 10px; left: 10px; height: 75%;">
+          <div class="box1-text">
+            <ul>
+              <li>毛筆的種類</li>
+              <li>毛筆的挑選</li>
+              <li>毛筆的保養</li>
+            </ul>
           </div>
-          <div class="box4">
-            <router-link to="/xuexi">
-            <v-img
-              src="../assets/heye2.jpg"
-              width="100%"
-            ></v-img>
-            </router-link>
+        </div>
+        <div class="box4">
+          <router-link to="/xuexi">
+          <v-img
+            src="../assets/heye2.jpg"
+            width="100%"
+          ></v-img>
+          </router-link>
 
-            <img src="../assets/zitie.png"
-              fluid
-              style="position: absolute; top: 10px; left: 10px; height: 75%;">
-            <div class="box1-text">
-              <ul>
-                <li>毛筆的種類</li>
-                <li>毛筆的挑選</li>
-                <li>毛筆的保養</li>
-              </ul>
-            </div>
+          <img src="../assets/zitie.png"
+            fluid
+            style="position: absolute; top: 10px; left: 10px; height: 75%;">
+          <div class="box1-text">
+            <ul>
+              <li>毛筆的種類</li>
+              <li>毛筆的挑選</li>
+              <li>毛筆的保養</li>
+            </ul>
           </div>
+        </div>
       </div>
     </div>
     <!-- 客製專區-------------------------- -->
@@ -235,6 +236,14 @@ video {
   position: absolute;
   right: 3%;
   top: 33%;
+}
+
+.rabbit {
+  position:absolute;
+  left: 60px;
+  top: -300px;
+  transform: rotate(-5deg);
+  z-index: 22;
 }
 
 /* 書法入門------------------------------------- */

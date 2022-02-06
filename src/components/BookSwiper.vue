@@ -66,13 +66,14 @@ $breakpoint-xs: 600px;
     width: 700px !important;
     height: 500px;
     position: absolute;
-    left: 50%;
+    left: 40%;
     top: 25%;
     margin-left: -150px;
     margin-top: -150px;
     @include xs {
       width: 300px !important;
       height: 300px;
+      left: 50%;
     }
     .swiper-slide {
       display: flex;

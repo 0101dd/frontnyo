@@ -56,6 +56,56 @@
       line-height: 2;
       font-size: 30px;
     }
+    .rabbit {
+      width: 25%;
+      top: -350px;
+    }
+    .information {
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-top: 120px;
+      margin-left: 0;
+    }
+    .container {
+      flex-wrap: wrap;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+      width: 300px;
+      height: 170px;
+      position: static;
+      left: 0;
+      top: 50px;
+      margin-bottom: 20px;
+      pointer-events: none;
+    }
+    .box1-text {
+      font-size: 1.4rem;
+      right: 40px;
+      top: 30px;
+    }
+  }
+  .shop {
+    h1 {
+      margin-top: 150px;
+    }
+  }
+  .footer-img {
+    .cloud1, .cloud2, .cloud3 {
+      width: 30%;
+    }
+    .cloud1 {
+      bottom: 200px;
+    }
+    .cloud2 {
+      bottom: 100px;
+      left: 15%;
+    }
+    .cloud3 {
+      bottom: 300px;
+    }
   }
 
   // [login] ---------------------------------

@@ -77,31 +77,35 @@
     </v-app-bar>
     <!-- --------------------------------------------------------- -->
     <div id="menu-sm" style="position: relative;">
-       <v-bottom-sheet v-model="sheet">
-      <template v-slot:activator="{ on, attrs }">
         <v-btn
           color="secondary"
           dark
-          v-bind="attrs"
-          v-on="on"
           icon
           large
+          @click="sheet = !sheet"
           style="position: fixed; left: 540px; top: 780px; z-index: 111;"
         >
         <v-icon>mdi-menu</v-icon>
         </v-btn>
-      </template>
-      <v-list>
-        <v-subheader>Open in</v-subheader>
-        <v-list-item
-          v-for="tile in tiles"
-          :key="tile.title"
-          @click="sheet = false"
+       <v-bottom-sheet v-model="sheet">
+       <v-sheet
+        class="text-center"
+        height="50vh"
+        color="accent"
+       >
+       <v-btn
+          class="mt-6"
+          text
+          color="red"
+          @click="sheet = !sheet"
         >
-          <v-list-item-title>{{ tile.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-bottom-sheet>
+          close
+        </v-btn>
+        <div class="py-3">
+          This is a bottom sheet using the controlled by v-model instead of activator
+        </div>
+        </v-sheet>
+      </v-bottom-sheet>
   </div>
     <!-- --------------------------------------------------------- -->
       <v-main>
