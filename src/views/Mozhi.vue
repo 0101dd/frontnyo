@@ -8,12 +8,12 @@
         width="40%"
         class="img"
       >
-      <v-img
+      <img
         src="../assets/mo.png"
         width="17%"
         style="position: absolute; top: 4%; left: 3%;"
-        class="bi"
-      ></v-img>
+        class="mo"
+      >
     </div>
     <!-- 文案內容------------------------------ -->
     <div
@@ -33,48 +33,48 @@
         </div>
       </div>
       <div class="row mt-16">
-        <div class="col-5 t1">
-          <h3>墨之淡與濃與含水量有關</h3>
+        <div class="col-md-5 col text-center text-sm-left t1">
+          <h3>墨的淡與濃</h3>
           <p class="mt-5">墨與水是相容的，墨需有水才能流暢，太濃太乾則易成枯筆，水枯則行筆澀度高，功夫要更高才行。所以，太濃時就要加些水，再拌均勻就好寫了。但水要少量慢加，若加太多水就太淡了，字就容易渲開暈散，反而更難看。</p>
         </div>
         <v-spacer></v-spacer>
       </div>
       <div class="row">
         <v-spacer></v-spacer>
-        <div class="col-5 t2">
+        <div class="col-md-5 col text-center text-sm-left t2">
           <h3>買墨汁慎選品牌</h3>
           <p class="mt-5">吳竹、正大、雄師、檀香墨都可以，但台灣的開明墨汁常太濃，又容易發臭，雖然是最便宜，也寧可不要買。</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-5 t3">
+        <div class="col-md-5 col text-center text-sm-left t3">
           <h3>油煙墨</h3>
           <p class="mt-5">（油煙是用油料，主要是以桐柚籽或豬油為原料燃燒後收集其煙所制的墨。）的品種有：雲頭艷墨汁、蘭煙墨汁、亮光墨汁、桐煙墨汁、大單童和雙童墨汁、油煙墨汁等。油煙墨汁有一定光澤，色相偏暖，色階豐富且有光澤，可濃可淡，多用來勾線、渲染，是書畫家們用的佳品。</p>
         </div>
         <v-spacer></v-spacer>
       </div>
-      <div class="row">
+      <div class="row flex-column flex-sm-row">
         <v-spacer></v-spacer>
-        <div class="col-5 t4">
+        <div class="col-md-5 col text-center text-sm-left t4">
           <h3>松煙墨</h3>
           <p class="mt-5">（松煙是松樹油燃燒後收集其煙所制的墨）的品種有：阿膠松煙、五老松煙、小松煙等。松煙墨汁烏黑無光，略呈冷色古人常用於渲染頭髮、鬚眉，是書寫小楷字和工筆繪畫的佳品。它的配方比例按照季節氣候進行調整，以適合四季的氣候變換。</p>
         </div>
       </div>
-      <h1 class="my-16">初學者如何選墨</h1>
+      <h1 class="my-16 text-center text-sm-left">初學者如何選墨</h1>
         <div class="row">
         <div class="col">
           <p class="mt-5 text-center">由於墨汁是現代產品，不如墨錠挑選時直觀，在挑選時要打，開墨瓶，聞聞氣味，是否芳香無臭味。如果商家允許可倒出幾滴，看看墨汁里的雜質多不多，再看看墨汁的稀釋度，含膠大、較粘稠的墨汁質量較差。最後，待墨汁乾燥後觀察墨色是否純正，不發灰泛紅黃光。在購買墨汁時要按需挑選，儘量選擇容量少的，以免由於保存不當造成浪費。</p>
         </div>
       </div>
       <h1 class="my-16">墨汁的注意事項</h1>
-      <div class="row">
-        <div class="col-5">
+      <div class="row flex-column flex-sm-row">
+        <div class="col-md-5 col text-center text-sm-left">
           <h3>使用方法</h3>
           <p class="mt-5">1. 墨汁雖然使用方便，而濃談卻是固定的（墨汁廠生產墨汁的時候就已經調好了），我們書寫的時候，墨汁太濃，拉不開筆、容易滯澀；墨汁太淡，筆一上紙就洇墨，總之濃淡不合適的話都會影響到書寫。因此，墨汁濃了就要加水，淡了就適當加一些，使墨濃淡適宜，才能寫出好字來。</p>
           <p>2. 不同書體建議用不同濃淡的墨汁：寫楷書，一般多用較濃的墨；而寫行草，墨汁就要相應的淡些。</p>
         </div>
         <v-spacer></v-spacer>
-        <div class="col-5">
+        <div class="col-md-5 col text-center text-sm-left">
           <h3>注意項目</h3>
           <p class="mt-5">1. 因為墨汁的濃度較大，所以在使用時可根據作品風格取出部分墨汁適量加水，但是需要注意的是加水後的墨汁千萬不要再倒入瓶內，否則會造成瓶內墨汁變質。尤其是炎熱的夏天，兌了水的墨汁更容易臭掉，這就是因為墨汁變質的緣故。</p>
           <p>2. 書寫完作品後要放置24小時晾乾，讓墨固定下來，以免托裱時跑墨。</p>
@@ -170,7 +170,7 @@ h3, h4 {
   display: inline;
 }
 .row {
-  .col-5 {
+  .col {
     h3 {
       position: relative;
       &::before {

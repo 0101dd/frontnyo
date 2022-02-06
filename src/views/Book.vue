@@ -53,7 +53,7 @@ export default {
         { title: '七言詩（花氣薰人帖）', author: '黃庭堅', src: 'https://theme.npm.edu.tw/selection/att/collection/04001006/%E5%9B%9B-1.jpg', page: '/huaqi' },
         { title: '黃州寒食帖', author: '蘇軾', src: 'https://theme.npm.edu.tw/selection/att/collection/04001005/17010135.jpg', page: '/hanshi' },
         { title: '穠芳詩帖', author: '趙佶', src: 'https://theme.npm.edu.tw/selection/att/collection/04001007/17010210.jpg', page: '/nongfangshi' },
-        { title: '真草千字文', author: '智永', src: 'https://upload.cc/i1/2022/01/31/xbaG78.jpg', page: '/qianziwen' }
+        { title: '書趵突泉詩', author: '趙孟頫', src: 'https://theme.npm.edu.tw/selection/att/collection/04001012/17009560.jpg', page: '/shubotuquan' }
       ]
     }
   }

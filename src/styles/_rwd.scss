@@ -107,7 +107,107 @@
       bottom: 300px;
     }
   }
+  // [maobi] ---------------------------------
+  #maobi {
+    .title-picture img{
+      width: 69%;
+    }
+    .title-picture .bi {
+      width: 30%;
+      top: 1% !important;
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+    }
+    .container .row:nth-child(1) {
+      margin-top: 200px;
+    }
+    .col h3+p {
+      width: 100% !important;
+    }
+    .spacer {
+      display: none;
+    }
+  }
 
+// [mozhi] ---------------------------------
+#mozhi {
+  .title-picture img{
+    width: 69%;
+  }
+  .title-picture .mo {
+    width: 30%;
+    top: 1.5% !important;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  .container .row:nth-child(1) {
+    margin-top: 200px;
+  }
+  .col h1+p {
+    width: 100% !important;
+  }
+  .spacer {
+    display: none;
+  }
+}
+// [zhi] ---------------------------------
+#zhi {
+  .title-picture img{
+    width: 69%;
+  }
+  .title-picture .zhi {
+    width: 30%;
+    top: 1.5% !important;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  .container .row:nth-child(1) {
+    margin-top: 200px;
+  }
+  .col h1+p {
+    width: 100% !important;
+  }
+  .spacer {
+    display: none;
+  }
+}
+// [xuexi] ---------------------------------
+#xuexi {
+  .title-picture img{
+    width: 69%;
+  }
+  .title-picture .zitie {
+    width: 40%;
+    top: 1% !important;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  .container .row:nth-child(1) {
+    margin-top: 200px;
+  }
+  .col h1+p {
+    width: 100% !important;
+  }
+  .spacer {
+    display: none;
+  }
+}
   // [login] ---------------------------------
   #login {
     #zhuzi {

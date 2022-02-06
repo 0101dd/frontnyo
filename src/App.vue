@@ -83,7 +83,7 @@
           icon
           large
           @click="sheet = !sheet"
-          style="position: fixed; left: 540px; top: 780px; z-index: 111;"
+          style="position: fixed; left: 520px; top: 800px; z-index: 111;"
         >
         <v-icon>mdi-menu</v-icon>
         </v-btn>
@@ -93,17 +93,24 @@
         height="50vh"
         color="accent"
        >
-       <v-btn
+        <v-list style="background: var(--accent); padding: 50px 0 0 50px;">
+        <v-list-item-content
+          v-for="tile in tiles"
+          :key="tile"
+        >
+          <v-list-item
+          > {{ tile.title }}
+          </v-list-item>
+        </v-list-item-content>
+        </v-list>
+        <v-btn
           class="mt-6"
           text
-          color="red"
+          color="error"
           @click="sheet = !sheet"
         >
-          close
+          關閉
         </v-btn>
-        <div class="py-3">
-          This is a bottom sheet using the controlled by v-model instead of activator
-        </div>
         </v-sheet>
       </v-bottom-sheet>
   </div>
@@ -165,10 +172,13 @@ export default {
         'mdi-linkedin',
         'mdi-instagram'
       ],
-      tile: [
-        { title: 'first' },
-        { title: 'second' },
-        { title: 'third' }
+      tiles: [
+        { title: '精選字帖' },
+        { title: '書法入門' },
+        { title: '作品專區' },
+        { title: '常見問題' },
+        { title: '客製專區' },
+        { title: '店家資訊' }
       ]
     }
   }

@@ -141,11 +141,11 @@ const routes = [
     }
   },
   {
-    path: '/qianziwen',
-    name: 'Qianziwen',
-    component: () => import(/* webpackChunkName: "qianziwen" */ '../views/Qianziwen.vue'),
+    path: '/shubotuquan',
+    name: 'Shubotuquan',
+    component: () => import(/* webpackChunkName: "shubotuquan" */ '../views/Shubotuquan.vue'),
     meta: {
-      title: '千字文｜書彙齋'
+      title: '書趵突泉詩｜書彙齋'
       // transition: 'overlay-left-right'
     }
   },

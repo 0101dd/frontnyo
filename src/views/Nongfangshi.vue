@@ -81,7 +81,7 @@ export default {
 
 .container {
   width: 70%;
-  height: 60%;
+  height: 55%;
   display: block;
 }
 
