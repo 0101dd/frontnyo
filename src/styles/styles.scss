@@ -74,7 +74,7 @@ h5 {
   font-family: 'HanyiSentyTang';
 }
 
-#router-ink {
+#router-ink, #router-ink2 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -84,6 +84,11 @@ h5 {
   background: url(../assets/ink.png) no-repeat 0 0;
   background-size: 100% 100%;
   animation: thisOne 1.8s steps(24);
+}
+
+#router-ink2 {
+  top: 12%;
+  height: 110vh;
 }
 
 @keyframes thisOne {
@@ -108,6 +113,7 @@ h5 {
     -ms-transform: translateY(-50%) translateX(-2%);
     -o-transform: translateY(-50%) translateX(-2%);
     transform: translateY(-50%) translateX(-2%);
+    z-index: 0;
   }
   100% {
     // z-index: -11;
@@ -173,4 +179,20 @@ h5 {
 .box4:hover {
   transition: 1s;
   transform: translate(20px, -10px);
+}
+
+#home {
+  h1 {
+    position: absolute;
+    z-index: 33;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -80px;
+  }
+}
+// carousel ------------------------------------
+#shupu, #zixutie, #kuaixue, #hanshi, #nongfangshi, #shubotuquan {
+  .v-carousel__controls {
+    display: none;
+  }
 }

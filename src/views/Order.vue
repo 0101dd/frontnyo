@@ -7,6 +7,6 @@
 #order {
   width: 100vw;
   height: 100vh;
-  background: var(--primary);
+  background: var(--accent);
 }
 </style>

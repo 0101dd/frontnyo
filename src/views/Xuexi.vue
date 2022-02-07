@@ -2,6 +2,7 @@
 <template>
 <v-app style="overflow: hidden;">
   <div id="xuexi">
+    <div id="router-ink2" style="top: 14%;"></div>
     <div class="title-picture">
       <img
         src="../assets/pomo.png"
@@ -18,7 +19,7 @@
     <!-- 文案內容------------------------------ -->
     <div
       class="container d-flex flex-column"
-      style="transform: translate3d(0, 0, 15px); width: 65vw; height: 100%; padding-top: 10rem;"
+      style="transform: translate3d(0, 0, 15px); width: 65vw; height: 100%; padding-top: 15rem;"
       >
       <div class="row">
         <div class="col text-center">
@@ -32,23 +33,22 @@
           </p>
         </div>
       </div>
-      <h3 class="mt-16">選擇合適的字帖</h3>
+      <h3 class="mt-16 h3-1">選擇合適的字帖</h3>
       <div class="row">
         <v-spacer></v-spacer>
         <div class="col-sm-8 col text-center">
-          <p class="mt-5 text-center">首先選擇好字體，常用的有篆，隸，楷，行，草 五大字體。楷書分為兩類，一類是魏碑，一類是唐楷。對初學者來說，還是從唐楷入手比較好。它筆畫規範，字形端正工整，結體嚴謹，適宜初學。</p>
-          <p class="text-center">提醒：一旦選擇好一本字帖後，就要深入地去學習，只有真正學會之後才可以更換字帖。學習不同的字體，也就更快一些。</p>
+          <p class="p-1 mt-5 text-center">首先選擇好字體，常用的有篆，隸，楷，行，草 五大字體。楷書分為兩類，一類是魏碑，一類是唐楷。對初學者來說，還是從唐楷入手比較好。它筆畫規範，字形端正工整，結體嚴謹，適宜初學。無論你選擇學習什麼書體，學習哪一家，在選擇字帖時，首先一定要選擇善本。這裡所說的善本是指字跡清楚 ，未經現代人修改 、放大、勾描或者電腦拼湊製作過的，最接近原始本的版本。 對於有一定基礎的學書者來說，寧可要看不清的也不要失真的版本。 同一版本有墨跡的，就不要碑刻的；有原拓的，就不要翻刻的。</p>
         </div>
         <v-spacer></v-spacer>
       </div>
-      <h3 class="mt-16">正確的臨帖方法</h3>
+      <!-- <h3 class="mt-16">正確的臨帖方法</h3>
       <div class="row">
         <v-spacer></v-spacer>
         <div class="col-sm-8 col  text-center">
           <p class="mt-5 text-center">特指中國書法的學習方法，主要是以臨摹前人好的書法作品和字帖，學習書法家的精華，古人與今人都把臨帖看作是中國書法入門的鑰匙，是學習書法打好基礎好方法。臨的次數越多、臨的範圍越廣，基礎就越牢固。臨帖需眼到手到、眼準手巧，眼裡看到的，筆端都能夠表達展示出來。</p>
         </div>
         <v-spacer></v-spacer>
-      </div>
+      </div> -->
       <div class="row mt-16">
         <div class="col-md-5 col text-center text-sm-left t1">
           <h3>實臨法</h3>
@@ -117,7 +117,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default {
   mounted () {
-    gsap.from('.bi', {
+    gsap.from('.zitie', {
       duration: 1,
       ease: 'none',
       opacity: 0,
@@ -151,13 +151,25 @@ export default {
       opacity: 0,
       delay: 2.9
     })
+    gsap.from('.h3-1', {
+      duration: 0.5,
+      ease: 'none',
+      opacity: 0,
+      delay: 3.5
+    })
+    gsap.from('.p-1', {
+      duration: 0.5,
+      ease: 'none',
+      opacity: 0,
+      delay: 4
+    })
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: '.t1',
         endTrigger: '.t4',
         start: 'top 70%',
-        end: 'bottom 40%',
-        scrub: 1,
+        end: 'bottom 60%',
+        scrub: 0.5,
         markers: false
       },
       defaults: {
@@ -227,7 +239,7 @@ h3, h4 {
   // bottom: 0;
   // z-index: 0;
   background:
-  linear-gradient(360deg, #ffffff80, white),
+  linear-gradient(360deg, #ffffffb6, white),
   url(../assets/ru-men-footer.png) no-repeat bottom/100%;
 }
 </style>

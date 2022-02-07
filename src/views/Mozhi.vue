@@ -2,6 +2,7 @@
 <template>
 <v-app style="overflow: hidden;">
   <div id="mozhi">
+    <div id="router-ink2" style="top: 18%;"></div>
     <div class="title-picture">
       <img
         src="../assets/pomo.png"
@@ -18,7 +19,7 @@
     <!-- 文案內容------------------------------ -->
     <div
       class="container d-flex flex-column"
-      style="transform: translate3d(0, 0, 15px); width: 65vw; height: 100%; padding-top: 10rem;"
+      style="transform: translate3d(0, 0, 15px); width: 65vw; height: 100%; padding-top: 15rem;"
       >
       <div class="row">
         <div class="col text-center">
@@ -95,7 +96,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default {
   mounted () {
-    gsap.from('.bi', {
+    gsap.from('.mo', {
       duration: 1,
       ease: 'none',
       opacity: 0,
@@ -133,9 +134,9 @@ export default {
       scrollTrigger: {
         trigger: '.t1',
         endTrigger: '.t4',
-        start: 'top 70%',
-        end: 'bottom 40%',
-        scrub: 1,
+        start: 'top 65%',
+        end: 'bottom 75%',
+        scrub: 0.5,
         markers: false
       },
       defaults: {
@@ -193,7 +194,7 @@ h3, h4 {
   // bottom: 0;
   // z-index: 0;
   background:
-  linear-gradient(360deg, #ffffff80, white),
+  linear-gradient(360deg, #ffffffb6, white),
   url(../assets/ru-men-footer.png) no-repeat bottom/100%;
 }
 </style>

@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar
     fixed
-    elevate-on-scroll
+    elevation="0"
     color="transparent"
     style="width: 100vw;"
     class="d-flex justify-end">
@@ -40,7 +40,7 @@
         <li><a href="#">作品專區</a></li>
         <li><router-link to="/question">常見問題</router-link></li>
         <li><a href="#">客製專區</a></li>
-        <li><a href="#"><router-link to="/store">店家資訊</router-link></a></li>
+        <li><router-link to="/store">店家資訊</router-link></li>
       </ul>
       <v-menu
         open-on-hover
@@ -58,16 +58,16 @@
            v-bind="attrs" v-on="on"
         >mdi-account-circle-outline</v-icon>
       </template>
-      <v-list>
+      <v-list flat>
           <v-list-item class="d-flex flex-column">
             <v-list-item-content>
-            <v-list-item to="/dashboard/pro">會員主頁</v-list-item>
+            <v-list-item :ripple="false" to="/dashboard/pro">會員主頁</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item to="/login">登入</v-list-item>
+            <v-list-item :ripple="false" to="/login">登入</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item to="/register">註冊</v-list-item>
+            <v-list-item :ripple="false" to="/register">註冊</v-list-item>
             </v-list-item-content>
           </v-list-item>
         </v-list>

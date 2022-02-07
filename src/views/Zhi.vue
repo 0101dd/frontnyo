@@ -2,6 +2,7 @@
 <template>
 <v-app style="overflow: hidden;">
   <div id="zhi">
+    <div id="router-ink2" style="top: 17%;"></div>
     <div class="title-picture">
       <img
         src="../assets/pomo.png"
@@ -18,7 +19,7 @@
     <!-- 文案內容------------------------------ -->
     <div
       class="container d-flex flex-column"
-      style="transform: translate3d(0, 0, 15px); width: 65vw; height: 100%; padding-top: 10rem;"
+      style="transform: translate3d(0, 0, 15px); width: 65vw; height: 100%; padding-top: 15rem;"
       >
       <div class="row">
         <div class="col text-center">
@@ -31,13 +32,13 @@
           </p>
         </div>
       </div>
-    <h3 class="mt-16">紙的種類</h3>
+    <h3 class="mt-16 h3-1">紙的種類</h3>
       <div class="row">
         <v-spacer></v-spacer>
         <div class="col-md-8 col text-center">
-          <h4>生宣、熟宣、半熟宣</h4>
-          <p class="mt-5 text-center">選購新筆時，可以觀察筆的末端是否尖銳，尚未開筆的新筆，筆毛有膠聚合，很容易分辨，如果是已經用過的舊筆，將筆毛浸濕後再聚攏，也可看出筆尖是否依舊鋒利。</p>
-          <p class="text-center">好的毛料配上好工藝，才能打造如刀般銳利的筆尖，有些好筆，即使是大楷，也可以拿來寫小字，就是因為筆夠尖。為什麼筆的末端尖才是好筆？因為寫字鋒稜易出，更能呈現書寫者的精神跟風采。</p>
+          <h4 class="h4-1">生宣、熟宣、半熟宣</h4>
+          <p class="p-1 mt-5 text-center">選購新筆時，可以觀察筆的末端是否尖銳，尚未開筆的新筆，筆毛有膠聚合，很容易分辨，如果是已經用過的舊筆，將筆毛浸濕後再聚攏，也可看出筆尖是否依舊鋒利。</p>
+          <p class="p-2 text-center">好的毛料配上好工藝，才能打造如刀般銳利的筆尖，有些好筆，即使是大楷，也可以拿來寫小字，就是因為筆夠尖。為什麼筆的末端尖才是好筆？因為寫字鋒稜易出，更能呈現書寫者的精神跟風采。</p>
         </div>
         <v-spacer></v-spacer>
       </div>
@@ -97,7 +98,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default {
   mounted () {
-    gsap.from('.bi', {
+    gsap.from('.zhi', {
       duration: 1,
       ease: 'none',
       opacity: 0,
@@ -131,13 +132,32 @@ export default {
       opacity: 0,
       delay: 2.9
     })
+    gsap.from('.h3-1', {
+      duration: 0.5,
+      ease: 'none',
+      opacity: 0,
+      delay: 3.5
+    })
+    gsap.from('.h4-1', {
+      duration: 0.5,
+      ease: 'none',
+      opacity: 0,
+      delay: 4
+    })
+    gsap.from('.p-1, .p-2', {
+      duration: 0.5,
+      ease: 'none',
+      opacity: 0,
+      delay: 4.5
+    })
+
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: '.t1',
         endTrigger: '.t4',
         start: 'top 70%',
-        end: 'bottom 40%',
-        scrub: 1,
+        end: 'bottom 60%',
+        scrub: 0.5,
         markers: false
       },
       defaults: {
@@ -195,7 +215,7 @@ h3, h4 {
   // bottom: 0;
   // z-index: 0;
   background:
-  linear-gradient(360deg, #ffffff80, white),
+  linear-gradient(360deg, #ffffffb6, white),
   url(../assets/ru-men-footer.png) no-repeat bottom/100%;
 }
 </style>

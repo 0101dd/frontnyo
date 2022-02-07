@@ -1,22 +1,27 @@
 <!-- 首頁******************************************************************* -->
 <template>
-<v-app style="background: white;" class="text-center">
-<div id="router-ink"></div>
-  <div id="home">
+<v-app style="background: white;" >
+  <div id="home" class="text-center">
+    <div id="router-ink2"></div>
     <div class="banner">
       <div class="container">
         <p id="target" v-split-characters>書法是一種書寫的藝術，書法縱向穿透兩個層面：「使用」與「審美」；橫向跨越文字兩個層面：「文字」、「繪畫」。書法除了是書法家用以創作的主要表現和作品形式，也是一種研究書寫者心理與性格的工具。各地域依其在地歷史與文化發展出自有的書法特色，而書法至今仍廣泛應用於生活與藝術文化等層面。</p>
       </div>
     </div>
-    <!-- 影片遮罩 -->
-    <!-- <video src="../assets/Ink Drop 2.mp4" autoplay muted loop></video> -->
+    <!-- 影片遮罩 6s -->
+    <video src="../assets/Sequence 01.mp4" autoplay muted loop></video>
     <!-- 精選字帖-------------------------- -->
     <div class="book">
+      <kinesis-container>
+        <kinesis-element :strength="30">
+          <img src="../assets/shan.png" width="30%" class="shan">
+          </kinesis-element>
+      </kinesis-container>
       <h1>精選字帖</h1>
           <img src="https://upload.cc/i1/2022/02/04/HGpIA9.png" class="he" alt="dd">
       <bookswiper></bookswiper>
-      <kinesis-container>
-        <kinesis-element :strength="50">
+      <kinesis-container style="height: 100%;">
+        <kinesis-element :strength="600">
           <img src="../assets/tu.png" alt="tu" width="12%"
           class="rabbit">
         </kinesis-element>
@@ -58,9 +63,9 @@
             style="position: absolute; top: 10px; left: 30px; height: 85%;">
           <div class="box1-text">
             <ul>
-              <li>毛筆的種類</li>
-              <li>毛筆的挑選</li>
-              <li>毛筆的保養</li>
+              <li>選墨的重點</li>
+              <li>墨的淡與濃</li>
+              <li>用墨的注意事項</li>
             </ul>
           </div>
         </div>
@@ -77,9 +82,9 @@
             style="position: absolute; top: 10px; left: 10px; height: 75%;">
           <div class="box1-text">
             <ul>
-              <li>毛筆的種類</li>
-              <li>毛筆的挑選</li>
-              <li>毛筆的保養</li>
+              <li>挑紙的要領</li>
+              <li>紙的種類</li>
+              <li>如何挑選宣紙</li>
             </ul>
           </div>
         </div>
@@ -96,9 +101,9 @@
             style="position: absolute; top: 10px; left: 10px; height: 75%;">
           <div class="box1-text">
             <ul>
-              <li>毛筆的種類</li>
-              <li>毛筆的挑選</li>
-              <li>毛筆的保養</li>
+              <li>書法的學習方式</li>
+              <li>選擇合適的字帖</li>
+              <li>正確的臨帖方法</li>
             </ul>
           </div>
         </div>
@@ -126,6 +131,9 @@ import Vue from 'vue'
 import VueSplitCharacters from 'vue-split-characters'
 Vue.use(VueSplitCharacters)
 
+// document.querySelector('video').defaultPlaybackRate = 2
+// document.querySelector('video').play()
+
 export default {
   components: {
     bookswiper
@@ -138,19 +146,19 @@ export default {
     })
     gsap.from('#target span', {
       stagger: {
-        each: 0.05,
-        delay: 0.1,
-        repeatDelay: 5,
+        each: 0.03,
+        // delay: 0.1,
         from: 'random'
       },
+      repeatDelay: 4,
+      // delay: 1,
       opacity: 0,
       x: '+=random(-500,500)',
       y: '+=random(-500,500)',
       z: '+=random(-500,500)',
       repeat: -1,
-      duration: 2.5,
-      scale: 'random(-1,2)',
-      yoyo: true
+      duration: 2,
+      scale: 'random(-1,2)'
     })
     gsap.from('.cloud1', {
       duration: 15,
@@ -205,7 +213,7 @@ video {
   height: 100%;
   object-fit: cover;
   mix-blend-mode: screen;
-  filter:grayscale(1);
+  filter:brightness(1.2)
   /* z-index: -11; */
 }
 
@@ -228,6 +236,7 @@ video {
 }
 
 .book, .information, .shop  {
+  margin-top: 150px;
   height: 800px;
   z-index: 1;
 }
@@ -238,12 +247,18 @@ video {
   top: 33%;
 }
 
+.shan {
+  position: absolute;
+  left: -50px;
+  top: 0px;
+}
+
 .rabbit {
   position:absolute;
   left: 60px;
-  top: -300px;
+  top: 300px;
   transform: rotate(-5deg);
-  z-index: 22;
+  z-index: 50;
 }
 
 /* 書法入門------------------------------------- */
@@ -299,7 +314,7 @@ video {
 
 .footer-img {
   width: 100vw;
-  height: 100%;
+  height: 25%;
   position: absolute;
   bottom: 0;
   /* z-index: 0; */
