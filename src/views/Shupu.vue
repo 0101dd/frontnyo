@@ -9,8 +9,10 @@
           :key="i"
           :src="item.src"
           height="100%"
+          style="z-index: 1;"
         ></v-carousel-item>
       </v-carousel>
+      <img src="../assets/he2.png" class="he2">
       <div class="container">
         <div class="content">
           <h2>孫過庭</h2>
@@ -182,5 +184,22 @@ h3 {
 hr {
   margin-bottom: 20px;
   border: 1px solid #00000052;
+}
+
+.col-sm-6 {
+  p {
+    padding: 20px;
+  }
+}
+
+.col-sm-6:nth-child(even) {
+  padding-top: 55px;
+}
+
+.he2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 </style>
