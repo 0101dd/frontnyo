@@ -79,11 +79,13 @@ h1 {
   &::before {
     content: '';
     position: absolute;
-    width: 120%;
-    height: 100%;
-    left: -10%;
-    background: linear-gradient(#ded7b94f, #ded7b94f);
-    filter: blur(20px);
+    width: 112%;
+    height: 45%;
+    left: -5%;
+    bottom: 18%;
+    background: var(--info);
+    // background: linear-gradient(#ded7b94f, #ded7b94f);
+    // filter: blur(20px);
     z-index: -1;
   }
 }

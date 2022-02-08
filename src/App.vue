@@ -90,36 +90,74 @@
        <v-bottom-sheet v-model="sheet">
        <v-sheet
         class="text-center"
-        height="50vh"
+        height="67vh"
         color="accent"
        >
-        <v-list style="background: var(--accent); padding: 50px 0 0 50px;">
+        <v-list flat style="background: var(--accent); padding: 50px 0 0 50px;">
         <v-list-item-content>
-          <v-list-item @click="sheet = !sheet"><router-link to="/book">精選字帖</router-link></v-list-item>
+          <v-list-item @click="sheet = !sheet" :ripple="false" to="/book"><v-icon class="mr-3">mdi-bookshelf</v-icon>精選字帖</v-list-item>
         </v-list-item-content>
         <v-list-item-content>
-          <v-list-item>書法入門</v-list-item>
+          <v-list-group
+            :ripple="false"
+          >
+            <template v-slot:activator>
+              <v-list-item class="ml-n4"><v-icon class="mr-3">mdi-information-outline</v-icon>書法入門</v-list-item>
+            </template>
+              <v-list-item-content>
+                <v-list-item class="ml-10" @click="sheet = !sheet" :ripple="false" to="/maobi">毛筆介紹</v-list-item>
+              </v-list-item-content>
+              <v-list-item-content>
+                <v-list-item class="ml-10" @click="sheet = !sheet" :ripple="false" to="/mozhi">墨汁介紹</v-list-item>
+              </v-list-item-content>
+              <v-list-item-content>
+                <v-list-item class="ml-10" @click="sheet = !sheet" :ripple="false" to="/zhi">紙類介紹</v-list-item>
+              </v-list-item-content>
+              <v-list-item-content>
+                <v-list-item class="ml-10" @click="sheet = !sheet" :ripple="false" to="/xuexi">學習方法</v-list-item>
+              </v-list-item-content>
+          </v-list-group>
         </v-list-item-content>
         <v-list-item-content>
-          <v-list-item>作品專區</v-list-item>
+          <v-list-item><v-icon class="mr-3">mdi-book-open</v-icon>作品專區</v-list-item>
         </v-list-item-content>
         <v-list-item-content>
-          <v-list-item><router-link to="/question">常見問題</router-link></v-list-item>
+          <v-list-item @click="sheet = !sheet" :ripple="false" to="/question"><v-icon class="mr-3">mdi-comment-question-outline</v-icon>常見問題</v-list-item>
         </v-list-item-content>
         <v-list-item-content>
-          <v-list-item>客製專區</v-list-item>
+          <v-list-item><v-icon class="mr-3">mdi-shopping-outline</v-icon>客製專區</v-list-item>
         </v-list-item-content>
         <v-list-item-content>
-          <v-list-item><router-link to="/store">店家資訊</router-link></v-list-item>
+          <v-list-item @click="sheet = !sheet" :ripple="false" to="/store"><v-icon class="mr-3">mdi-store-outline</v-icon> 店家資訊</v-list-item>
         </v-list-item-content>
         </v-list>
         <v-btn
-          class="mt-6"
+          class="mt-6 close"
           text
           color="error"
           @click="sheet = !sheet"
+          :ripple="false"
+          plain="true"
+          x-large
+          style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);"
         >
-          關閉
+          <v-icon>
+            mdi-window-close
+          </v-icon>
+        </v-btn>
+        <v-btn
+          text
+          color="primary"
+          @click="sheet = !sheet"
+          :ripple="false"
+          plain="true"
+          x-large
+          style="position: absolute; bottom: 20px; left: 40%; transform: translateX(-50%);"
+          to="/"
+        >
+        <v-icon>
+          mdi-home
+        </v-icon>
         </v-btn>
         </v-sheet>
       </v-bottom-sheet>
@@ -191,6 +229,9 @@ export default {
 // .animation-enter-active {
 //   animation: thisOne 1.2s steps(24);
 // }
+.v-list-item__icon {
+  min-width: 360px;
+}
 
 .router {
   position: absolute;

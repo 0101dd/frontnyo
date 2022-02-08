@@ -2,7 +2,7 @@
 <template>
 <v-app style="overflow: hidden;">
   <div id="maobi">
-    <div id="router-ink2"></div>
+    <div id="router-ink2" style="top: 10%;"></div>
     <div class="title-picture">
       <img
         src="../assets/pomo.png"
@@ -72,48 +72,62 @@
         </div>
       </div>
       <h1 class="my-16 t5">好筆的條件</h1>
-      <div class="row flex-column flex-sm-row">
-        <div class="col-md-5 col">
-          <h3>尖：筆尖鋒利</h3>
-          <p class="mt-5">選購新筆時，可以觀察筆的末端是否尖銳，尚未開筆的新筆，筆毛有膠聚合，很容易分辨，如果是已經用過的舊筆，將筆毛浸濕後再聚攏，也可看出筆尖是否依舊鋒利。</p>
-          <p>好的毛料配上好工藝，才能打造如刀般銳利的筆尖，有些好筆，即使是大楷，也可以拿來寫小字，就是因為筆夠尖。為什麼筆的末端尖才是好筆？因為寫字鋒稜易出，更能呈現書寫者的精神跟風采</p>
+      <div class="row">
+        <v-spacer></v-spacer>
+        <div class="col-md-8 col-12 text-center">
+          <h3>尖 / 筆尖鋒利</h3>
+          <p class="mt-5 text-center">選購新筆時，可以觀察筆的末端是否尖銳，尚未開筆的新筆，筆毛有膠聚合，很容易分辨，如果是已經用過的舊筆，將筆毛浸濕後再聚攏，也可看出筆尖是否依舊鋒利。</p>
+          <p class="mb-16 text-center">好的毛料配上好工藝，才能打造如刀般銳利的筆尖，有些好筆，即使是大楷，也可以拿來寫小字，就是因為筆夠尖。為什麼筆的末端尖才是好筆？因為寫字鋒稜易出，更能呈現書寫者的精神跟風采。</p>
         </div>
         <v-spacer></v-spacer>
-        <div class="col-md-5 col">
-          <h3>健：筆腰彈力</h3>
-          <p class="mt-5">寫字時將筆毫重壓後提起，筆毛會逐漸恢復原狀，以便書寫者下一個動作，當筆的彈力剛剛好時，就能運筆自如。</p>
-          <p>筆腰的彈力過與不及都不好，如果彈力太強，一下筆就回復原樣，書寫者很難保持每一筆畫間的流暢性，如果彈力太弱，下筆後筆毛變形回不來，一樣很難好好寫字。</p>
-        </div>
       </div>
-      <div class="row flex-column flex-sm-row">
-        <div class="col-md-5 col">
-          <h3>圓：筆肚渾圓</h3>
-          <p class="mt-5">買筆時觀察新筆的筆毫是否渾厚圓滿，一支筆肚渾圓的筆，表示毫毛豐足，沾墨後可充分發揮筆力，運筆自在如意，得心應手。</p>
+      <div class="row">
+        <v-spacer></v-spacer>
+        <div class="col-md-8 col-12 text-center">
+          <h3>健 / 筆腰彈力</h3>
+          <p class="mt-5 mb-16 text-center">寫字時將筆毫重壓後提起，筆毛會逐漸恢復原狀，以便書寫者下一個動作，當筆的彈力剛剛好時，就能運筆自如。筆腰的彈力過與不及都不好，如果彈力太強，一下筆就回復原樣，書寫者很難保持每一筆畫間的流暢性，如果彈力太弱，下筆後筆毛變形回不來，一樣很難好好寫字。</p>
         </div>
         <v-spacer></v-spacer>
-        <div class="col-md-5 col">
-          <h3>齊: 筆尖平齊</h3>
-          <p class="mt-5">開筆前看筆尖是否鋒利，開筆後把筆沾濕壓平，筆毛長短一致，平整如線，就是一支有「齊」的筆。筆尖平整的筆，寫字時筆毛受力均勻，可以發揮萬毫齊力的運筆氣勢。</p>
+      </div>
+      <div class="row">
+        <v-spacer></v-spacer>
+        <div class="col-md-8 col-12 text-center">
+          <h3>圓 / 筆肚渾圓</h3>
+          <p class="mt-5 mb-16 text-center">買筆時觀察新筆的筆毫是否渾厚圓滿，一支筆肚渾圓的筆，表示毫毛豐足，沾墨後可充分發揮筆力，運筆自在如意，得心應手。</p>
         </div>
+        <v-spacer></v-spacer>
+      </div>
+      <div class="row">
+        <v-spacer></v-spacer>
+        <div class="col-md-8 col-12 text-center">
+          <h3>齊 / 筆尖平齊</h3>
+          <p class="mt-5 mb-16 text-center">開筆前看筆尖是否鋒利，開筆後把筆沾濕壓平，筆毛長短一致，平整如線，就是一支有「齊」的筆。筆尖平整的筆，寫字時筆毛受力均勻，可以發揮萬毫齊力的運筆氣勢。</p>
+        </div>
+        <v-spacer></v-spacer>
       </div>
       <h1 class="my-16">如何保養毛筆</h1>
-      <div class="row flex-column flex-sm-row">
-        <div class="col-md-5 col">
+      <div class="row flex-wrap">
+        <v-spacer></v-spacer>
+        <div class="col-md-8 col text-center">
           <h3>新毛筆如何開筆？</h3>
           <p class="mt-5">1. 一手拿筆桿，將筆尖放在另一手上。</p>
           <p>2. 用拇指與食指，慢慢把筆從筆尖往筆根處壓開，開筆不需全開，開7成即可。開筆過程中如有短小雜毛撢出，是正常現象。</p>
           <p>3. 在水洗或任何含水容器中，把筆上的殘膠洗掉。</p>
-          <p>4. 用厚紙巾擦乾筆毛，沾墨汁即可開始書寫了。</p>
+          <p class="mb-16">4. 用厚紙巾擦乾筆毛，沾墨汁即可開始書寫了。</p>
         </div>
         <v-spacer></v-spacer>
-        <div class="col-md-5 col">
-          <h3>毛筆寫完如何清洗？</h3>
-          <p class="mt-5">毛筆用完之後，請清洗乾淨，不洗筆任由墨汁殘留，會導致筆毛變乾、變硬，不僅下次要寫時很難處理，更會大幅影響毛筆的使用壽命。</p>
-          <p>重要提醒：不可用清水以外的清潔劑清洗，會造成筆毛變質</p>
-          <p>1. 洗筆時維持筆尖朝下的方向，切記不可倒拿毛筆沖洗筆毛，會導致筆頭脫膠掉落。</p>
-          <p>2. 打開水龍頭讓水流順著筆桿到筆毛，用手指輕壓筆毛，幫助殘墨流出。</p>
-          <p>3. 用手指輕撥，當滲出的水接近透明，沒有明顯墨色時，即可結束沖洗。</p>
-          <p>4. 最後先輕壓擠出筆毛中的水分，再用厚紙巾或乾布，順著毛向吸乾筆毛水分，掛在筆架上自然陰乾。</p>
+        <div class="row">
+          <v-spacer></v-spacer>
+          <div class="col-md-8 col text-center">
+            <h3>毛筆寫完如何清洗？</h3>
+            <p class="mt-5">毛筆用完之後，請清洗乾淨，不洗筆任由墨汁殘留，會導致筆毛變乾、變硬，不僅下次要寫時很難處理，更會大幅影響毛筆的使用壽命。</p>
+            <p>重要提醒：不可用清水以外的清潔劑清洗，會造成筆毛變質</p>
+            <p>1. 洗筆時維持筆尖朝下的方向，切記不可倒拿毛筆沖洗筆毛，會導致筆頭脫膠掉落。</p>
+            <p>2. 打開水龍頭讓水流順著筆桿到筆毛，用手指輕壓筆毛，幫助殘墨流出。</p>
+            <p>3. 用手指輕撥，當滲出的水接近透明，沒有明顯墨色時，即可結束沖洗。</p>
+            <p class="mb-16">4. 最後先輕壓擠出筆毛中的水分，再用厚紙巾或乾布，順著毛向吸乾筆毛水分，掛在筆架上自然陰乾。</p>
+          </div>
+          <v-spacer></v-spacer>
         </div>
       </div>
     </div>
@@ -204,7 +218,7 @@ h3, h4 {
   display: inline;
 }
 .row {
-  .col {
+  .col-12, .col {
     h3 {
       position: relative;
       &::before {

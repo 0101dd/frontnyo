@@ -3,6 +3,7 @@
   <!-- <RouterTransition></RouterTransition> -->
   <div id="question">
     <div id="router-ink"></div>
+    <h1>常見問題</h1>
     <v-container>
       <div class="list">
         <v-expansion-panels focusable multiple>
@@ -56,6 +57,25 @@ export default {
   background:
   linear-gradient(transparent,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.35)),
   url('https://theme.npm.edu.tw/selection/att/collection/04000980/17010201.jpg') no-repeat center/cover;
+}
+
+h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  &::before {
+    content: '';
+    position: absolute;
+    width: 112%;
+    height: 45%;
+    left: -5%;
+    bottom: 18%;
+    background: var(--info);
+    // background: linear-gradient(#ded7b94f, #ded7b94f);
+    // filter: blur(20px);
+    z-index: -1;
+  }
 }
 
 .list {

@@ -9,7 +9,7 @@
       </div>
     </div>
     <!-- 影片遮罩 6s -->
-    <video src="../assets/Sequence 01.mp4" autoplay muted loop></video>
+    <!-- <video src="../assets/Sequence 01.mp4" autoplay muted loop></video> -->
     <!-- 精選字帖-------------------------- -->
     <div class="book">
       <kinesis-container>
