@@ -1,10 +1,13 @@
 <template>
   <v-app style="background: var(--accent);">
     <div id="dutong">
+      <div class="bg">
       <img
         src="https://upload.cc/i1/2022/01/31/W0dz6D.jpg"
-        height="100vh"
+        style="height: 100vh;"
       >
+      </div>
+      <img src="../assets/shan-bejing.png" class="shan-bejing">
       <div class="container">
         <div class="content">
           <h2>張旭</h2>
@@ -67,5 +70,19 @@ export default {
 
 p {
   text-indent: 2.5rem;
+}
+
+.bg {
+  background: linear-gradient(-165deg, var(--accent) 2%, var(--primary) 70%);
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+}
+.shan-bejing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 0;
 }
 </style>

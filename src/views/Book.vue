@@ -20,6 +20,7 @@
             <v-img
               :src="card.src"
               width="100%"
+              height="200px"
               fluid
             ></v-img></router-link>
             <v-card-text>

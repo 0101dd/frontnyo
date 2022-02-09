@@ -1,9 +1,17 @@
 <template>
   <v-app style="background: var(--accent);">
     <div id="hanshi">
-      <v-carousel height="100vh">
-        <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" height="100%"></v-carousel-item>
-      </v-carousel>
+      <!-- swiper ------------------------------------ -->
+      <swiper class="swiper" :options="swiperOption">
+        <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
+          <img :src="item.src" height="100%">
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
+      <!-- ---------------------------------------------- -->
+      <img src="../assets/shan2-beijing.png" class="shan2-bejing">
       <div class="container">
         <div class="content">
           <h2>蘇軾</h2>
@@ -50,10 +58,14 @@
 
 <script>
 import MovePosition from '../components/MovePosition.vue'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 
 export default {
   components: {
-    MovePosition
+    MovePosition,
+    Swiper,
+    SwiperSlide
   },
   data () {
     return {
@@ -73,7 +85,17 @@ export default {
         { src: 'https://theme.npm.edu.tw/selection/att/collection/04001005/17010135.jpg' },
         { src: 'https://theme.npm.edu.tw/selection/att/collection/04001005/17010134.jpg' },
         { src: 'https://theme.npm.edu.tw/selection/att/collection/04001005/17009562.jpg' }
-      ]
+      ],
+      swiperOption: {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction'
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }
     }
   }
 }
@@ -92,5 +114,13 @@ export default {
 
 p {
   text-indent: 2.5rem;
+}
+
+.shan2-bejing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 0;
 }
 </style>

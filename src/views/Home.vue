@@ -8,8 +8,8 @@
         <p id="target" v-split-characters>書法是一種書寫的藝術，書法縱向穿透兩個層面：「使用」與「審美」；橫向跨越文字兩個層面：「文字」、「繪畫」。書法除了是書法家用以創作的主要表現和作品形式，也是一種研究書寫者心理與性格的工具。各地域依其在地歷史與文化發展出自有的書法特色，而書法至今仍廣泛應用於生活與藝術文化等層面。</p>
       </div>
     </div>
-    <!-- 影片遮罩 6s -->
-    <!-- <video src="../assets/Sequence 01.mp4" autoplay muted loop></video> -->
+    <!-- 影片遮罩  -->
+    <video src="../assets/Sequence 02.mp4" autoplay muted></video>
     <!-- 精選字帖-------------------------- -->
     <div class="book">
       <kinesis-container>
@@ -151,12 +151,12 @@ export default {
         from: 'random'
       },
       repeatDelay: 4,
-      // delay: 1,
+      delay: 2,
       opacity: 0,
       x: '+=random(-500,500)',
       y: '+=random(-500,500)',
       z: '+=random(-500,500)',
-      repeat: -1,
+      // repeat: -1,
       duration: 2,
       scale: 'random(-1,2)'
     })
@@ -241,6 +241,20 @@ video {
   z-index: 1;
 }
 /* 精選字帖------------------------------------- */
+h1 {
+  position: relative;
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+  background: url(../assets/circle.png) no-repeat center / cover;
+  width: 50px;
+  height: 50px;
+}
+
 .he {
   position: absolute;
   right: 3%;

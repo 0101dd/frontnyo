@@ -1,5 +1,8 @@
 <template>
 <div class="button">
+  <v-icon
+      color="primary"
+    >mdi-chevron-left</v-icon>
   <a href="#" @click="back" class="move-back">
     <v-icon
       color="accent"
@@ -38,7 +41,7 @@ export default {
 
   .button {
     position: fixed;
-    bottom: 0;
+    bottom: 400px;
     right: 0;
     height: 100px;
     width: 100px;
@@ -50,11 +53,16 @@ export default {
     transition: 0.7s;
   }
 
+  .button:hover>.mdi-chevron-left {
+    opacity: 0;
+    transition: 0.5s;
+  }
+
   .move-back {
-    bottom: 20px;
+    bottom: 420px;
   }
 
   .move-top {
-    bottom: 80px;
+    bottom: 480px;
   }
 </style>

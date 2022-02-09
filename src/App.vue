@@ -5,9 +5,9 @@
     elevation="0"
     color="transparent"
     style="width: 100vw;"
-    class="d-flex justify-end">
-    <!-- <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
-    </v-img></router-link> -->
+    class="d-flex justify- space-between">
+    <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
+    </v-img></router-link>
       <ul>
         <li><router-link to="/book">精選字帖</router-link></li>
         <v-menu
@@ -72,8 +72,8 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer; position: absolute; left: -40%; top: 10px;">
-    </v-img></router-link>
+      <!-- <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer; position: absolute; left: -40%; top: 10px;">
+    </v-img></router-link> -->
     </v-app-bar>
     <!-- --------------------------------------------------------- -->
     <div id="menu-sm" style="position: relative;">
@@ -163,14 +163,11 @@
       </v-bottom-sheet>
   </div>
     <!-- --------------------------------------------------------- -->
-      <v-main>
-        <transition name="animation">
-          <router-view
-          >
-          </router-view>
-        </transition>
-            <!-- <vue-page-transition> -->
-        <!-- </vue-page-transition> -->
+      <v-main><vue-page-transition>
+        <router-view></router-view>
+      </vue-page-transition>
+        <!-- <transition name="animation">
+        </transition> -->
       </v-main>
     <!-- footer---------------------- -->
     <v-footer
@@ -325,6 +322,9 @@ ul {
 
 .account-outline {
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: -1120px;
   &:hover {
     transition: 0.5s;
     transform: translateY(-4px);

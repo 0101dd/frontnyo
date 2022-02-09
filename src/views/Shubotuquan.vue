@@ -1,9 +1,17 @@
 <template>
   <v-app style="background: var(--accent);">
     <div id="shubotuquan">
-      <v-carousel height="100vh">
-        <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" height="100%" width="100vw"></v-carousel-item>
-      </v-carousel>
+      <!-- swiper ------------------------------------ -->
+      <swiper class="swiper" :options="swiperOption">
+        <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
+          <img :src="item.src" height="100%">
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
+      <!-- ---------------------------------------------- -->
+      <img src="../assets/yu-bejing.png" class="yu-bejing">
       <div class="container">
         <div class="content">
           <h3>元 西元1279-1368</h3>
@@ -37,10 +45,14 @@
 
 <script>
 import MovePosition from '../components/MovePosition.vue'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 
 export default {
   components: {
-    MovePosition
+    MovePosition,
+    Swiper,
+    SwiperSlide
   },
   data () {
     return {
@@ -52,7 +64,17 @@ export default {
         { src: 'https://theme.npm.edu.tw/selection/att/collection/04001012/17010156.jpg' },
         { src: 'https://theme.npm.edu.tw/selection/att/collection/04001012/17010155.jpg' },
         { src: 'https://theme.npm.edu.tw/selection/att/collection/04001012/17010154.jpg' }
-      ]
+      ],
+      swiperOption: {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction'
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }
     }
   }
 }
@@ -71,5 +93,12 @@ export default {
 
 p {
   text-indent: 2.5rem;
+}
+.yu-bejing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 0;
 }
 </style>
