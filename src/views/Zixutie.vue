@@ -16,8 +16,8 @@
         <div class="content">
           <h3>唐 西元618-907</h3>
           <h2>懷素</h2>
-          <h1>自序帖</h1>
-          <h5>卷 紙本 縱：28.3公分 橫：755公分</h5>
+          <h1 class="d-inline">自序帖</h1>
+          <h5 class="mb-5">卷 紙本 縱：28.3公分 橫：755公分</h5>
           <hr>
           <div class="row">
             <v-spacer></v-spacer>
@@ -140,10 +140,6 @@ h3 {
     width: 100%;
     background: var(--info);
   }
-}
-
-h5 {
-  margin-bottom: 10px;
 }
 
 p {

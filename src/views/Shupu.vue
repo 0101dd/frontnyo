@@ -15,8 +15,8 @@
       <div class="container">
         <div class="content">
           <h2>孫過庭</h2>
-          <h1>書譜</h1>
-          <h5>卷 紙本 縱：26.5公分 橫：900.8公分</h5>
+          <h1 class="d-inline">書譜</h1>
+          <h5 class="mb-5">卷 紙本 縱：26.5公分 橫：900.8公分</h5>
           <hr>
           <div class="row">
             <div class="col-sm-4 col-12" >
@@ -173,10 +173,6 @@ export default {
 
 p {
   text-indent: 2.5rem;
-}
-
-h5 {
-  margin-bottom: 10px;
 }
 
 h3 {

@@ -45,10 +45,11 @@ h1 {
   position: relative;
 }
 
+// circle --------------------------------------------
 h1::before {
   content: '';
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   right: -20px;
   background: url(../assets/circle.png) no-repeat center / cover;
   width: 50px;
@@ -86,6 +87,8 @@ h5 {
 }
 
 hr {
+  width: 70%;
+  margin: 0 auto;
   margin-bottom: 20px;
   border: 1px solid #00000052;
 }
@@ -213,8 +216,10 @@ hr {
   }
 }
 
+
 .swiper-slide.swiper-slide-active {
-  background: linear-gradient(-165deg, var(--accent) 2%, var(--primary) 70%) !important;
+  // background: linear-gradient(180deg, var(--accent) 2%, var(--primary) 70%) !important;
+  background: #665b44 !important;
 }
 
 .swiper-button-prev, .swiper-button-next {

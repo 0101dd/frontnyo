@@ -2,8 +2,8 @@
   <v-app>
     <v-app-bar
     fixed
-    elevation="0"
-    color="transparent"
+    elevation="2"
+    color="#c4a66f"
     style="width: 100vw;"
     class="d-flex justify- space-between">
     <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
@@ -205,9 +205,7 @@
 </template>
 
 <script>
-
 export default {
-
   data () {
     return {
       sheet: false,
@@ -229,13 +227,11 @@ export default {
 .v-list-item__icon {
   min-width: 360px;
 }
-
 .router {
   position: absolute;
   left: 0;
   top: 0;
 }
-
 @keyframes thisOne {
   0% {
     -webkit-transform: translateY(-50%) translateX(-2%);
@@ -259,7 +255,6 @@ export default {
     transform: translateY(-50%) translateX(-2%);
   }
 }
-
 ul {
   li {
     display: inline;
@@ -291,17 +286,14 @@ ul {
     }
   }
 }
-
 .v-card__title {
   color: white;
   background: var(--secondary);
 }
-
 .v-card__text {
   color: white;
   background: var(--primary);
 }
-
 .v-menu__content {
   min-width: 94px;
   top: 55px !important;
@@ -319,7 +311,6 @@ ul {
       }
   }
 }
-
 .account-outline {
   cursor: pointer;
   position: absolute;
@@ -330,7 +321,6 @@ ul {
     transform: translateY(-4px);
   }
 }
-
 .v-list-item {
   min-height: 0px
 }
