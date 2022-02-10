@@ -4,17 +4,25 @@
       <!-- swiper ------------------------------------ -->
       <swiper class="swiper" :options="swiperOption">
         <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
-          <img :src="item.src" height="100%">
+          <img :src="item.src" height="100%" style="box-shadow: inset 1px 1px 10px black;">
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
+      <swiper class="swiper" :options="swiperOption" style="position: absolute; top: 0;">
+      <swiper-slide></swiper-slide>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+        <img src="../assets/hongyun.jpg" class="hongyun">
+        <img src="../assets/hongyun.jpg" class="hongyun2">
+      </swiper>
+
       <!-- ---------------------------------------------- -->
       <img src="../assets/zhuzi-beijing.png" class="zhuzi-beijing">
+      <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
         <div class="content">
-          <h3>唐 西元618-907</h3>
           <h2>懷素</h2>
           <h1 class="d-inline">自序帖</h1>
           <h5 class="mb-5">卷 紙本 縱：28.3公分 橫：755公分</h5>
@@ -131,33 +139,17 @@ h3 {
   position: relative;
   display: inline-block;
   margin-bottom: 20px;
-  &::before {
-    content:'';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    background: var(--info);
-  }
 }
 
 p {
   text-indent: 2.5rem;
 }
-.col-sm-6 {
-  p {
-    padding: 20px;
-  }
-}
 
-.col-sm-6:nth-child(even) {
-  padding-top: 55px;
-}
 .zhuzi-beijing {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
 }
+
 </style>

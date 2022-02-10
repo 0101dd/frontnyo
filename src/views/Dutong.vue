@@ -8,6 +8,7 @@
       >
       </div>
       <img src="../assets/shan-bejing.png" class="shan-bejing">
+      <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
         <div class="content">
           <h2>張旭</h2>

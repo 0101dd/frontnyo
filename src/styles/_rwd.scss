@@ -30,6 +30,9 @@
 
 @include xs {
   // app-bar ------------------------------------
+  .app-bar {
+    height: 0 !important;
+  }
   .v-toolbar__content {
     display: none
   }
@@ -247,7 +250,7 @@
       height: 70% !important;
     }
   }
-  // [book] ---------------------------
+  // [book]... ---------------------------
   #book {
     .container {
       height: 100%;
@@ -258,6 +261,9 @@
         justify-content: center;
       }
     }
+  }
+  .he2, .laohu-bejing, .meihua-bejing, .mudan, .shan2-bejing, .shan-bejing, .yu-bejing, .zhuzi-beijing {
+    display: none;
   }
   // [shupu...] -------------------------
   #shupu, #zixutie, #kuaixue, #hanshi, #nongfangshi, #shubotuquan {

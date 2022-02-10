@@ -5,7 +5,7 @@
     elevation="2"
     color="#c4a66f"
     style="width: 100vw;"
-    class="d-flex justify- space-between">
+    class="app-bar d-flex justify- space-between">
     <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
     </v-img></router-link>
       <ul>
@@ -179,7 +179,7 @@
       tile
       >
       <v-card-title>
-        <strong class="subheading">Get connected with us on social networks!</strong>
+        <strong class="subheading">這是一條夫特文字😎</strong>
 
         <v-spacer></v-spacer>
 
@@ -197,7 +197,7 @@
       </v-card-title>
 
       <v-card-text class="py-2 text-center white--text">
-        {{ new Date().getFullYear() }} / {{ new Date().getMonth() + 1}} — <strong>dd0101</strong>
+        {{ new Date().getFullYear() }} — <strong>dd0101</strong>
       </v-card-text>
     </v-card>
     </v-footer>
@@ -232,29 +232,7 @@ export default {
   left: 0;
   top: 0;
 }
-@keyframes thisOne {
-  0% {
-    -webkit-transform: translateY(-50%) translateX(-2%);
-    -moz-transform: translateY(-50%) translateX(-2%);
-    -ms-transform: translateY(-50%) translateX(-2%);
-    -o-transform: translateY(-50%) translateX(-2%);
-    transform: translateY(-50%) translateX(-2%);
-  }
-  50% {
-    -webkit-transform: translateY(-50%) translateX(-98%);
-    -moz-transform: translateY(-50%) translateX(-98%);
-    -ms-transform: translateY(-50%) translateX(-98%);
-    -o-transform: translateY(-50%) translateX(-98%);
-    transform: translateY(-50%) translateX(-98%);
-  }
-  100% {
-    -webkit-transform: translateY(-50%) translateX(-2%);
-    -moz-transform: translateY(-50%) translateX(-2%);
-    -ms-transform: translateY(-50%) translateX(-2%);
-    -o-transform: translateY(-50%) translateX(-2%);
-    transform: translateY(-50%) translateX(-2%);
-  }
-}
+
 ul {
   li {
     display: inline;
@@ -301,7 +279,7 @@ ul {
   transform-origin: left top;
   z-index: 8;
   .v-list {
-      background-color: #ffffff60;
+      background-color: #ffffff;
       .v-list-item__title {
         color: black;
         cursor: pointer;

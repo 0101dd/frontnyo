@@ -209,6 +209,18 @@ hr {
     margin-top: -80px;
   }
 }
+// book... ----------------------------------------
+
+.wenlu {
+  position: fixed;
+  bottom: -100px;
+  right: -50px;
+  height: 60%;
+  z-index: 0;
+  transform: rotate(-30deg);
+  mix-blend-mode: overlay;
+}
+
 // carousel swiper ------------------------------------
 #shupu, #zixutie, #kuaixue, #hanshi, #nongfangshi, #shubotuquan {
   .v-carousel__controls {
@@ -219,11 +231,37 @@ hr {
 
 .swiper-slide.swiper-slide-active {
   // background: linear-gradient(180deg, var(--accent) 2%, var(--primary) 70%) !important;
-  background: #665b44 !important;
+  background: transparent !important;
 }
 
 .swiper-button-prev, .swiper-button-next {
-  color: var(--accent) !important;
+  // color: var(--accent) !important;
+  background: url(../assets/menkou.png) no-repeat center / 80%;
+  width: 100px;
+  height: 100px;
+}
+
+.swiper-button-prev {
+  left: 140px;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgb(161, 49, 49));
+    transition: 0.5s;
+  }
+}
+.swiper-button-next {
+  right: 140px;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgb(161, 49, 49));
+    transition: 0.5s;
+  }
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  display: none;
 }
 .swiper {
   height: 100vh;
@@ -237,4 +275,22 @@ hr {
     font-weight: bold;
     background-color: white;
   }
+}
+
+.hongyun{
+  position: absolute;
+  left: -430px;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.561);
+}
+
+.hongyun2 {
+  position: fixed;
+  right: -430px;
+  top: 0;
+  height: 100vh;
+  z-index: 2;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.561);
 }

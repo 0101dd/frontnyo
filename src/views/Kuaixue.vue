@@ -12,6 +12,7 @@
       </swiper>
       <!-- ---------------------------------------------- -->
       <img src="../assets/mudan-beijing.png" class="mudan">
+      <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
         <div class="content">
           <h3>晉 西元265-420</h3>
