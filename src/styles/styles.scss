@@ -87,7 +87,7 @@ h5 {
 }
 
 hr {
-  width: 70%;
+  width: 55%;
   margin: 0 auto;
   margin-bottom: 20px;
   border: 1px solid #00000052;
@@ -234,7 +234,8 @@ hr {
   background: transparent !important;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev, .swiper-button-next,
+.swiper-button-prev2, .swiper-button-next2 {
   // color: var(--accent) !important;
   background: url(../assets/menkou.png) no-repeat center / 80%;
   width: 100px;
@@ -242,20 +243,20 @@ hr {
 }
 
 .swiper-button-prev {
-  left: 140px;
+  left: 210px;
   transition: 0.5s;
   &:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 10px rgb(161, 49, 49));
+    filter: drop-shadow(0 0 10px var(--accent));
     transition: 0.5s;
   }
 }
 .swiper-button-next {
-  right: 140px;
+  right: 215px;
   transition: 0.5s;
   &:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 10px rgb(161, 49, 49));
+    filter: drop-shadow(0 0 10px var(--accent));
     transition: 0.5s;
   }
 }
@@ -279,7 +280,7 @@ hr {
 
 .hongyun{
   position: absolute;
-  left: -430px;
+  left: -360px;
   top: 0;
   height: 100vh;
   z-index: 1;
@@ -288,7 +289,7 @@ hr {
 
 .hongyun2 {
   position: fixed;
-  right: -430px;
+  right: -360px;
   top: 0;
   height: 100vh;
   z-index: 2;

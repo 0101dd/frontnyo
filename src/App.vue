@@ -242,6 +242,12 @@ ul {
       font-weight: bolder;
       letter-spacing: 2.5px;
       position: relative;
+      top: 0;
+      transition: 0.5s;
+      &:hover {
+        transition: 0.5s;
+        top: -6px;
+      }
       &::before {
         content: "";
         width: 0px;
@@ -249,7 +255,7 @@ ul {
         position: absolute;
         bottom: -8px;
         left: -4px;
-        background: var(--info);
+        background: var(--error);
         opacity: 0;
         transition: 0.5s;
       }
@@ -257,9 +263,6 @@ ul {
         opacity: 1;
         width: 80px;
         transition: 0.5s;
-      }
-      &:hover {
-        bottom: 4px;
       }
     }
   }
@@ -296,7 +299,7 @@ ul {
   right: -1120px;
   &:hover {
     transition: 0.5s;
-    transform: translateY(-4px);
+    transform: translateY(-6px);
   }
 }
 .v-list-item {
