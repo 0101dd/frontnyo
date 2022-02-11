@@ -6,6 +6,10 @@
           src="https://upload.cc/i1/2022/01/31/W0dz6D.jpg"
           style="height: 100vh;"
         >
+        <img src="../assets/hongyun.jpg" class="hongyun">
+        <img src="../assets/hongyun.jpg" class="hongyun2">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
       <img src="../assets/shan-bejing.png" class="shan-bejing">
       <img src="../assets/wenlu.png" class="wenlu">
@@ -82,6 +86,7 @@ p {
   // background: linear-gradient(-165deg, var(--accent) 2%, var(--primary) 70%);
   background: #665b44;
   width: 100vw;
+  height: 100vh;
   position: relative;
   z-index: 1;
 }

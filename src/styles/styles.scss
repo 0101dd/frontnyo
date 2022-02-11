@@ -267,7 +267,6 @@ hr {
 .swiper {
   height: 100vh;
   width: 100%;
-
   .swiper-slide {
     display: flex;
     justify-content: center;
@@ -278,20 +277,101 @@ hr {
   }
 }
 
+.swiper-container {
+  bottom: -18px;
+}
+
 .hongyun{
   position: absolute;
   left: -360px;
-  top: 0;
+  bottom: 0;
   height: 100vh;
   z-index: 1;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.561);
 }
 
 .hongyun2 {
-  position: fixed;
+  position: absolute;
   right: -360px;
-  top: 0;
+  bottom: 0;
   height: 100vh;
   z-index: 2;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.561);
+}
+
+// 字帖 swiper 調整
+#shupu {
+  .hongyun {
+    left: -382px;
+  }
+  .hongyun2 {
+    right: -382px;
+  }
+  .swiper-button-prev {
+    left: 190px;
+  }
+  .swiper-button-next {
+    right: 190px;
+  }
+}
+
+#kuaixue {
+  .hongyun {
+    left: -245px;
+  }
+  .hongyun2 {
+    right: -245px;
+  }
+  .swiper-button-prev {
+    left: 325px;
+  }
+  .swiper-button-next {
+    right: 325px;
+  }
+}
+#hanshi {
+  .hongyun {
+    left: -322px;
+  }
+  .hongyun2 {
+    right: -322px;
+  }
+  .swiper-button-prev {
+    left: 250px;
+  }
+  .swiper-button-next {
+    right: 250px;
+  }
+}
+#dutong {
+  .hongyun {
+    left: -330px;
+  }
+  .hongyun2 {
+    right: -330px;
+  }
+  .swiper-button-prev {
+    left: 240px;
+    pointer-events: none;
+  }
+  .swiper-button-next {
+    right: 240px;
+    pointer-events: none;
+  }
+}
+#huaqi {
+  .hongyun {
+    left: -305px;
+  }
+  .hongyun2 {
+    right: -305px;
+  }
+  .swiper-button-prev {
+    left: 265px;
+    pointer-events: none;
+  }
+  .swiper-button-next {
+    right: 265px;
+    pointer-events: none;
+  }
 }

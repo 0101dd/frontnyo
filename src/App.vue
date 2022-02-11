@@ -8,6 +8,10 @@
     class="app-bar d-flex justify- space-between">
     <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
     </v-img></router-link>
+    <ul>
+      <li>這裡要寫個什麼，記得要寫個什麼，前面還要放個什麼</li>
+      <li> ｜</li>
+    </ul>
       <ul>
         <li><router-link to="/book">精選字帖</router-link></li>
         <v-menu
@@ -296,7 +300,7 @@ ul {
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: -1120px;
+  right: -700px;
   &:hover {
     transition: 0.5s;
     transform: translateY(-6px);

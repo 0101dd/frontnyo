@@ -24,7 +24,8 @@
               fluid
             ></v-img></router-link>
             <v-card-text>
-              <p>{{ card.title }} &emsp; {{ card.author }}</p>
+              <h6 style="font-weight: bold; font-size: 1.1rem; color: var(--primary);">{{ card.title }}</h6>
+              <p> {{ card.author }}</p>
             </v-card-text>
             <v-card-actions>
               <v-btn icon class="btn">

@@ -6,6 +6,10 @@
         src="https://theme.npm.edu.tw/selection/att/collection/04001006/%E5%9B%9B-1.jpg"
         style="height: 100vh;"
       >
+      <img src="../assets/hongyun.jpg" class="hongyun">
+        <img src="../assets/hongyun.jpg" class="hongyun2">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
       <img src="../assets/meihua-beijing.png" class="meihua-bejing">
       <img src="../assets/wenlu.png" class="wenlu">
@@ -29,7 +33,7 @@
         <div class="origin-text">
           <h3>花氣熏人帖原文</h3>
           <div class="row flex-wrap">
-            <div class="mx-auto col-7">
+            <div class="mx-auto col-6">
               <p class="pa-5">花氣薰人欲破禪，心情其實過中年。春來詩思何所似，八節灘頭上水船。</p>
             </div>
           </div>
@@ -37,12 +41,12 @@
         <div class="intro">
           <h3>花氣熏人帖介紹</h3>
           <div class="row">
-            <div class="mx-auto col-sm-8 col-12">
+            <div class="mx-auto col-sm-6 col-12">
               <p class="pa-5">"花氣薰人"是黃庭堅的小品之作，一首28個字的小詩，以隨意自在的筆法寫來，非常爛漫天真，在黃庭堅講求結構的書法中也是不可多見的好作品。「花氣薰人慾破禪，心情其實過中年，春來詩思何所似，八節灘頭上水船。」「花朵開放時的香氣薰來，仿佛使平日修行禪定的功夫都被破除了，過了中年竟然還有這樣為花感動的心情，到了春天，有著寫詩的念頭，卻又像一層一層逆水的灘頭，船要上行，何其艱難啊!」作者為了傳達自己對年齡、歲月、春天、生命創作許多複雜的經驗，寫了這首詩，也用最自然的方式來書寫，把黃庭堅平日嚴謹的中鋒線和草書中的宛轉結合起來，構成一幅完美的小品，是欣賞書法不可多得的佳作。作品上有南宋「緝熙殿寶」的印，入過南宋內府。也有清代朝鮮人安儀周的收藏印安歧(安儀周)是當時最著名的大收藏家。</p>
             </div>
           </div>
           <div class="row">
-            <div class="mx-auto col-sm-8 col-12">
+            <div class="mx-auto col-sm-6 col-12">
               <p class="pa-5">此帖筆勢蒼勁，拙勝於巧，肥筆有骨，瘦筆有肉，「變態縱橫，勁若飛動」。其美韻不亞於行楷書。「山谷書法，晚年大得藏真（懷素）三昧，此筆力恍惚，出神入鬼，謂之'草聖'宜焉！」（草書《李白憶舊遊詩卷》沈周題跋）此時黃庭堅的草書藝術已達到爐火純青的地步。此時草書書法，深得張旭，懷素草書飛動灑脫的神韻，而又有自己的風格。用筆緊峭，瘦勁奇崛，氣勢雄健，結體變化多端。</p>
             </div>
           </div>
@@ -81,6 +85,7 @@ p {
   // background: linear-gradient(-165deg, var(--accent) 2%, var(--primary) 70%);
   background: #665b44;
   width: 100vw;
+  height: 100vh;
   position: relative;
   z-index: 1;
 }

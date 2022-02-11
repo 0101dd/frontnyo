@@ -2,7 +2,7 @@
   <v-app style="background: var(--accent);">
     <div id="hanshi">
       <!-- swiper ------------------------------------ -->
-      <swiper class="swiper" style="background: var(--accent);" :options="swiperOption">
+      <swiper class="swiper" style="background: #8c3c31;" :options="swiperOption">
         <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
           <img :src="item.src" height="100%">
         </swiper-slide>

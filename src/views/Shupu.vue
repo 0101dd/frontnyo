@@ -1,29 +1,12 @@
 <template>
 <v-app style="background: var(--accent);">
-  <div id="shupu">
-      <!-- swiper ------------------------------------ -->
-      <swiper class="swiper" style="background: var(--accent);" :options="swiperOption">
-        <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
-          <img :src="item.src" height="100%">
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div slot="button-prev"></div>
-        <div slot="button-next"></div>
-      </swiper>
-      <swiper class="swiper" style="position: absolute; top: 0;">
-      <swiper-slide></swiper-slide>
-        <img src="../assets/hongyun.jpg" class="hongyun">
-        <img src="../assets/hongyun.jpg" class="hongyun2">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </swiper>
-      <!-- ---------------------------------------------- -->
+  <div id="shupu" style="margin-top: 64px;">
       <img src="../assets/he2.png" class="he2">
       <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
         <div class="content">
-          <h2>孫過庭</h2>
           <h1 class="d-inline">書譜</h1>
+          <h2 class="d-inline ml-16">孫過庭</h2>
           <h5 class="mb-5">卷 紙本 縱：26.5公分 橫：900.8公分</h5>
           <hr>
           <div class="row">
@@ -151,6 +134,23 @@
           </div>
         </div>
       </div>
+      <!-- swiper ------------------------------------ -->
+      <swiper class="swiper" style="background: #8c3c31;" :options="swiperOption">
+        <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
+          <img :src="item.src" height="100%">
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div slot="button-prev"></div>
+        <div slot="button-next"></div>
+      </swiper>
+      <swiper class="swiper" style="position: absolute; bottom: 0;">
+      <swiper-slide></swiper-slide>
+        <img src="../assets/hongyun.jpg" class="hongyun">
+        <img src="../assets/hongyun.jpg" class="hongyun2">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </swiper>
+      <!-- ---------------------------------------------- -->
       <MovePosition></MovePosition>
   </div>
 </v-app>
@@ -220,7 +220,7 @@ export default {
 
 .container {
   width: 70%;
-  height: 80%;
+  height: 88.5%;
   display: block;
 }
 

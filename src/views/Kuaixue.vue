@@ -1,30 +1,12 @@
 <template>
   <v-app style="background: var(--accent);">
-    <div id="kuaixue">
-      <!-- swiper ------------------------------------ -->
-      <swiper class="swiper" style="background: var(--accent);" :options="swiperOption">
-        <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
-          <img :src="item.src" height="100%">
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div slot="button-prev"></div>
-        <div slot="button-next"></div>
-      </swiper>
-      <swiper class="swiper" style="position: absolute; top: 0;">
-      <swiper-slide></swiper-slide>
-        <img src="../assets/hongyun.jpg" class="hongyun">
-        <img src="../assets/hongyun.jpg" class="hongyun2">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </swiper>
-      <!-- ---------------------------------------------- -->
+    <div id="kuaixue" style="margin-top: 64px;">
       <img src="../assets/mudan-beijing.png" class="mudan">
       <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
         <div class="content">
-          <h3>晉 西元265-420</h3>
-          <h2>王羲之</h2>
           <h1 class="d-inline">快雪時晴帖</h1>
+          <h2 class="d-inline ml-16">王羲之</h2>
           <h5 class="mb-5">冊 紙本 縱：23公分 橫：14.8公分</h5>
           <hr>
           <div class="row">
@@ -47,6 +29,23 @@
           </div>
         </div>
       </div>
+      <!-- swiper ------------------------------------ -->
+      <swiper class="swiper" style="background: #8c3c31;" :options="swiperOption">
+        <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
+          <img :src="item.src" height="100%">
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div slot="button-prev"></div>
+        <div slot="button-next"></div>
+      </swiper>
+      <swiper class="swiper" style="position: absolute; bottom: 0;">
+      <swiper-slide></swiper-slide>
+        <img src="../assets/hongyun.jpg" class="hongyun">
+        <img src="../assets/hongyun.jpg" class="hongyun2">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </swiper>
+      <!-- ---------------------------------------------- -->
       <MovePosition></MovePosition>
     </div>
   </v-app>
