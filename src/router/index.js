@@ -195,6 +195,44 @@ const routes = [
         }
       }
     ]
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: () => import(/* webpackChunkName: "admin" */ '../views/Admin.vue'),
+    meta: {
+      title: '管理｜書彙齋'
+      // transition: 'overlay-left-right'
+    },
+    children: [
+      {
+        path: 'adminPro',
+        name: 'AdminPro',
+        component: () => import(/* webpackChunkName: "admin" */ '../views/AdminPro.vue'),
+        meta: {
+          title: '會員管理｜書彙齋',
+          transition: 'overlay-left-right'
+        }
+      },
+      {
+        path: 'adminOrder',
+        name: 'AdminOrder',
+        component: () => import(/* webpackChunkName: "admin" */ '../views/AdminOrder.vue'),
+        meta: {
+          title: '訂單管理｜書彙齋',
+          transition: 'overlay-left-right'
+        }
+      },
+      {
+        path: 'adminQ',
+        name: 'AdminQ',
+        component: () => import(/* webpackChunkName: "admin" */ '../views/AdminQ.vue'),
+        meta: {
+          title: '常見問題管理｜書彙齋',
+          transition: 'overlay-left-right'
+        }
+      }
+    ]
   }
 ]
 

@@ -4,7 +4,7 @@
     <v-navigation-drawer v-model="drawer" app color="secondary">
       <v-list rounded class="text-center mt-16" style="color: var(--info);" flat>
         <v-list-item router-link to="/dashboard/pro" :ripple="false">
-            <v-list-item-title>會員主頁</v-list-item-title>
+            <v-list-item-title class="pro">會員主頁</v-list-item-title>
         </v-list-item>
         <v-list-item router-link to="/dashboard/order" :ripple="false">
             <v-list-item-title>訂單查詢</v-list-item-title>
@@ -29,6 +29,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.pro {
+  margin-top: 50px;
+}
 .v-list-item__title {
   background-color: var(--accent);
   padding: 10px 0;
@@ -39,7 +42,13 @@ export default {
   display: none;
 }
 
-.v-main {
-  padding: 0 !important;
+.v-navigation-drawer__content {
+  height: 80vw;
 }
+
+.v-main {
+  padding: 70px !important;
+  background: var(--accent);
+}
+
 </style>
