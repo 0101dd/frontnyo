@@ -101,7 +101,7 @@ export default {
         await this.api.post('/users', this.form)
         this.$swal({
           icon: 'success',
-          iconColor: '#D58E40',
+          iconColor: '#202938',
           title: '註冊成功',
           buttonsStyling: false,
           background: '#DED7B9',

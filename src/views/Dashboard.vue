@@ -42,6 +42,10 @@ export default {
   display: none;
 }
 
+.v-navigation-drawer {
+  top: 64px !important;
+}
+
 .v-navigation-drawer__content {
   height: 80vw;
 }

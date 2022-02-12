@@ -77,7 +77,7 @@
             <v-list-item :ripple="false" to="/register">註冊</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item v-if="user.isLogin"  :ripple="false">登出</v-list-item>
+            <v-list-item v-if="user.isLogin" :ripple="false" @click="logout">登出</v-list-item>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -226,6 +226,11 @@ export default {
         'mdi-linkedin',
         'mdi-instagram'
       ]
+    }
+  },
+  methods: {
+    logout () {
+      this.$store.dispatch('user/logout')
     }
   }
 }
