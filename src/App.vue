@@ -4,7 +4,7 @@
     fixed
     elevation="2"
     color="#c4a66f"
-    style="width: 100vw;"
+    style="width: 100vw; z-index: 3;"
     class="app-bar d-flex justify- space-between">
     <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
     </v-img></router-link>
@@ -65,13 +65,19 @@
       <v-list flat>
           <v-list-item class="d-flex flex-column">
             <v-list-item-content>
-            <v-list-item :ripple="false" to="/dashboard/pro">會員主頁</v-list-item>
+            <v-list-item :ripple="false" v-if="user.isLogin && !user.isAdmin" to="/dashboard/pro">會員主頁</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item :ripple="false" to="/login">登入</v-list-item>
+            <v-list-item :ripple="false" v-if="user.isLogin && user.isAdmin" to="/admin/adminPro">管理</v-list-item>
+            </v-list-item-content>
+            <v-list-item-content>
+            <v-list-item :ripple="false" v-if="!user.isLogin" to="/login">登入</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
             <v-list-item :ripple="false" to="/register">註冊</v-list-item>
+            </v-list-item-content>
+            <v-list-item-content>
+            <v-list-item v-if="user.isLogin"  :ripple="false">登出</v-list-item>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -176,6 +182,7 @@
     <!-- footer---------------------- -->
     <v-footer
       padless
+      style="z-index: 100;"
     >
       <v-card
       class="flex"
