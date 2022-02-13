@@ -1,6 +1,13 @@
 <template>
 <div id="adminQ">
   <h1 class="text-center mt-5">常見問題管理</h1>
+  <v-data-table
+    :headers="headers"
+    :items="arrayQ"
+    :items-per-page="5"
+    ref="table"
+    class="elevation-3"
+  ></v-data-table>
     <v-row justify="center">
     <v-dialog
       v-model="dialog"
@@ -63,7 +70,7 @@
           <v-btn
             color="primary"
             :ripple="false"
-            @click="dialog = false"
+            @click="reset"
             class="mb-5"
           >
             關閉
@@ -71,7 +78,7 @@
           <v-btn
             color="secondary"
             :ripple="false"
-            @click="dialog = false"
+            @click="createQuestion"
             class="mb-5 mr-5"
             type="submit"
           >
@@ -90,35 +97,64 @@ export default {
     return {
       dialog: false,
       valid: true,
+      // modalSubmitting: false,
       form: {
         question: '',
         answer: ''
-      }
+      },
+      arrayQ: [],
+      test: [],
+      headers: [
+        {
+          text: '問題敘述',
+          align: 'start',
+          sortable: false,
+          value: 'question'
+        },
+        { text: '回答敘述', value: 'answer' }
+      ]
     }
+  },
+  computed: {
   },
   methods: {
     async createQuestion () {
       try {
-        await this.api.post('/questions', this.form)
-        this.$swal({
-          icon: 'success',
-          iconColor: '#202938',
-          title: '註冊成功',
-          buttonsStyling: false,
-          background: '#DED7B9',
-          confirmButtonText: '關閉',
-          width: '20rem'
+        const { data } = await this.api.post('/questions', this.form, {
+          headers: {
+            authorization: 'Bearer ' + this.user.token
+          }
         })
+        this.arrayQ.push(data.result)
+        this.dialog = false
       } catch (error) {
-        console.log(error)
         this.$swal({
           icon: 'error',
-          title: '失敗',
-          text: error.response.data.message,
-          background: '#DED7B9',
-          confirmButtonText: '關閉'
+          title: '錯誤',
+          text: error.response.data.message
         })
       }
+      // this.modalSubmitting = false
+    },
+    reset () {
+      this.dialog = false
+      this.$refs.form.reset()
+    }
+  },
+  async created () {
+    try {
+      const { data } = await this.api.get('/questions/all', {
+        headers: {
+          authorization: 'Bearer ' + this.user.token
+        }
+      })
+      this.arrayQ = data.result
+    } catch (error) {
+      this.$swal({
+        icon: 'error',
+        title: '錯誤',
+        text: '取得失敗'
+      })
     }
   }
 }
