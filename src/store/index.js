@@ -16,7 +16,7 @@ export default new Vuex.Store({
     user
   },
   plugins: [createPersistedState({
-    key: 'shop',
+    key: 'shuhuazhai',
     paths: ['user.token']
   })]
 })

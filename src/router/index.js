@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import store from '../store'
 
 Vue.use(VueRouter)
 
@@ -172,7 +173,8 @@ const routes = [
     name: 'Dashboard',
     component: () => import(/* webpackChunkName: "dashboard" */ '../views/Dashboard.vue'),
     meta: {
-      title: '會員｜書彙齋'
+      title: '會員｜書彙齋',
+      login: true
       // transition: 'overlay-left-right'
     },
     children: [
@@ -182,6 +184,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "dashboard" */ '../views/Pro.vue'),
         meta: {
           title: '會員主頁｜書彙齋',
+          login: true,
           transition: 'overlay-left-right'
         }
       },
@@ -191,6 +194,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "dashboard" */ '../views/Order.vue'),
         meta: {
           title: '訂單｜書彙齋',
+          login: true,
           transition: 'overlay-left-right'
         }
       }
@@ -201,6 +205,8 @@ const routes = [
     name: 'Admin',
     component: () => import(/* webpackChunkName: "admin" */ '../views/Admin.vue'),
     meta: {
+      login: true,
+      admin: true,
       title: '管理｜書彙齋'
       // transition: 'overlay-left-right'
     },
@@ -210,6 +216,8 @@ const routes = [
         name: 'AdminPro',
         component: () => import(/* webpackChunkName: "admin" */ '../views/AdminPro.vue'),
         meta: {
+          login: true,
+          admin: true,
           title: '會員管理｜書彙齋',
           transition: 'overlay-left-right'
         }
@@ -219,6 +227,8 @@ const routes = [
         name: 'AdminOrder',
         component: () => import(/* webpackChunkName: "admin" */ '../views/AdminOrder.vue'),
         meta: {
+          login: true,
+          admin: true,
           title: '訂單管理｜書彙齋',
           transition: 'overlay-left-right'
         }
@@ -228,6 +238,8 @@ const routes = [
         name: 'AdminQ',
         component: () => import(/* webpackChunkName: "admin" */ '../views/AdminQ.vue'),
         meta: {
+          login: true,
+          admin: true,
           title: '常見問題管理｜書彙齋',
           transition: 'overlay-left-right'
         }
@@ -238,6 +250,17 @@ const routes = [
 
 const router = new VueRouter({
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  const user = store.getters['user/user']
+  if (to.meta.login && !user.isLogin) {
+    next('/login')
+  } else if (to.meta.admin && !user.isAdmin) {
+    next('/')
+  } else {
+    next()
+  }
 })
 
 router.afterEach((to) => {

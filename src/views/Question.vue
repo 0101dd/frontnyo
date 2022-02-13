@@ -8,7 +8,7 @@
       <div class="list">
         <v-expansion-panels focusable multiple>
           <v-expansion-panel
-            v-for="(item,i) in items"
+            v-for="(item,i) in arrayQ"
             :key="i"
           >
             <v-expansion-panel-header
@@ -17,10 +17,10 @@
               class="font-weight-black"
               style="color: var(--warning);"
             >
-            {{ item.ques }}
+            {{ item.question }}
             </v-expansion-panel-header>
             <v-expansion-panel-content>
-              {{ item.ans }}
+              {{ item.answer }}
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
@@ -39,15 +39,24 @@ export default {
   // },
   data () {
     return {
-      items: [
-        { ques: '第一個問題？', ans: 'first question.' },
-        { ques: '第二個問題？', ans: 'seconde question.' },
-        { ques: '第三個問題', ans: 'third question.' }
-      ]
+      arrayQ: []
     }
   },
-  methods: {
-    remove () {}
+  async created () {
+    try {
+      const { data } = await this.api.get('/questions/all', {
+        headers: {
+          authorization: 'Bearer ' + this.user.token
+        }
+      })
+      this.arrayQ = data.result
+    } catch (error) {
+      this.$swal({
+        icon: 'error',
+        title: '錯誤',
+        text: '取得失敗'
+      })
+    }
   }
 }
 </script>
