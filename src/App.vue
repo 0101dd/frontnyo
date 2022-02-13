@@ -232,6 +232,9 @@ export default {
     logout () {
       this.$store.dispatch('user/logout')
     }
+  },
+  async created () {
+    this.$store.dispatch('user/getInfo')
   }
 }
 </script>
