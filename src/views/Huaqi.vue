@@ -1,16 +1,6 @@
 <template>
-  <v-app style="background: var(--accent);">
+  <v-app style="background: var(--accent); margin-top: 64px;">
     <div id="huaqi">
-      <div class="bg">
-      <img
-        src="https://theme.npm.edu.tw/selection/att/collection/04001006/%E5%9B%9B-1.jpg"
-        style="height: 100vh;"
-      >
-      <img src="../assets/hongyun.jpg" class="hongyun">
-        <img src="../assets/hongyun.jpg" class="hongyun2">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
       <img src="../assets/meihua-beijing.png" class="meihua-bejing">
       <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
@@ -52,6 +42,16 @@
           </div>
         </div>
       </div>
+      <div class="bg">
+      <img
+        src="https://theme.npm.edu.tw/selection/att/collection/04001006/%E5%9B%9B-1.jpg"
+        style="height: 100vh;"
+      >
+      <img src="../assets/hongyun.jpg" class="hongyun">
+        <img src="../assets/hongyun.jpg" class="hongyun2">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
       <MovePosition></MovePosition>
     </div>
   </v-app>
@@ -74,7 +74,7 @@ export default {
 
 .container {
   width: 70%;
-  height: 50%;
+  height: 65%;
   display: block;
 }
 

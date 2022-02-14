@@ -243,7 +243,7 @@ hr {
 }
 
 .swiper-button-prev {
-  left: 210px;
+  left: 215px;
   transition: 0.5s;
   &:hover {
     transform: scale(1.1);
@@ -252,7 +252,7 @@ hr {
   }
 }
 .swiper-button-next {
-  right: 215px;
+  right: 220px;
   transition: 0.5s;
   &:hover {
     transform: scale(1.1);
@@ -283,7 +283,7 @@ hr {
 
 .hongyun{
   position: absolute;
-  left: -360px;
+  left: -355px;
   bottom: 0;
   height: 100vh;
   z-index: 1;
@@ -292,7 +292,7 @@ hr {
 
 .hongyun2 {
   position: absolute;
-  right: -360px;
+  right: -355px;
   bottom: 0;
   height: 100vh;
   z-index: 2;
@@ -312,6 +312,21 @@ hr {
   }
   .swiper-button-next {
     right: 190px;
+  }
+}
+
+#zixutie {
+  .hongyun {
+    left: -430px;
+  }
+  .hongyun2 {
+    right: -430px;
+  }
+  .swiper-button-prev {
+    left: 140px;
+  }
+  .swiper-button-next {
+    right: 140px;
   }
 }
 

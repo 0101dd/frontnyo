@@ -207,8 +207,8 @@ const routes = [
     meta: {
       login: true,
       admin: true,
-      title: '管理｜書彙齋'
-      // transition: 'overlay-left-right'
+      title: '管理｜書彙齋',
+      transition: 'overlay-left-right'
     },
     children: [
       {

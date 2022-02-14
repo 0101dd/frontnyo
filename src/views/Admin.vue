@@ -52,7 +52,7 @@ export default {
 }
 
 .v-main {
-  padding: 70px !important;
+  padding: 0px !important;
   background: var(--accent);
 }
 

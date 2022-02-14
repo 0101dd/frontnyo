@@ -1,23 +1,6 @@
 <template>
-  <v-app style="background: var(--accent);">
+  <v-app style="background: var(--accent); margin-top: 64px;">
     <div id="nongfangshi">
-     <!-- swiper ------------------------------------ -->
-      <swiper class="swiper" style="background: #8c3c31;" :options="swiperOption">
-        <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
-          <img :src="item.src" height="100%">
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div slot="button-prev"></div>
-        <div slot="button-next"></div>
-      </swiper>
-      <swiper class="swiper" style="position: absolute; top: 0;">
-      <swiper-slide></swiper-slide>
-        <img src="../assets/hongyun.jpg" class="hongyun">
-        <img src="../assets/hongyun.jpg" class="hongyun2">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </swiper>
-      <!-- ---------------------------------------------- -->
       <img src="../assets/laohu-bejing.png" class="laohu-bejing">
       <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
@@ -71,6 +54,23 @@
           </div>
         </div>
       </div>
+      <!-- swiper ------------------------------------ -->
+      <swiper class="swiper" style="background: #8c3c31; bottom: -13.3%;" :options="swiperOption">
+        <swiper-slide style="height: 100vh;" v-for="(item, i) in items" :key="i">
+          <img :src="item.src" height="100%">
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div slot="button-prev"></div>
+        <div slot="button-next"></div>
+      </swiper>
+      <swiper class="swiper" style="position: absolute; bottom: 0;">
+      <swiper-slide></swiper-slide>
+        <img src="../assets/hongyun.jpg" class="hongyun">
+        <img src="../assets/hongyun.jpg" class="hongyun2">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </swiper>
+      <!-- ---------------------------------------------- -->
       <MovePosition></MovePosition>
     </div>
   </v-app>

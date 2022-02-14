@@ -68,7 +68,7 @@
             <v-list-item :ripple="false" v-if="user.isLogin && !user.isAdmin" to="/dashboard/pro">會員主頁</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
-            <v-list-item :ripple="false" v-if="user.isLogin && user.isAdmin" to="/admin/adminPro">管理</v-list-item>
+            <v-list-item :ripple="false" v-if="user.isLogin && user.isAdmin" to="/admin">管理</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
             <v-list-item :ripple="false" v-if="!user.isLogin" to="/login">登入</v-list-item>

@@ -44,11 +44,7 @@ export default {
   },
   async created () {
     try {
-      const { data } = await this.api.get('/questions/all', {
-        headers: {
-          authorization: 'Bearer ' + this.user.token
-        }
-      })
+      const { data } = await this.api.get('/questions/all')
       this.arrayQ = data.result
     } catch (error) {
       this.$swal({
@@ -88,6 +84,6 @@ h1 {
 }
 
 .list {
-  width: 65%;
+  width: 35%;
 }
 </style>

@@ -143,7 +143,7 @@
         <div slot="button-prev"></div>
         <div slot="button-next"></div>
       </swiper>
-      <swiper class="swiper" style="position: absolute; bottom: 0;">
+      <swiper class="swiper" style="position: absolute; bottom: -11px;">
       <swiper-slide></swiper-slide>
         <img src="../assets/hongyun.jpg" class="hongyun">
         <img src="../assets/hongyun.jpg" class="hongyun2">
