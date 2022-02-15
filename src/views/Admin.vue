@@ -9,6 +9,9 @@
         <v-list-item router-link to="/admin/adminOrder" :ripple="false">
             <v-list-item-title>訂單管理</v-list-item-title>
         </v-list-item>
+        <v-list-item router-link to="/admin/adminProduct" :ripple="false">
+            <v-list-item-title>商品管理</v-list-item-title>
+        </v-list-item>
         <v-list-item router-link to="/admin/adminQ" :ripple="false">
             <v-list-item-title>常見問題</v-list-item-title>
         </v-list-item>

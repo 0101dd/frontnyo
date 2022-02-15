@@ -34,6 +34,22 @@ const routes = [
     }
   },
   {
+    path: '/ProductPage',
+    name: 'productPage',
+    component: () => import(/* webpackChunkName: "productPage" */ '../views/ProductPage.vue'),
+    meta: {
+      title: '客製專區 | 書畫齋'
+    }
+  },
+  {
+    path: '/product/:id',
+    name: 'Product',
+    component: () => import(/* webpackChunkName: "product" */ '../views/Product.vue'),
+    meta: {
+      title: '商品 | 書畫齋'
+    }
+  },
+  {
     path: '/maobi',
     name: 'Maobi',
     component: () => import(/* webpackChunkName: "maobi" */ '../views/Maobi.vue'),
@@ -230,6 +246,17 @@ const routes = [
           login: true,
           admin: true,
           title: '訂單管理｜書彙齋',
+          transition: 'overlay-left-right'
+        }
+      },
+      {
+        path: 'adminProduct',
+        name: 'AdminProduct',
+        component: () => import(/* webpackChunkName: "admin" */ '../views/AdminProduct.vue'),
+        meta: {
+          login: true,
+          admin: true,
+          title: '商品管理｜書彙齋',
           transition: 'overlay-left-right'
         }
       },

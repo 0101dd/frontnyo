@@ -1,10 +1,10 @@
 <template>
 <div id="adminQ">
-  <h1 class="text-center mt-16 mb-10">常見問題管理</h1>
+  <h1 class="text-center mt-16 mb-10">商品管理</h1>
   <div class="container">
     <v-data-table
       :headers="headers"
-      :items="arrayQ"
+      :items="products"
       :items-per-page="10"
       ref="table"
       class="elevation-3"
@@ -59,24 +59,32 @@
         <v-card-text>
           <div class="container" style="display: block; width: 500px; height: 500px;">
             <v-card-title>
-              <p class="text-h5 mt-6 mx-auto font-weight-black">常見問題新增</p>
+              <p class="text-h5 mt-6 mx-auto font-weight-black">商品新增</p>
             </v-card-title>
-            <v-form ref="form" v-model="valid" @submit.prevent="createQuestion">
+            <v-form ref="form" v-model="valid" @submit.prevent="create">
+              <img-inputer
+                v-model="file"
+                theme="light"
+                size="large"
+                bottom-text="點選或拖拽圖片以修改"
+                hover-text="點選或拖拽圖片以修改"
+                placeholder="點選或拖拽選擇圖片"
+                :max-size="1024"
+                exceed-size-text="檔案大小不能超過"
+              />
+              <v-text-field
+                v-model="form.name"
+                label="商品名稱"
+              ></v-text-field>
+              <v-text-field
+                v-model="form.price"
+                label="商品價格"
+              ></v-text-field>
               <v-textarea
-                v-model="form.question"
-                label="請輸入問題"
+                v-model="form.description"
+                label="敘述"
                 counter
                 maxlength="200"
-                full-width
-                single-line
-                required
-                :rules="[v => v.length >= 5 || '至少輸入 5 個字']"
-              ></v-textarea>
-              <v-textarea
-                v-model="form.answer"
-                label="請輸入回答"
-                counter
-                maxlength="500"
                 full-width
                 single-line
                 required
@@ -192,20 +200,18 @@ export default {
       valid: true,
       // modalSubmitting: false,
       form: {
-        question: '',
-        answer: '',
-        index: -1
       },
-      arrayQ: [],
-      test: [],
+      products: [],
       headers: [
         {
-          text: '問題敘述',
-          align: 'start',
+          text: '商品圖片',
+          align: 'center',
           sortable: false,
-          value: 'question'
+          value: 'image'
         },
-        { text: '回答敘述', value: 'answer' },
+        { text: '名稱', value: 'name' },
+        { text: '價格', value: 'price' },
+        { text: '敘述', value: 'description' },
         { text: 'actions', value: 'actions', sortable: false }
       ]
     }
@@ -213,77 +219,13 @@ export default {
   computed: {
   },
   methods: {
-    async createQuestion () {
-      try {
-        const { data } = await this.api.post('/questions', this.form, {
-          headers: {
-            authorization: 'Bearer ' + this.user.token
-          }
-        })
-        this.arrayQ.push(data.result)
-        this.dialog = false
-      } catch (error) {
-        this.$swal({
-          icon: 'error',
-          title: '新增錯誤',
-          text: error.response.data.message
-        })
-      }
-      // this.modalSubmitting = false
-    },
-    async editQuestion2 () {
-      // const fd = new FormData()
-      // for (const key in this.form) {
-      //   if (key !== '_id') {
-      //     fd.append(key, this.form[key])
-      //   }
-      // }
-      try {
-        const { data } = await this.api.patch('/questions/' + this.form._id, {
-          headers: {
-            authorization: 'Bearer ' + this.user.token
-          }
-        })
-        this.arrayQ[this.form.index] = { question: data.question, answer: data.answer }
-        this.$refs.table.refresh()
-      } catch (error) {
-        this.$swal({
-          icon: 'error',
-          title: '修改錯誤',
-          text: error.response.data.message
-        })
-      }
-    },
     reset () {
       this.dialog = false
       this.editDialog = false
       this.$refs.form.reset()
-    },
-    editQuestion (index) {
-      this.form = {
-        question: this.arrayQ[index].question,
-        answer: this.arrayQ[index].answer,
-        _id: ''
-      }
-      this.editDialog = false
     }
   },
-  async created () {
-    try {
-      const { data } = await this.api.get('/questions/all', {
-        headers: {
-          authorization: 'Bearer ' + this.user.token
-        }
-      })
-      this.arrayQ = data.result
-    } catch (error) {
-      this.$swal({
-        icon: 'error',
-        title: '錯誤',
-        text: '取得失敗'
-      })
-    }
-  }
+  async created () {}
 }
 </script>
 
