@@ -27,7 +27,7 @@
         </v-icon>
       </template>
       <!-- 編輯按鈕-------------------------------------------- -->
-      <template v-slot:item.actions="{ item }">
+      <template v-slot:item.operate="{ item }">
       <v-icon
         middle
         class="mr-5"
@@ -214,7 +214,7 @@ export default {
         { text: '類型', align: 'center', class: 'primary white--text subtitle-1', value: 'category' },
         { text: '敘述', align: 'center', class: 'primary white--text subtitle-1', value: 'description' },
         { text: '上架', align: 'center', class: 'primary white--text subtitle-1', value: 'sell' },
-        { text: 'actions', align: 'center', class: 'primary white--text subtitle-1', value: 'actions', sortable: false }
+        { text: 'operate', align: 'center', class: 'primary white--text subtitle-1', value: 'operate', sortable: false }
       ]
     }
   },
@@ -265,14 +265,12 @@ export default {
         return
       }
       this.modalSubmitting = true
-
       const fd = new FormData()
       for (const key in this.form) {
         if (key !== '_id') {
           fd.append(key, this.form[key])
         }
       }
-
       try {
         if (this.form._id.length === 0) {
           const { data } = await this.api.post('/products', fd, {
@@ -299,7 +297,7 @@ export default {
           text: error.response.data.message
         })
       }
-      this.modalSubmitting = false
+      this.modalSubmitting = true
     }
   },
   async created () {
@@ -329,7 +327,6 @@ h1::before {
   content: '';
   display: none;
 }
-
 .container {
   width: 100%;
   height: 100%;
@@ -337,18 +334,15 @@ h1::before {
 .v-data-table {
   width: 70%;
 }
-
 colgroup {
   &>col {
     width: 40% !important;
   }
 }
-
 .text-start {
   vertical-align: middle !important;
 }
 .v-sheet.v-card:not(.v-sheet--outlined) {
   box-shadow: none;
 }
-
 </style>
