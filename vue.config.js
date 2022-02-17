@@ -5,7 +5,7 @@ module.exports = {
   ],
   chainWebpack (config) {
     config.plugin('html').tap(args => {
-      args[0].title = '購物網'
+      args[0].title = '書彙齋'
       return args
     })
   }

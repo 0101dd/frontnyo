@@ -72,6 +72,7 @@ export const getInfo = async ({ commit, state }) => {
     })
     commit('getInfo', data.result)
   } catch (error) {
+    console.log(error)
     commit('logout')
   }
 }

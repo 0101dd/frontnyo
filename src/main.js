@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import 'mutationobserver-shim'
 import './plugins/axios.js'
 import './registerServiceWorker'
 import router from './router'

@@ -174,7 +174,7 @@
   </div>
     <!-- --------------------------------------------------------- -->
       <v-main><vue-page-transition>
-        <router-view></router-view>
+        <router-view :key="$route.fullPath"></router-view>
       </vue-page-transition>
         <!-- <transition name="animation">
         </transition> -->

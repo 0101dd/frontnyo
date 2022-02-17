@@ -11,7 +11,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '書畫齋'
+      title: '書彙齋'
       // transition: 'fade-in-down'
     }
   },
@@ -20,7 +20,7 @@ const routes = [
     name: 'Register',
     component: () => import(/* webpackChunkName: "register" */ '../views/Register.vue'),
     meta: {
-      title: '註冊｜書畫齋'
+      title: '註冊｜書彙齋'
       //  transition: 'overlay-down-full'
     }
   },
@@ -29,7 +29,7 @@ const routes = [
     name: 'Login',
     component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue'),
     meta: {
-      title: '登入｜書畫齋'
+      title: '登入｜書彙齋'
       // transition: 'overlay-down-full'
     }
   },
@@ -38,7 +38,7 @@ const routes = [
     name: 'productPage',
     component: () => import(/* webpackChunkName: "productPage" */ '../views/ProductPage.vue'),
     meta: {
-      title: '客製專區 | 書畫齋'
+      title: '客製專區 | 書彙齋'
     }
   },
   {
@@ -46,7 +46,7 @@ const routes = [
     name: 'Product',
     component: () => import(/* webpackChunkName: "product" */ '../views/Product.vue'),
     meta: {
-      title: '商品 | 書畫齋'
+      title: '商品 | 書彙齋'
     }
   },
   {
@@ -54,7 +54,7 @@ const routes = [
     name: 'Maobi',
     component: () => import(/* webpackChunkName: "maobi" */ '../views/Maobi.vue'),
     meta: {
-      title: '毛筆介紹｜書畫齋'
+      title: '毛筆介紹｜書彙齋'
       // transition: 'overlay-down-full'
     }
   },
@@ -63,7 +63,7 @@ const routes = [
     name: 'Mozhi',
     component: () => import(/* webpackChunkName: "mozhi" */ '../views/Mozhi.vue'),
     meta: {
-      title: '墨汁介紹｜書畫齋'
+      title: '墨汁介紹｜書彙齋'
       // transition: 'overlay-down-full'
     }
   },
@@ -72,7 +72,7 @@ const routes = [
     name: 'Zhi',
     component: () => import(/* webpackChunkName: "zhi" */ '../views/Zhi.vue'),
     meta: {
-      title: '紙類介紹｜書畫齋'
+      title: '紙類介紹｜書彙齋'
       // transition: 'overlay-down-full'
     }
   },
@@ -81,7 +81,7 @@ const routes = [
     name: 'Xuexi',
     component: () => import(/* webpackChunkName: "xuexi" */ '../views/Xuexi.vue'),
     meta: {
-      title: '學習方法｜書畫齋'
+      title: '學習方法｜書彙齋'
       // transition: 'overlay-down-full'
     }
   },
@@ -90,7 +90,7 @@ const routes = [
     name: 'Book',
     component: () => import(/* webpackChunkName: "book" */ '../views/Book.vue'),
     meta: {
-      title: '精選字帖｜書畫齋'
+      title: '精選字帖｜書彙齋'
       // transition: 'overlay-left-right'
     }
   },
@@ -221,16 +221,16 @@ const routes = [
     name: 'Admin',
     component: () => import(/* webpackChunkName: "admin" */ '../views/Admin.vue'),
     children: [
-      {
-        path: '',
-        name: 'AdminHome',
-        component: () => import(/* webpackChunkName: "admin" */ '../views/AdminHome.vue'),
-        meta: {
-          login: true,
-          admin: true,
-          title: '管理 | 書彙齋'
-        }
-      },
+      // {
+      //   path: '',
+      //   name: 'AdminHome',
+      //   component: () => import(/* webpackChunkName: "admin" */ '../views/AdminHome.vue'),
+      //   meta: {
+      //     login: true,
+      //     admin: true,
+      //     title: '管理 | 書彙齋'
+      //   }
+      // },
       {
         path: 'adminPro',
         name: 'AdminPro',
@@ -294,7 +294,8 @@ router.beforeEach((to, from, next) => {
   }
 })
 
-router.afterEach((to) => {
+router.afterEach((to, from) => {
   document.title = to.meta.title
 })
+
 export default router
