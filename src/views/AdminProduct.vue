@@ -222,7 +222,7 @@ export default {
         { text: '名稱', align: 'center', class: 'primary white--text subtitle-1', value: 'name' },
         { text: '價格', align: 'center', class: 'primary white--text subtitle-1', value: 'price' },
         { text: '類型', align: 'center', class: 'primary white--text subtitle-1', value: 'category' },
-        { text: '敘述', align: 'center', class: 'primary white--text subtitle-1', value: 'description' },
+        { text: '敘述', align: 'center', class: 'primary white--text subtitle-1', width: '280px', value: 'description' },
         { text: '上架', align: 'center', class: 'primary white--text subtitle-1', value: 'sell' },
         { text: 'operate', align: 'center', class: 'primary white--text subtitle-1', value: 'operate', sortable: false }
       ]

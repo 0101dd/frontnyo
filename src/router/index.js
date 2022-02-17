@@ -220,13 +220,17 @@ const routes = [
     path: '/admin',
     name: 'Admin',
     component: () => import(/* webpackChunkName: "admin" */ '../views/Admin.vue'),
-    meta: {
-      login: true,
-      admin: true,
-      title: '管理｜書彙齋',
-      transition: 'overlay-left-right'
-    },
     children: [
+      {
+        path: '',
+        name: 'AdminHome',
+        component: () => import(/* webpackChunkName: "admin" */ '../views/AdminHome.vue'),
+        meta: {
+          login: true,
+          admin: true,
+          title: '管理 | 書彙齋'
+        }
+      },
       {
         path: 'adminPro',
         name: 'AdminPro',
