@@ -64,20 +64,20 @@
       </template>
       <v-list flat>
           <v-list-item class="d-flex flex-column">
-            <v-list-item-content>
-            <v-list-item :ripple="false" v-if="user.isLogin && !user.isAdmin" to="/dashboard/pro">會員主頁</v-list-item>
+            <v-list-item-content v-if="user.isLogin && !user.isAdmin" >
+            <v-list-item :ripple="false" to="/dashboard/pro">會員主頁</v-list-item>
             </v-list-item-content>
-            <v-list-item-content>
-            <v-list-item :ripple="false" v-if="user.isLogin && user.isAdmin" to="/admin">管理</v-list-item>
+            <v-list-item-content v-if="user.isLogin && user.isAdmin">
+            <v-list-item :ripple="false" to="/admin">管理</v-list-item>
             </v-list-item-content>
-            <v-list-item-content>
-            <v-list-item :ripple="false" v-if="!user.isLogin" to="/login">登入</v-list-item>
+            <v-list-item-content v-if="!user.isLogin">
+            <v-list-item :ripple="false" to="/login">登入</v-list-item>
             </v-list-item-content>
             <v-list-item-content>
             <v-list-item :ripple="false" to="/register">註冊</v-list-item>
             </v-list-item-content>
-            <v-list-item-content>
-            <v-list-item v-if="user.isLogin" :ripple="false" @click="logout">登出</v-list-item>
+            <v-list-item-content v-if="user.isLogin">
+            <v-list-item :ripple="false" @click="logout">登出</v-list-item>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -243,6 +243,9 @@ export default {
 // .animation-enter-active {
 //   animation: thisOne 1.2s steps(24);
 // }
+.active {
+  display: none;
+}
 .v-list-item__icon {
   min-width: 360px;
 }
@@ -315,7 +318,7 @@ ul {
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: -600px;
+  right: -660px;
   &:hover {
     transition: 0.5s;
     transform: translateY(-6px);

@@ -1,6 +1,6 @@
 <template>
 <div id="adminQ">
-  <h1 class="text-center mt-16 mb-10">常見問題管理</h1>
+  <h1 class="text-center">常見問題管理</h1>
   <div class="container">
     <v-data-table
       :headers="headers"
@@ -10,12 +10,12 @@
       class="elevation-3"
     >
       <!-- 編輯按鈕-------------------------------------------- -->
-      <template v-slot:item.actions>
+      <template v-slot:item.operate="{ item }">
       <v-icon
         middle
         class="mr-5"
         color="primary"
-        @click="editDialog = true"
+        @click="editQuestion(item)"
       >
         mdi-pencil
       </v-icon>
@@ -23,7 +23,7 @@
       <v-icon
         middle
         color="error"
-        @click="dialogDelete = true"
+        @click="deleteItem(item)"
       >
         mdi-delete
       </v-icon>
@@ -61,7 +61,7 @@
             <v-card-title>
               <p class="text-h5 mt-6 mx-auto font-weight-black">常見問題新增</p>
             </v-card-title>
-            <v-form ref="form" v-model="valid" @submit.prevent="createQuestion">
+            <v-form ref="form" v-model="valid" @submit.prevent="created">
               <v-textarea
                 v-model="form.question"
                 label="請輸入問題"
@@ -70,7 +70,7 @@
                 full-width
                 single-line
                 required
-                :rules="[v => v.length >= 5 || '至少輸入 5 個字']"
+                :rule="state.question"
               ></v-textarea>
               <v-textarea
                 v-model="form.answer"
@@ -80,7 +80,7 @@
                 full-width
                 single-line
                 required
-                :rules="[v => v.length >= 5 || '至少輸入 5 個字']"
+                :rule="state.answer"
               ></v-textarea>
             </v-form>
           </div>
@@ -91,7 +91,7 @@
           <v-btn
             color="primary"
             :ripple="false"
-            @click="reset"
+            @click="close"
             class="mb-5"
           >
             關閉
@@ -99,7 +99,7 @@
           <v-btn
             color="secondary"
             :ripple="false"
-            @click="createQuestion"
+            @click="submitModal"
             class="mb-5 mr-5"
             type="submit"
           >
@@ -109,75 +109,36 @@
       </v-card>
     </v-dialog>
   </v-row>
-  <!-- 編輯框 ----------------------------------------------------------- -->
-  <v-dialog
-      v-model="editDialog"
-      persistent
-      max-width="600px"
-    >
-      <v-card>
-        <v-card-text>
-          <div class="container" style="display: block; width: 500px; height: 500px;">
-            <v-card-title>
-              <p class="text-h5 mt-6 mx-auto font-weight-black">常見問題編輯</p>
-            </v-card-title>
-            <v-form ref="form" v-model="valid" @submit.prevent="editQuestion2">
-              <v-textarea
-                v-model="form.question"
-                label="請輸入問題2"
-                counter
-                maxlength="200"
-                full-width
-                single-line
-                required
-                :rules="[v => v.length >= 5 || '至少輸入 5 個字']"
-              ></v-textarea>
-              <v-textarea
-                v-model="form.answer"
-                label="請輸入回答2"
-                counter
-                maxlength="500"
-                full-width
-                single-line
-                required
-                :rules="[v => v.length >= 5 || '至少輸入 5 個字']"
-              ></v-textarea>
-            </v-form>
-          </div>
-
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="primary"
-            :ripple="false"
-            @click="reset"
-            class="mb-5"
-          >
-            關閉
-          </v-btn>
-          <v-btn
-            color="secondary"
-            :ripple="false"
-            @click="editQuestion2"
-            class="mb-5 mr-5"
-            type="submit"
-          >
-            確定
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-    <v-dialog v-model="dialogDelete" max-width="500px">
-        <v-card>
-          <v-card-title class="text-h5">Are you sure you want to delete this item?</v-card-title>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="blue darken-1" text>Cancel</v-btn>
-            <v-btn color="blue darken-1" text @click="dialogDelete = false">OK</v-btn>
-            <v-spacer></v-spacer>
-          </v-card-actions>
-        </v-card>
+    <v-dialog v-model="dialogDelete" max-width="400px">
+        <v-card class="delete-card">
+            <v-card-text class="delete-title">
+              確定要刪除問題嗎？
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn
+                color="primary"
+                :ripple="false"
+                absolute
+                bottom
+                style="right: 210px;"
+                @click="closeDelete"
+              >
+                取消
+              </v-btn>
+              <v-btn
+                color="error"
+                :ripple="false"
+                absolute
+                bottom
+                style="right: 120px;"
+                @click="deleteQuestion"
+              >
+                刪除
+              </v-btn>
+              <v-spacer></v-spacer>
+            </v-card-actions>
+          </v-card>
       </v-dialog>
 </div>
 </template>
@@ -188,87 +149,170 @@ export default {
     return {
       dialog: false,
       dialogDelete: false,
-      editDialog: false,
       valid: true,
       // modalSubmitting: false,
+      editedIndex: -1,
       form: {
         question: '',
         answer: '',
+        _id: '',
         index: -1
       },
       arrayQ: [],
-      test: [],
       headers: [
         {
           text: '問題敘述',
           align: 'start',
           sortable: false,
+          class: 'primary white--text subtitle-1',
+          width: '350px',
           value: 'question'
         },
-        { text: '回答敘述', value: 'answer' },
-        { text: 'actions', value: 'actions', sortable: false }
+        { text: '回答敘述', class: 'primary white--text subtitle-1', width: '550px', value: 'answer' },
+        { text: '操作', class: 'primary white--text subtitle-1', value: 'operate', sortable: false }
       ]
     }
   },
   computed: {
+    state () {
+      return {
+        question: this.form.question.length === 0 ? null : true,
+        answer: this.form.answer.length === 0 ? null : true
+      }
+    }
   },
   methods: {
-    async createQuestion () {
-      try {
-        const { data } = await this.api.post('/questions', this.form, {
-          headers: {
-            authorization: 'Bearer ' + this.user.token
-          }
-        })
-        this.arrayQ.push(data.result)
-        this.dialog = false
-      } catch (error) {
+    async submitModal () {
+      if (!this.state.question || !this.state.answer) {
         this.$swal({
           icon: 'error',
-          title: '新增錯誤',
-          text: error.response.data.message
+          iconColor: '#7e2f28',
+          title: '缺少必填欄位',
+          buttonsStyling: false,
+          background: '#DED7B9',
+          confirmButtonText: '關閉',
+          width: '20rem'
         })
+        return
+      }
+      const fd = new FormData()
+      for (const key in this.form) {
+        if (key !== '_id') {
+          fd.append(key, this.form[key])
+        }
+      }
+      try {
+        if (this.form._id.length === 0) {
+          const { data } = await this.api.post('/questions', fd, {
+            headers: {
+              authorization: 'Bearer ' + this.user.token
+            }
+          })
+          this.arrayQ.push(data.result)
+          this.dialog = true
+        } else {
+          const { data } = await this.api.patch('/questions/' + this.form._id, fd, {
+            headers: {
+              authorization: 'Bearer ' + this.user.token
+            }
+          })
+          console.log(data)
+          this.arrayQ[this.form.index] = this.form
+        }
+        this.dialog = false
+      } catch (error) {
+        if (error.response) {
+          this.$swal({
+            icon: 'error',
+            title: '新增錯誤',
+            text: error.response.data.message
+          })
+        } else {
+          this.$swal({
+            icon: 'error',
+            title: '錯誤',
+            text: error
+          })
+        }
       }
       // this.modalSubmitting = false
     },
-    async editQuestion2 () {
-      // const fd = new FormData()
-      // for (const key in this.form) {
-      //   if (key !== '_id') {
-      //     fd.append(key, this.form[key])
-      //   }
-      // }
+    async deleteQuestion () {
+      const fd = new FormData()
+      for (const key in this.form) {
+        if (key !== '_id') {
+          fd.append(key, this.form[key])
+        }
+      }
       try {
-        const { data } = await this.api.patch('/questions/' + this.form._id, {
+        const { data } = await this.api.patch('/questions/deleteQuestion/' + this.form._id, fd, {
           headers: {
             authorization: 'Bearer ' + this.user.token
           }
         })
-        this.arrayQ[this.form.index] = { question: data.question, answer: data.answer }
-        this.$refs.table.refresh()
+        console.log(data)
+        this.arrayQ.splice(this.form.index, 1)
+        this.closeDelete()
       } catch (error) {
-        this.$swal({
-          icon: 'error',
-          title: '修改錯誤',
-          text: error.response.data.message
-        })
+        if (error.response) {
+          this.$swal({
+            icon: 'error',
+            title: '錯誤',
+            text: error.response.data.message
+          })
+        } else {
+          this.$swal({
+            icon: 'error',
+            title: '錯誤',
+            text: '錯誤'
+          })
+        }
       }
     },
-    reset () {
+    close () {
       this.dialog = false
-      this.editDialog = false
-      this.$refs.form.reset()
-    },
-    editQuestion (index) {
       this.form = {
-        question: this.arrayQ[index].question,
-        answer: this.arrayQ[index].answer,
-        _id: ''
+        question: '',
+        answer: ''
       }
-      this.editDialog = false
+    },
+    editQuestion (item) {
+      this.form.index = this.arrayQ.indexOf(item)
+      this.form = Object.assign({}, item)
+      this.dialog = true
+    },
+    deleteItem (item) {
+      this.form.index = this.arrayQ.indexOf(item)
+      this.form = Object.assign({}, item)
+      this.dialogDelete = true
+    },
+    closeDelete () {
+      this.dialogDelete = false
+      this.form = {
+        question: '',
+        answer: '',
+        _id: '',
+        index: -1
+      }
     }
   },
   async created () {
+    try {
+      const { data } = await this.api.get('/questions/all', {
+        headers: {
+          authorization: 'Bearer ' + this.user.token
+        }
+      })
+      this.arrayQ = data.result
+    } catch (error) {
+      this.$swal({
+        icon: 'error',
+        title: '錯誤',
+        text: '取得失敗'
+      })
+    }
+  },
+  async updated () {
     try {
       const { data } = await this.api.get('/questions/all', {
         headers: {
@@ -288,12 +332,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  margin: 100px 0 50px 0;
+}
+
 h1::before {
   content: '';
   display: none;
 }
 
 .container {
+  width: 100%;
   height: 100%;
 }
 .v-data-table {
@@ -308,5 +357,19 @@ colgroup {
 
 .text-start {
   vertical-align: middle !important;
+}
+
+.delete-card {
+  background: var(--accent);
+  height: 170px;
+}
+.v-card__text.delete-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary);
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  width: 300px;
 }
 </style>

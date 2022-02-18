@@ -175,13 +175,34 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-      <v-dialog v-model="dialogDelete" max-width="500px">
-          <v-card>
-            <v-card-title class="text-h5">Are you sure you want to delete this item?</v-card-title>
+    <!-- 刪除框 ----------------------------------------- -->
+      <v-dialog v-model="dialogDelete" max-width="400px">
+          <v-card class="delete-card">
+            <v-card-text class="delete-title">
+              確定要刪除商品嗎？
+            </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" text @click="closeDelete">Cancel</v-btn>
-              <v-btn color="blue darken-1" text @click="deleteProducts">OK</v-btn>
+              <v-btn
+                color="primary"
+                :ripple="false"
+                absolute
+                bottom
+                style="right: 210px;"
+                @click="closeDelete"
+              >
+                取消
+              </v-btn>
+              <v-btn
+                color="error"
+                :ripple="false"
+                absolute
+                bottom
+                style="right: 120px;"
+                @click="deleteProducts"
+              >
+                刪除
+              </v-btn>
               <v-spacer></v-spacer>
             </v-card-actions>
           </v-card>
@@ -435,5 +456,19 @@ colgroup {
 }
 .v-sheet.v-card:not(.v-sheet--outlined) {
   box-shadow: none;
+}
+
+.delete-card {
+  background: var(--accent);
+  height: 170px;
+}
+.v-card__text.delete-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary);
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  width: 300px;
 }
 </style>
