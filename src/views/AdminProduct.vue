@@ -107,6 +107,7 @@
                     v-model="form.price"
                     :rule="state.price"
                     label="商品價格"
+                    type="number"
                   ></v-text-field>
                 </div>
               </div>
