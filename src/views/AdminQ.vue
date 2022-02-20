@@ -360,13 +360,13 @@ colgroup {
 }
 
 .delete-card {
-  background: var(--accent);
+  background: var(--secondary);
   height: 170px;
 }
 .v-card__text.delete-title {
   font-weight: bold;
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--accent);
   position: absolute;
   top: 30%;
   left: 18%;

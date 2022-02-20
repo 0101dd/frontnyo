@@ -3,7 +3,7 @@
     <div id="router-link"></div>
     <v-navigation-drawer v-model="drawer" app color="secondary">
       <v-list rounded class="text-center mt-16" style="color: var(--info);" flat>
-        <v-list-item router-link to="/dashboard/pro" :ripple="false">
+        <v-list-item router-link to="/dashboard/users" :ripple="false">
             <v-list-item-title class="pro">會員主頁</v-list-item-title>
         </v-list-item>
         <v-list-item router-link to="/dashboard/order" :ripple="false">
@@ -25,6 +25,11 @@
 
 <script>
 export default {
+  data () {
+    return {
+      drawer: null
+    }
+  }
 }
 </script>
 

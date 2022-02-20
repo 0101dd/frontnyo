@@ -65,7 +65,7 @@
       <v-list flat>
           <v-list-item class="d-flex flex-column">
             <v-list-item-content v-if="user.isLogin && !user.isAdmin" >
-            <v-list-item :ripple="false" to="/dashboard/pro">會員主頁</v-list-item>
+            <v-list-item :ripple="false" to="/dashboard/users">會員主頁</v-list-item>
             </v-list-item-content>
             <v-list-item-content v-if="user.isLogin && user.isAdmin">
             <v-list-item :ripple="false" to="/admin">管理</v-list-item>

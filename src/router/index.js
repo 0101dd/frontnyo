@@ -195,9 +195,9 @@ const routes = [
     },
     children: [
       {
-        path: 'pro',
-        name: 'Pro',
-        component: () => import(/* webpackChunkName: "dashboard" */ '../views/Pro.vue'),
+        path: 'users',
+        name: 'Users',
+        component: () => import(/* webpackChunkName: "dashboard" */ '../views/Users.vue'),
         meta: {
           title: '會員主頁｜書彙齋',
           login: true,
