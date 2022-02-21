@@ -280,7 +280,7 @@ export default {
       }
       try {
         if (this.form._id.length === 0) {
-          const { data } = await this.api.post('/works', fd, {
+          const { data } = await this.api.post('/userworks', fd, {
             headers: {
               authorization: 'Bearer ' + this.user.token
             }
@@ -288,7 +288,7 @@ export default {
           this.works.unshift(data.result)
           this.dialog = true
         } else {
-          const { data } = await this.api.patch('/works/' + this.form._id, fd, {
+          const { data } = await this.api.patch('/userworks/' + this.form._id, fd, {
             headers: {
               authorization: 'Bearer ' + this.user.token
             }
@@ -352,23 +352,7 @@ export default {
   },
   async created () {
     try {
-      const { data } = await this.api.get('/works/all', {
-        headers: {
-          authorization: 'Bearer ' + this.user.token
-        }
-      })
-      this.works = data.result
-    } catch (error) {
-      this.$swal({
-        icon: 'error',
-        title: '錯誤',
-        text: error
-      })
-    }
-  },
-  async updated () {
-    try {
-      const { data } = await this.api.get('/works/all', {
+      const { data } = await this.api.get('/userworks/me', {
         headers: {
           authorization: 'Bearer ' + this.user.token
         }
