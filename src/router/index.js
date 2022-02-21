@@ -213,6 +213,16 @@ const routes = [
           login: true,
           transition: 'overlay-left-right'
         }
+      },
+      {
+        path: 'userWorks',
+        name: 'UserWorks',
+        component: () => import(/* webpackChunkName: "dashboard" */ '../views/UserWorks.vue'),
+        meta: {
+          title: '作品管理｜書彙齋',
+          login: true,
+          transition: 'overlay-left-right'
+        }
       }
     ]
   },

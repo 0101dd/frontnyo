@@ -69,7 +69,6 @@
                 maxlength="200"
                 full-width
                 single-line
-                required
                 :rule="state.question"
               ></v-textarea>
               <v-textarea
@@ -79,7 +78,6 @@
                 maxlength="500"
                 full-width
                 single-line
-                required
                 :rule="state.answer"
               ></v-textarea>
             </v-form>
@@ -182,7 +180,8 @@ export default {
     }
   },
   methods: {
-    async submitModal () {
+    async submitModal (event) {
+      event.preventDefault()
       if (!this.state.question || !this.state.answer) {
         this.$swal({
           icon: 'error',
@@ -217,7 +216,11 @@ export default {
             }
           })
           console.log(data)
-          this.arrayQ[this.form.index] = this.form
+          const obj = this.form
+          if (data.result.image) {
+            obj.image = data.result.image
+          }
+          this.arrayQ[this.form.index] = obj
         }
         this.dialog = false
       } catch (error) {
@@ -273,7 +276,9 @@ export default {
       this.dialog = false
       this.form = {
         question: '',
-        answer: ''
+        answer: '',
+        _id: '',
+        index: -1
       }
     },
     editQuestion (item) {

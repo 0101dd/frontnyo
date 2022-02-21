@@ -9,6 +9,9 @@
         <v-list-item router-link to="/dashboard/order" :ripple="false">
             <v-list-item-title>訂單查詢</v-list-item-title>
         </v-list-item>
+        <v-list-item router-link to="/dashboard/userWorks" :ripple="false">
+            <v-list-item-title>作品管理</v-list-item-title>
+        </v-list-item>
         <v-list-item router-link to="/">
             <v-list-item-title>HOME</v-list-item-title>
         </v-list-item>

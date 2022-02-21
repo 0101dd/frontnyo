@@ -3,42 +3,29 @@
   <!-- <RouterTransition></RouterTransition> -->
   <div id="store">
     <div id="router-ink"></div>
-    <h1>店家資訊</h1>
     <v-container>
-      <div class="list">
-        <v-expansion-panels focusable>
-          <v-expansion-panel
-            v-for="(item,i) in items"
-            :key="i"
-          >
-            <v-expansion-panel-header
-              expand-icon="mdi-menu-down"
-              color="accent"
-              class="font-weight-black"
-              style="color: var(--warning);"
-            >
-            {{ item.store }}
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <div class="store-box">
-                <iframe :src="item.iframe" width="600" height="450" style="border:0; margin-top: 10px;" allowfullscreen="" loading="lazy"></iframe>
-                <div class="store-content ma-sm-7">
-                  地址：{{ item.address }} <br>
-                  電話：{{ item.phone }} <br>
-                  營業時間： <br>
-                  星期一：{{ item.workday }} <br>
-                  星期二：{{ item.workday }} <br>
-                  星期三：{{ item.workday }} <br>
-                  星期四：{{ item.workday }} <br>
-                  星期五：{{ item.workday }} <br>
-                  星期六：{{ item.week }} <br>
-                  星期日：{{ item.week2 }}
-                  <a :href="item.src">詳細資訊</a>
-                </div>
-              </div>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
+      <div class="row flex-wrap">
+        <div class="col-6 d-flex" v-for="(item, i) in items" :key="i">
+        <v-card class="d-flex pa-5" style="background: var(--secondary);">
+        <iframe
+          :src="item.iframe"
+          width="300"
+          height="300"
+          style="border:0; margin-top: 10px;"
+          loading="lazy">
+        </iframe>
+        <div class="card-text" style="width: 300px; margin-left: 30px;">
+          <p class="store">{{ item.store }}</p>
+          <p><span>地址：</span> {{ item.address }}</p>
+          <p><span>電話：</span>{{ item.phone }}</p>
+          <p><span>營業時間：</span></p>
+          <p><span>星期一~五：</span>{{ item.workday }}</p>
+          <p><span>星期六：</span>{{ item.week }}</p>
+          <p><span>星期日：</span>{{ item.week2 }}</p>
+         <a :href="item.src">詳細資訊</a>
+        </div>
+      </v-card>
+        </div>
       </div>
     </v-container>
   </div>
@@ -71,6 +58,20 @@ export default {
   url('https://theme.npm.edu.tw/selection/att/collection/04009135/17010458.jpg') no-repeat center/cover;
 }
 
+.container {
+  width: 70vw;
+}
+
+p {
+  color: white;
+  padding: 0;
+  margin: 0;
+  span {
+    color: var(--accent);
+    font-weight: bold;
+  }
+}
+
 h1 {
   position: absolute;
   top: 30%;
@@ -92,6 +93,12 @@ h1 {
 
 .list {
   width: 65%;
+}
+
+.store {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: var(--info);
 }
 
 .store-box {
@@ -119,6 +126,12 @@ h1 {
       }
     }
   }
+}
+
+.btn-url {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 </style>
