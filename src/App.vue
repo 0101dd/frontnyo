@@ -41,7 +41,7 @@
           </v-list-item>
         </v-list>
         </v-menu>
-        <li><a href="#">作品專區</a></li>
+        <li><router-link to="/myWorkPage">作品專區</router-link></li>
         <li><router-link to="/question">常見問題</router-link></li>
         <li><router-link to="/ProductPage">客製專區</router-link></li>
         <li><router-link to="/store">店家資訊</router-link></li>
@@ -190,8 +190,9 @@
       tile
       >
       <v-card-title>
-        <strong class="subheading">這是一條夫特文字😎</strong>
+        <v-spacer></v-spacer>
 
+        <strong class="subheading">這是一條夫特文字😎</strong>
         <v-spacer></v-spacer>
 
         <v-btn

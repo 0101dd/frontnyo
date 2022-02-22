@@ -42,6 +42,14 @@ const routes = [
     }
   },
   {
+    path: '/MyWorkPage',
+    name: 'myWorkPage',
+    component: () => import(/* webpackChunkName: "myWorkPage" */ '../views/MyWorkPage.vue'),
+    meta: {
+      title: '作品專區 | 書彙齋'
+    }
+  },
+  {
     path: '/product/:id',
     name: 'Product',
     component: () => import(/* webpackChunkName: "product" */ '../views/Product.vue'),

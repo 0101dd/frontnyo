@@ -7,7 +7,7 @@
         <h1>{{ user.email }}</h1>
       </div>
       <div class="col">
-         <v-form
+         <!-- <v-form
           ref="form"
           v-model="valid"
           @submit.prevent="created"
@@ -78,7 +78,7 @@
               >
                 修改
               </v-btn>
-        </v-form>
+        </v-form> -->
       </div>
     </div>
   </div>

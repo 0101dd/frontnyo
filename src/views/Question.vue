@@ -3,7 +3,7 @@
   <!-- <RouterTransition></RouterTransition> -->
   <div id="question">
     <div id="router-ink"></div>
-    <h1>常見問題</h1>
+    <!-- <h1>常見問題</h1> -->
     <v-container>
       <div class="list">
         <v-expansion-panels focusable multiple>
@@ -11,12 +11,17 @@
             v-for="(item,i) in arrayQ"
             :key="i"
           >
+              <!-- expand-icon="mdi-menu-down" -->
             <v-expansion-panel-header
-              expand-icon="mdi-menu-down"
-              color="accent"
+              color="primary"
               class="font-weight-black"
-              style="color: var(--warning);"
+              style="color: var(--accent);"
             >
+            <template v-slot:actions>
+            <v-icon color="accent">
+              $expand
+            </v-icon>
+          </template>
             {{ item.question }}
             </v-expansion-panel-header>
             <v-expansion-panel-content>
@@ -69,21 +74,29 @@ h1 {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -30%);
-  &::before {
-    content: '';
-    position: absolute;
-    width: 112%;
-    height: 45%;
-    left: -5%;
-    bottom: 18%;
-    background: var(--info);
-    // background: linear-gradient(#ded7b94f, #ded7b94f);
-    // filter: blur(20px);
-    z-index: -1;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 112%;
+  //   height: 45%;
+  //   left: -5%;
+  //   bottom: 18%;
+  //   background: var(--info);
+  //   // background: linear-gradient(#ded7b94f, #ded7b94f);
+  //   // filter: blur(20px);
+  //   z-index: -1;
+  // }
+}
+
+.v-expansion-panel-content {
+  padding: 15px 0 0 !important;
 }
 
 .list {
   width: 35%;
+}
+
+.mdi.mdi-menu-down::before {
+  color: var(--accent) !important;
 }
 </style>

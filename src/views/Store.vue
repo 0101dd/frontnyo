@@ -101,30 +101,23 @@ h1 {
   color: var(--info);
 }
 
-.store-box {
-  display: flex;
-  .store-content {
-    display: flex;
-    flex-direction: column;
-    line-height: 2.5;
-    a {
-      color: var(--accent);
-      background: var(--primary);
-      width: 100px;
-      height: 40px;
-      border-radius: 30px;
-      line-height: 40px;
-      text-align: center;
-      position: absolute;
-      right: 50px;
-      bottom: 30px;
-      transition: 0.5s;
-      &:hover {
-        color: var(--primary);
-        background: var(--accent);
-        transition: 0.5s;
-      }
-    }
+a {
+  color: var(--primary);
+  background: var(--accent);
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  transition: 0.5s;
+  &:hover {
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--accent);
+    transition: 0.5s;
   }
 }
 

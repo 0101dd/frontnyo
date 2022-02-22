@@ -213,7 +213,7 @@ export default {
       headers: [
         { text: '作品圖片', align: 'center', sortable: false, value: 'image', class: 'primary white--text subtitle-1' },
         { text: '標題', align: 'center', sortable: false, value: 'name', class: 'primary white--text subtitle-1' },
-        { text: '介紹', align: 'center', sortable: false, value: 'description', class: 'primary white--text subtitle-1' },
+        { text: '介紹', align: 'center', sortable: false, value: 'description', class: 'primary white--text subtitle-1', width: '280px' },
         { text: '顯示', align: 'center', class: 'primary white--text subtitle-1', value: 'show' },
         { text: '操作', align: 'center', class: 'primary white--text subtitle-1', value: 'operate', sortable: false }
       ]
@@ -239,13 +239,13 @@ export default {
       }
     },
     editWork (item) {
-      this.form.index = this.works.indexOf(item)
       this.form = Object.assign({}, item)
+      this.form.index = this.works.indexOf(item)
       this.dialog = true
     },
     deleteItem (item) {
-      this.form.index = this.works.indexOf(item)
       this.form = Object.assign({}, item)
+      this.form.index = this.works.indexOf(item)
       this.dialogDelete = true
     },
     closeDelete () {
@@ -298,7 +298,8 @@ export default {
           if (data.result.image) {
             obj.image = data.result.image
           }
-          this.works[this.form.index] = obj
+          // this.works[this.form.index] = obj
+          this.works.splice(this.form.index, 1, obj)
         }
         this.dialog = false
       } catch (error) {
@@ -359,10 +360,17 @@ export default {
       })
       this.works = data.result
     } catch (error) {
+      if (error.response) {
+        this.$swal({
+          icon: 'error',
+          title: '錯誤',
+          text: error.response.data.message
+        })
+      }
       this.$swal({
         icon: 'error',
         title: '錯誤',
-        text: error
+        text: this.data.result
       })
     }
   }
@@ -397,13 +405,13 @@ colgroup {
 }
 
 .delete-card {
-  background: var(--accent);
+  background: var(--secondary);
   height: 170px;
 }
 .v-card__text.delete-title {
   font-weight: bold;
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--accent);
   position: absolute;
   top: 30%;
   left: 18%;

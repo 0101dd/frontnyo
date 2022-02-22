@@ -220,7 +220,8 @@ export default {
           if (data.result.image) {
             obj.image = data.result.image
           }
-          this.arrayQ[this.form.index] = obj
+          // this.arrayQ[this.form.index] = obj
+          this.arrayQ.splice(this.form.index, 1, obj)
         }
         this.dialog = false
       } catch (error) {
@@ -282,13 +283,13 @@ export default {
       }
     },
     editQuestion (item) {
-      this.form.index = this.arrayQ.indexOf(item)
       this.form = Object.assign({}, item)
+      this.form.index = this.arrayQ.indexOf(item)
       this.dialog = true
     },
     deleteItem (item) {
-      this.form.index = this.arrayQ.indexOf(item)
       this.form = Object.assign({}, item)
+      this.form.index = this.arrayQ.indexOf(item)
       this.dialogDelete = true
     },
     closeDelete () {
@@ -302,22 +303,6 @@ export default {
     }
   },
   async created () {
-    try {
-      const { data } = await this.api.get('/questions/all', {
-        headers: {
-          authorization: 'Bearer ' + this.user.token
-        }
-      })
-      this.arrayQ = data.result
-    } catch (error) {
-      this.$swal({
-        icon: 'error',
-        title: '錯誤',
-        text: '取得失敗'
-      })
-    }
-  },
-  async updated () {
     try {
       const { data } = await this.api.get('/questions/all', {
         headers: {
