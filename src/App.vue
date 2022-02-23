@@ -9,9 +9,10 @@
     <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
     </v-img></router-link>
     <ul>
-      <li>這裡要寫個什麼，記得要寫個什麼，前面還要放個什麼</li>
-      <li> ｜</li>
+      <li><span class="logo-slogan">書彙齋</span>在現實生活中沒辦法，來寫書法就有辦法。</li>
+      <!-- <li> ｜</li> -->
     </ul>
+    <v-spacer style="width: 150px"></v-spacer>
       <ul>
         <li><router-link to="/book">精選字帖</router-link></li>
         <v-menu
@@ -62,7 +63,7 @@
            v-bind="attrs" v-on="on"
         >mdi-account-circle-outline</v-icon>
       </template>
-      <v-list flat>
+      <v-list flat class="test">
           <v-list-item class="d-flex flex-column">
             <v-list-item-content v-if="user.isLogin && !user.isAdmin" >
             <v-list-item :ripple="false" to="/dashboard/users">會員主頁</v-list-item>
@@ -190,9 +191,8 @@
       tile
       >
       <v-card-title>
-        <v-spacer></v-spacer>
 
-        <strong class="subheading">這是一條夫特文字😎</strong>
+        <strong class="subheading">此網站為學習用途，並無商業使用。</strong>
         <v-spacer></v-spacer>
 
         <v-btn
@@ -209,7 +209,7 @@
       </v-card-title>
 
       <v-card-text class="py-2 text-center white--text">
-        {{ new Date().getFullYear() }} — <strong>dd0101</strong>
+        {{ new Date().getFullYear() }} — <span>dd0101</span>
       </v-card-text>
     </v-card>
     </v-footer>
@@ -244,6 +244,20 @@ export default {
 // .animation-enter-active {
 //   animation: thisOne 1.2s steps(24);
 // }
+.logo-slogan {
+  font-size: 2rem;
+  font-family: 'HanyiSentyTang';
+  color: var(--error);
+  margin-right: 20px;
+  letter-spacing: 5px;
+}
+
+strong {
+  font-size: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .active {
   display: none;
 }
@@ -298,6 +312,8 @@ ul {
   color: white;
   background: var(--primary);
 }
+// account-icon hover-list
+
 .v-menu__content {
   min-width: 94px;
   top: 55px !important;
@@ -315,11 +331,12 @@ ul {
       }
   }
 }
+
 .account-outline {
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: -660px;
+  right: -510px;
   &:hover {
     transition: 0.5s;
     transform: translateY(-6px);

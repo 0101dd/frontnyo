@@ -71,7 +71,7 @@ export default {
 }
 
 .container {
-  // margin: 100px 0;
+  margin: 50px;
   height: 100%;
 }
 
