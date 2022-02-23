@@ -4,7 +4,7 @@
   <div id="question">
     <div id="router-ink"></div>
     <!-- <h1>常見問題</h1> -->
-    <v-container>
+    <div class="container">
       <div class="list">
         <v-expansion-panels focusable multiple>
           <v-expansion-panel
@@ -30,7 +30,7 @@
           </v-expansion-panel>
         </v-expansion-panels>
       </div>
-    </v-container>
+    </div>
   </div>
 </v-app>
 </template>
@@ -66,7 +66,13 @@ export default {
 #question {
   background:
   linear-gradient(transparent,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.35)),
-  url('https://theme.npm.edu.tw/selection/att/collection/04000980/17010201.jpg') no-repeat center/cover;
+  url('https://theme.npm.edu.tw/selection/att/collection/04000980/17010201.jpg') no-repeat fixed center/cover;
+  height: 100%;
+}
+
+.container {
+  // margin: 100px 0;
+  height: 100%;
 }
 
 h1 {
@@ -74,18 +80,6 @@ h1 {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -30%);
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   width: 112%;
-  //   height: 45%;
-  //   left: -5%;
-  //   bottom: 18%;
-  //   background: var(--info);
-  //   // background: linear-gradient(#ded7b94f, #ded7b94f);
-  //   // filter: blur(20px);
-  //   z-index: -1;
-  // }
 }
 
 .v-expansion-panel-content {

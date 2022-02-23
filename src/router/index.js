@@ -213,6 +213,14 @@ const routes = [
         }
       },
       {
+        path: 'cart',
+        name: 'Cart',
+        component: () => import(/* webpackChunkName: "dashboard" */ '../views/Cart.vue'),
+        meta: {
+          title: '購物清單 | 書彙齋'
+        }
+      },
+      {
         path: 'order',
         name: 'Order',
         component: () => import(/* webpackChunkName: "dashboard" */ '../views/Order.vue'),

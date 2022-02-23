@@ -7,18 +7,19 @@
       </div>
       <div class="col">
         <h3>{{ name }}</h3>
-        <p class="pb-3">{{ description }}</p>
+        <p class="pb-3" style="white-space: break-spaces;">{{ description }}</p>
         <p class="price">{{ '$' + price }}</p>
         <hr>
         <p class="category">{{ category }}</p>
         <v-text-field
+          class="quantity"
           label="數量"
           v-model="quantity"
           type="number"
           color="accent"
           outlined
           dark
-          class="quantity"
+          :rule="quantityState"
         >
         </v-text-field>
         <v-btn
@@ -27,6 +28,7 @@
           color="accent"
           outlined
           :ripple="false"
+          @click="addCart"
         >
           <v-icon>
             mdi-basket-outline
@@ -55,6 +57,16 @@ export default {
       sell: false,
       category: '',
       quantity: 0
+    }
+  },
+  methods: {
+    addCart () {
+      this.$store.dispatch('user/addCart', { product: this.$route.params.id, quantity: this.quantity })
+    }
+  },
+  computed: {
+    quantityState () {
+      return this.quantity === 0 ? null : this.quantity > 0
     }
   },
   async created () {

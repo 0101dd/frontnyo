@@ -6,6 +6,9 @@
         <v-list-item router-link to="/dashboard/users" :ripple="false">
             <v-list-item-title class="pro">會員主頁</v-list-item-title>
         </v-list-item>
+        <v-list-item router-link to="/dashboard/cart" :ripple="false">
+            <v-list-item-title>購物清單</v-list-item-title>
+        </v-list-item>
         <v-list-item router-link to="/dashboard/order" :ripple="false">
             <v-list-item-title>訂單查詢</v-list-item-title>
         </v-list-item>

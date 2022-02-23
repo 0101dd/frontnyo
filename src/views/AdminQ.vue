@@ -5,7 +5,7 @@
     <v-data-table
       :headers="headers"
       :items="arrayQ"
-      :items-per-page="10"
+      :items-per-page="5"
       ref="table"
       class="elevation-3"
     >
@@ -160,14 +160,14 @@ export default {
       headers: [
         {
           text: '問題敘述',
-          align: 'start',
+          align: 'center',
           sortable: false,
           class: 'primary white--text subtitle-1',
           width: '350px',
           value: 'question'
         },
-        { text: '回答敘述', class: 'primary white--text subtitle-1', width: '550px', value: 'answer' },
-        { text: '操作', class: 'primary white--text subtitle-1', value: 'operate', sortable: false }
+        { text: '回答敘述', align: 'center', class: 'primary white--text subtitle-1', width: '550px', value: 'answer' },
+        { text: '操作', align: 'center', class: 'primary white--text subtitle-1', value: 'operate', sortable: false }
       ]
     }
   },

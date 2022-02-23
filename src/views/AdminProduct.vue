@@ -5,7 +5,7 @@
     <v-data-table
       :headers="headers"
       :items="products"
-      :items-per-page="5"
+      :items-per-page="3"
       ref="table"
       class="elevation-3"
     >
