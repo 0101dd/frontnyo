@@ -196,11 +196,11 @@
 
         <strong class="subheading">此網站為學習用途，並無商業使用。</strong>
         <v-spacer></v-spacer>
-
+        <div class="footer-icon d-flex">
         <v-btn
           v-for="icon in icons"
           :key="icon"
-          class="mx-4"
+          class="footer-icon"
           dark
           icon
         >
@@ -208,6 +208,7 @@
             {{ icon }}
           </v-icon>
         </v-btn>
+        </div>
       </v-card-title>
 
       <v-card-text class="py-2 text-center white--text">
