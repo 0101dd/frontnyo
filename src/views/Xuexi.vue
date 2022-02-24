@@ -2,7 +2,7 @@
 <template>
 <v-app style="overflow: hidden;">
   <div id="xuexi">
-    <div id="router-ink2" style="top: 14%;"></div>
+    <div id="router-ink2" style="top: 9%;"></div>
     <div class="title-picture">
       <img
         src="../assets/pomo.png"
@@ -177,9 +177,9 @@ export default {
       scrollTrigger: {
         trigger: '.t1',
         endTrigger: '.t4',
-        start: 'top 70%',
+        start: 'top 52%',
         end: 'bottom 60%',
-        scrub: 0.5,
+        scrub: 1,
         markers: false
       },
       defaults: {
@@ -249,7 +249,7 @@ h3, h4 {
   // bottom: 0;
   // z-index: 0;
   background:
-  linear-gradient(360deg, #ffffffb6, white),
+  linear-gradient(360deg, #ffffffd7, white),
   url(../assets/ru-men-footer.png) no-repeat bottom/100%;
 }
 </style>

@@ -2,17 +2,19 @@
   <v-app>
     <v-app-bar
     fixed
-    elevation="2"
+    elevation="10"
     color="#c4a66f"
     style="width: 100vw; z-index: 3;"
     class="app-bar d-flex justify- space-between">
     <router-link to="/"><v-img src="./assets/logo.png" max-height="50" max-width="50" class="pt-5" style="cursor: pointer;">
     </v-img></router-link>
-    <ul>
-      <li><span class="logo-slogan">書彙齋</span>在現實生活中沒辦法，來寫書法就有辦法。</li>
+    <ul class="pa-0">
+      <li><span class="logo-slogan">書彙齋</span>
+      <img src="./assets/logo-slogan.png" width="230px" style="transform: rotate(1deg); position: absolute; bottom: 17px;">
+      </li>
       <!-- <li> ｜</li> -->
     </ul>
-    <v-spacer style="width: 150px"></v-spacer>
+    <v-spacer style="width: 450px"></v-spacer>
       <ul>
         <li><router-link to="/book">精選字帖</router-link></li>
         <v-menu
@@ -69,7 +71,7 @@
             <v-list-item :ripple="false" to="/dashboard/users">會員主頁</v-list-item>
             </v-list-item-content>
             <v-list-item-content v-if="user.isLogin && user.isAdmin">
-            <v-list-item :ripple="false" to="/admin">管理</v-list-item>
+            <v-list-item :ripple="false" to="/admin/adminPro">管理</v-list-item>
             </v-list-item-content>
             <v-list-item-content v-if="!user.isLogin">
             <v-list-item :ripple="false" to="/login">登入</v-list-item>
@@ -94,7 +96,7 @@
           icon
           large
           @click="sheet = !sheet"
-          style="position: fixed; left: 520px; top: 800px; z-index: 111;"
+          style="position: fixed; left: 420px; top: 800px; z-index: 111;"
         >
         <v-icon>mdi-menu</v-icon>
         </v-btn>
@@ -336,7 +338,7 @@ ul {
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: -510px;
+  right: -535px;
   &:hover {
     transition: 0.5s;
     transform: translateY(-6px);

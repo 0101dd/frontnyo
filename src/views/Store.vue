@@ -6,7 +6,9 @@
     <v-container>
       <div class="row flex-wrap">
         <div class="col-6 d-flex" v-for="(item, i) in items" :key="i">
-        <v-card class="d-flex pa-5" style="background: var(--secondary);">
+        <v-card class="d-flex pa-5"
+        elevation="5"
+        style="background: var(--accent);">
         <iframe
           :src="item.iframe"
           width="300"
@@ -63,11 +65,10 @@ export default {
 }
 
 p {
-  color: white;
   padding: 0;
   margin: 0;
   span {
-    color: var(--accent);
+    color: var(--primary);
     font-weight: bold;
   }
 }
@@ -102,8 +103,8 @@ h1 {
 }
 
 a {
-  color: var(--primary);
-  background: var(--accent);
+  color: var(--accent);
+  background: var(--primary);
   width: 100px;
   height: 40px;
   border-radius: 30px;
@@ -114,9 +115,9 @@ a {
   bottom: 20px;
   transition: 0.5s;
   &:hover {
-    color: var(--accent);
+    color: var(--primary);
     background: transparent;
-    border: 1px solid var(--accent);
+    border: 1px solid var(--primary);
     transition: 0.5s;
   }
 }

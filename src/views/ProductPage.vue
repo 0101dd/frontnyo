@@ -1,5 +1,5 @@
 <template>
-<v-app style="background: var(--primary);">
+<v-app style="background: var(--accent);">
   <div id="router-ink"></div>
   <div id="product-page">
   <div class="container">

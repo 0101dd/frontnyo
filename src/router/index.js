@@ -54,7 +54,8 @@ const routes = [
     name: 'Product',
     component: () => import(/* webpackChunkName: "product" */ '../views/Product.vue'),
     meta: {
-      title: '商品 | 書彙齋'
+      title: '商品 | 書彙齋',
+      transition: 'overlay-left-right'
     }
   },
   {
@@ -305,8 +306,13 @@ const routes = [
   }
 ]
 
+// router 頁面最上
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    // return 期望滾動到哪個的位置
+    return { x: 0, y: 0 }
+  }
 })
 
 router.beforeEach((to, from, next) => {

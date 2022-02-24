@@ -2,7 +2,7 @@
 <template>
 <v-app style="background: white;" >
   <div id="home" class="text-center">
-    <div id="router-ink2"></div>
+    <div id="router-ink2" style="top: 15%;"></div>
     <div class="banner">
       <div class="container">
         <p id="target" v-split-characters>書法是一種書寫的藝術，書法縱向穿透兩個層面：「使用」與「審美」；橫向跨越文字兩個層面：「文字」、「繪畫」。書法除了是書法家用以創作的主要表現和作品形式，也是一種研究書寫者心理與性格的工具。各地域依其在地歷史與文化發展出自有的書法特色，而書法至今仍廣泛應用於生活與藝術文化等層面。</p>
@@ -18,14 +18,14 @@
           </kinesis-element>
       </kinesis-container>
       <h1>精選字帖</h1>
-          <img src="https://upload.cc/i1/2022/02/04/HGpIA9.png" class="he" alt="dd">
+          <!-- <img src="https://upload.cc/i1/2022/02/04/HGpIA9.png" class="he" alt="dd"> -->
       <bookswiper></bookswiper>
-      <kinesis-container style="height: 100%;">
+      <!-- <kinesis-container style="height: 100%;">
         <kinesis-element :strength="600">
           <img src="../assets/tu.png" alt="tu" width="12%"
           class="rabbit">
         </kinesis-element>
-      </kinesis-container>
+      </kinesis-container> -->
     </div>
     <!-- 書法入門-------------------------- -->
         <h1>書法入門</h1>
@@ -110,9 +110,9 @@
       </div>
     </div>
     <!-- 客製專區-------------------------- -->
-    <div class="shop">
+    <!-- <div class="shop">
       <h1>客製專區</h1>
-    </div>
+    </div> -->
     <div class="blank"></div>
     <!-- footer圖片------------------------ -->
     <div class="footer-img">
@@ -160,34 +160,34 @@ export default {
       duration: 2,
       scale: 'random(-1,2)'
     })
-    gsap.from('.cloud1', {
-      duration: 15,
-      repeat: -1,
-      yoyo: true,
-      ease: 'none',
-      x: '600px'
-    })
-    gsap.to('.cloud2', {
+    gsap.to('.cloud1', {
       duration: 25,
       repeat: -1,
-      yoyo: true,
+      yoyo: false,
       ease: 'none',
-      x: '50%'
+      x: '1920px'
     })
-    gsap.from('.cloud3', {
-      duration: 50,
+    gsap.to('.cloud2', {
+      duration: 95,
       repeat: -1,
-      yoyo: true,
-      ease: 'slow',
-      x: '70%'
+      yoyo: false,
+      ease: 'none',
+      x: '900px'
     })
-    gsap.to('.he', {
-      duration: 10,
+    gsap.to('.cloud3', {
+      duration: 90,
       repeat: -1,
+      yoyo: false,
       ease: 'slow',
-      x: '-2050px',
-      y: '-300px'
+      x: '-1500px'
     })
+    // gsap.to('.he', {
+    //   duration: 10,
+    //   repeat: -1,
+    //   ease: 'slow',
+    //   x: '-2050px',
+    //   y: '-300px'
+    // })
   }
 }
 </script>
@@ -267,13 +267,13 @@ h1::before {
   top: 0px;
 }
 
-.rabbit {
+/* .rabbit {
   position:absolute;
   left: 60px;
   top: 300px;
   transform: rotate(-5deg);
   z-index: 50;
-}
+} */
 
 /* 書法入門------------------------------------- */
 .information {
@@ -337,18 +337,18 @@ h1::before {
 
 .cloud1 {
   position: absolute;
-  bottom: 350px;
+  bottom: 550px;
 }
 
 .cloud2 {
   position: absolute;
-  bottom: 200px;
+  bottom: 300px;
   left: 30%;
 }
 
 .cloud3 {
   position: absolute;
-  bottom: 570px;
+  bottom: 470px;
   right: 26%;
 }
 </style>

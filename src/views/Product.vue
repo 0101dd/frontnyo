@@ -16,16 +16,15 @@
           label="數量"
           v-model="quantity"
           type="number"
-          color="accent"
+          color="secondary"
           outlined
-          dark
           :rule="quantityState"
         >
         </v-text-field>
         <v-btn
           v-model="quantity"
           large
-          color="accent"
+          color="secondary"
           outlined
           :ripple="false"
           @click="addCart"
@@ -38,16 +37,11 @@
       </div>
     </div>
   </div>
-  <MovePosition></MovePosition>
 </div>
 </template>
 
 <script>
-import MovePosition from '../components/MovePosition.vue'
 export default {
-  components: {
-    MovePosition
-  },
   data () {
     return {
       name: '',
@@ -88,7 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 #product {
-  background: var(--secondary);
+  background: var(--accent);
 }
 .container {
   width: 70vw;
@@ -103,7 +97,7 @@ export default {
 }
 .col:last-child {
   border-radius: 10px;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--secondary);
   padding: 50px 0px;
   text-align: center;
   display: flex;
@@ -116,17 +110,16 @@ img {
   border-radius: 5px;
 }
 h3 {
-  color: var(--accent);
+  color: var(--secondary);
   font-weight: normal;
 }
 p {
-  color: white;
   width: 70%;
   margin: 0;
 }
 hr {
   width: 75%;
-  background-color: var(--accent);
+  background-color: var(--secondary);
   margin-top: 15px;
 }
 .v-btn::before {
@@ -138,14 +131,14 @@ hr {
   right: 90px;
   bottom: 131px;
   &:hover {
-    background: var(--accent);
-    color: var(--primary) !important;
+    background: var(--secondary);
+    color: var(--accent) !important;
     transition: 0.5s;
   }
 }
 .price {
-  background: var(--accent);
-  color: var(--secondary);
+  background: var(--secondary);
+  color: var(--accent);
   border-radius: 8px;
   text-align: center;
   font-size: 2rem;
@@ -158,7 +151,7 @@ hr {
 }
 .category {
   font-size: 0.5rem;
-  color: #ffffff81;
+  // color: #ffffff81;
 }
 
 .quantity {

@@ -1,12 +1,15 @@
 <template>
-<div id="my-work-page" style="background: var(--secondary);">
+<div id="my-work-page" style="background: var(--accent);">
+<div id="router-ink2" style="top: 7%;"></div>
   <div class="container">
     <div class="row flex-column-reverse">
       <div class="col"
         v-for="myWork in works"
         :key="myWork.name"
       >
-        <v-card style="background: var(--accent);">
+        <v-card
+          elevation="10"
+        >
           <img :src="myWork.image" style="width: 100%;">
           <div class="card-text pa-5">
             <h3 class="text-center">{{ myWork.name }}</h3>

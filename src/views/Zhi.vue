@@ -221,7 +221,7 @@ h3, h4 {
   // bottom: 0;
   // z-index: 0;
   background:
-  linear-gradient(360deg, #ffffffb6, white),
+  linear-gradient(360deg, #ffffffd7, white),
   url(../assets/ru-men-footer.png) no-repeat bottom/100%;
 }
 </style>

@@ -3,8 +3,10 @@
   <div class="container">
     <div class="row">
       <div class="col left-info">
-        <h1>{{ user.account }}</h1>
-        <h1>{{ user.email }}</h1>
+        <h1 class="account-title">帳號：</h1>
+        <h1 class="pl-5">{{ user.account }}</h1>
+        <h1 class="email-title">信箱：</h1>
+        <h1 class="pl-5">{{ user.email }}</h1>
       </div>
       <div class="col">
          <!-- <v-form
@@ -173,11 +175,17 @@ export default {
 <style lang="scss" scoped>
 #users {
   h1 {
-    font-family: Arial !important;
+    font-family: Arial;
     &::before {
       display: none;
     }
   }
+}
+.account-title, .email-title {
+  color: var(--info) !important;
+  font-size: 2rem;
+  font-family: 'HanyiSentyTang' !important;
+  font-weight: normal;
 }
 
 .container {
