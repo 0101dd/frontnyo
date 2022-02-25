@@ -148,6 +148,8 @@ hr {
   align-self: flex-start;
   width: 23%;
   height: 54px;
+  position: relative;
+  z-index: 2;
 }
 .category {
   font-size: 0.5rem;

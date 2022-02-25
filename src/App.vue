@@ -76,7 +76,7 @@
             <v-list-item-content v-if="!user.isLogin">
             <v-list-item :ripple="false" to="/login">登入</v-list-item>
             </v-list-item-content>
-            <v-list-item-content>
+            <v-list-item-content v-if="!user.isLogin && !user.isAdmin">
             <v-list-item :ripple="false" to="/register">註冊</v-list-item>
             </v-list-item-content>
             <v-list-item-content v-if="user.isLogin">
@@ -92,11 +92,9 @@
     <div id="menu-sm" style="position: relative;">
         <v-btn
           color="secondary"
-          dark
-          icon
-          large
+          fab
           @click="sheet = !sheet"
-          style="position: fixed; left: 420px; top: 800px; z-index: 111;"
+          style="position: fixed; left: 420px; top: 730px; z-index: 111;"
         >
         <v-icon>mdi-menu</v-icon>
         </v-btn>
@@ -132,16 +130,40 @@
           </v-list-group>
         </v-list-item-content>
         <v-list-item-content>
-          <v-list-item><v-icon class="mr-3">mdi-book-open</v-icon>作品專區</v-list-item>
+          <v-list-item @click="sheet = !sheet" :ripple="false" to="/myWorkPage"><v-icon class="mr-3">mdi-book-open</v-icon>作品專區</v-list-item>
         </v-list-item-content>
         <v-list-item-content>
           <v-list-item @click="sheet = !sheet" :ripple="false" to="/question"><v-icon class="mr-3">mdi-comment-question-outline</v-icon>常見問題</v-list-item>
         </v-list-item-content>
         <v-list-item-content>
-          <v-list-item><v-icon class="mr-3">mdi-shopping-outline</v-icon>客製專區</v-list-item>
+          <v-list-item @click="sheet = !sheet" :ripple="false" to="/ProductPage"><v-icon class="mr-3">mdi-shopping-outline</v-icon>客製專區</v-list-item>
         </v-list-item-content>
         <v-list-item-content>
           <v-list-item @click="sheet = !sheet" :ripple="false" to="/store"><v-icon class="mr-3">mdi-store-outline</v-icon> 店家資訊</v-list-item>
+        </v-list-item-content>
+        <v-list-item-content>
+          <v-list-group
+            :ripple="false"
+          >
+            <template v-slot:activator>
+              <v-list-item class="ml-n4"><v-icon class="mr-3">mdi-account-circle-outline</v-icon>會員專區</v-list-item>
+            </template>
+              <v-list-item-content v-if="!user.isLogin">
+                <v-list-item class="ml-10" @click="sheet = !sheet" :ripple="false" to="/login">登入</v-list-item>
+              </v-list-item-content>
+              <v-list-item-content v-if="!user.isLogin && !user.isAdmin">
+                <v-list-item class="ml-10" @click="sheet = !sheet" :ripple="false" to="/register">註冊</v-list-item>
+              </v-list-item-content>
+              <v-list-item-content v-if="user.isLogin && !user.isAdmin">
+                <v-list-item class="ml-10" @click="sheet = !sheet" :ripple="false" to="/dashboard/users">會員主頁</v-list-item>
+              </v-list-item-content>
+              <v-list-item-content  v-if="user.isLogin && user.isAdmin">
+                <v-list-item class="ml-10" @click="sheet = !sheet" :ripple="false" to="/admin/adminPro">管理</v-list-item>
+              </v-list-item-content>
+              <v-list-item-content v-if="user.isLogin">
+                <v-list-item class="ml-10" @click="rwdLogout" :ripple="false" to="/">登出</v-list-item>
+              </v-list-item-content>
+          </v-list-group>
         </v-list-item-content>
         </v-list>
         <v-btn
@@ -152,7 +174,7 @@
           :ripple="false"
           plain="true"
           x-large
-          style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);"
+          style="position: absolute; bottom: 20px; left: 60%; transform: translateX(-50%);"
         >
           <v-icon>
             mdi-window-close
@@ -165,7 +187,7 @@
           :ripple="false"
           plain="true"
           x-large
-          style="position: absolute; bottom: 20px; left: 40%; transform: translateX(-50%);"
+          style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);"
           to="/"
         >
         <v-icon>
@@ -235,6 +257,10 @@ export default {
   methods: {
     logout () {
       this.$store.dispatch('user/logout')
+    },
+    rwdLogout () {
+      this.$store.dispatch('user/logout')
+      this.sheet = !this.sheet
     }
   },
   async created () {

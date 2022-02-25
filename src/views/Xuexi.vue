@@ -92,7 +92,7 @@
           <p class="mt-5">這是臨習法帖氣韻、意境的方法．被眾多書家廣為運用。臨習法書時不求一字一畫肖合形畢，但求整體氣韻生動自然。這是一種帶有創造性的臨習方法，不適於初習者運用，等學習者有一定臨寫基本功後可試用。</p>
         </div>
       </div>
-      <h1 class="mt-16">臨帖常見的問題</h1>
+      <h1 class="mt-16 t5">臨帖常見的問題</h1>
       <div class="row">
         <div class="mx-auto col-sm-6 col-12 text-center">
           <h3>筆畫寫不到位</h3>
@@ -205,18 +205,6 @@ export default {
         y: 100,
         opacity: 0
       })
-      .from('.t5', {
-        y: 100,
-        opacity: 0
-      })
-      .from('.t6', {
-        y: 100,
-        opacity: 0
-      })
-      .from('.t7', {
-        y: 100,
-        opacity: 0
-      })
   }
 }
 </script>
@@ -225,22 +213,22 @@ export default {
 h3, h4 {
   display: inline;
 }
-.row {
-  .col {
-    h3 {
-      position: relative;
-      &::before {
-        content: '';
-        width: 100%;
-        height: 4px;
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        background: var(--info);
-      }
-    }
-  }
-}
+// .row {
+//   .col {
+//     h3 {
+//       position: relative;
+//       &::before {
+//         content: '';
+//         width: 100%;
+//         height: 4px;
+//         position: absolute;
+//         bottom: -3px;
+//         left: 0;
+//         background: var(--info);
+//       }
+//     }
+//   }
+// }
 
 #xuexi {
   width: 100vw;

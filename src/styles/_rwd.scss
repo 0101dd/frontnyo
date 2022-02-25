@@ -117,6 +117,31 @@
   }
   // [maobi] ---------------------------------
   #maobi {
+    .container {
+      padding-top: 13rem !important;
+      .row:nth-child(1) {
+        margin-top: 200px;
+      }
+      .row:nth-child(2) {
+        margin-top: 0px !important;
+        width:100%;
+      }
+      .row:nth-child(3) {
+        margin-top: 400px !important;
+      }
+      .row:nth-child(5) {
+        margin-top: 420px !important;
+      }
+      .t2:nth-child(1),.t4:nth-child(1) {
+        order: 2;
+      }
+      .t2:nth-child(2),.t4:nth-child(1) {
+        order: 1;
+      }
+      .t5 {
+        margin-top: 440px !important;
+      }
+    }
     .title-picture img{
       width: 69%;
     }
@@ -129,9 +154,13 @@
     }
     h3 {
       font-size: 2.5rem;
+      display: block;
     }
-    .container .row:nth-child(1) {
-      margin-top: 200px;
+    img {
+      width: 100%;
+    }
+    .title-p {
+      width: 87% !important;
     }
     .col h3+p {
       width: 100% !important;
@@ -143,6 +172,15 @@
 
 // [mozhi] ---------------------------------
   #mozhi {
+    .container {
+      padding-top: 10rem !important;
+      .t2:nth-child(1),.t4:nth-child(1) {
+        order: 2;
+      }
+      .t2:nth-child(2),.t4:nth-child(1) {
+        order: 1;
+      }
+    }
     .title-picture img{
       width: 69%;
     }
@@ -151,13 +189,22 @@
       top: 1.5% !important;
     }
     h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
+      &::before {
+        content: '';
+        bottom: -5px;
+        width: 40px;
+        height: 40px;
+      }
     }
     h3 {
       font-size: 2.5rem;
     }
     .container .row:nth-child(1) {
       margin-top: 200px;
+    }
+    img {
+      width: 100%;
     }
     .col h1+p {
       width: 100% !important;
@@ -168,6 +215,24 @@
   }
 // [zhi] ---------------------------------
   #zhi {
+    .container {
+      padding-top: 10rem !important;
+      .t2:nth-child(1),.t4:nth-child(1) {
+        order: 2;
+      }
+      .t2:nth-child(2),.t4:nth-child(1) {
+        order: 1;
+      }
+      .t5 {
+        margin-top: 440px !important;
+      }
+      .row:nth-child(5) {
+        margin-top: 220px !important;
+      }
+      .row:nth-child(6) {
+        margin-top: 420px !important;
+      }
+    }
     .title-picture img{
       width: 69%;
     }
@@ -177,9 +242,18 @@
     }
     h1 {
       font-size: 3.5rem;
+      &::before {
+        content: '';
+        bottom: -5px;
+        width: 40px;
+        height: 40px;
+      }
     }
     h3 {
       font-size: 2.5rem;
+    }
+    img {
+      width: 100%;
     }
     .container .row:nth-child(1) {
       margin-top: 200px;
@@ -193,6 +267,24 @@
   }
 // [xuexi] ---------------------------------
   #xuexi {
+    .container {
+      padding-top: 10rem !important;
+      .t2:nth-child(1),.t4:nth-child(1) {
+        order: 2;
+      }
+      .t2:nth-child(2),.t4:nth-child(1) {
+        order: 1;
+      }
+      .t5 {
+        margin-top: 250px !important;
+      }
+      .row:nth-child(6) {
+        margin-top: 370px !important;
+      }
+      .row:nth-child(7) {
+        margin-top: 370px !important;
+      }
+    }
     .title-picture img{
       width: 69%;
     }
@@ -201,10 +293,20 @@
       top: 1% !important;
     }
     h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
+      &::before {
+        content: '';
+        bottom: -5px;
+        width: 40px;
+        height: 40px;
+      }
     }
     h3 {
       font-size: 2.5rem;
+      display: block;
+    }
+    img {
+      width: 100%;
     }
     .container .row:nth-child(1) {
       margin-top: 200px;
@@ -268,21 +370,37 @@
     display: none;
   }
   // [shupu...] -------------------------
-  #shupu, #zixutie, #kuaixue, #hanshi, #nongfangshi, #shubotuquan {
-    .v-carousel__controls {
+  #zixutie {
+    .container {
+      height: initial;
+    }
+    hr {
+      width: 100%;
+    }
+    .hongyun, .hongyun2 {
       display: none;
     }
-    .v-window {
-      height: 43vh !important;
+    .swiper {
+      bottom: 0% !important;
+      height: initial;
     }
-    .v-window__container {
-      height: 40vh !important;
-      .v-carousel__item {
-        height: 100% !important;
-      }
+    .swiper-slide {
+      height: initial !important;
     }
-    .spacer {
-      display: none;
+    img {
+      width: 100%;
+    }
+    .swiper-button-prev, .swiper-button-next,
+    .swiper-button-prev2, .swiper-button-next2 {
+      // color: var(--accent) !important;
+      background: none;
+      height: 100px;
+    }
+    .swiper-button-prev::after, .swiper-button-next::after {
+      display: block;
+      color: var(--primary);
+      position: absolute;
+      bottom: 200px;
     }
   }
   #dutong, #huaqi {
@@ -306,6 +424,82 @@
       a {
         right: 30px;
       }
+    }
+  }
+  // [productPage]---------------------
+  #product-page {
+    .container {
+      height: 100%;
+      margin-top: 5%;
+      margin-bottom: 100px;
+      .col {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  // [product/:id] ------------------
+  #product {
+    .container {
+      height: 100%;
+      padding-top: 30px;
+      padding-bottom: 40px;
+    }
+    .v-btn {
+      right: 50px;
+    }
+    .price {
+      width: 32%;
+      margin: 10px 0px 100px 65px;
+    }
+    .quantity {
+      left: 65px;
+      width: 140px;
+    }
+    hr {
+      width: 80%;
+    }
+    .col:first-child {
+      img {
+        width: 450px;
+      }
+    }
+    .col:last-child {
+      margin: 0 13px;
+    }
+  }
+  #question {
+    .container {
+      width: 100%;
+      margin: 0;
+    }
+    .list {
+      width: 90%;
+    }
+  }
+  // [my-work-page] -----------------
+  #my-work-page {
+    .container {
+      padding-top: 50px;
+      width: 90vw;
+    }
+    p {
+      width: 80%;
+    }
+  }
+  // [store] -------------------------
+  #store {
+    .container {
+      height: 100%;
+    }
+    iframe {
+      width: 330px !important;
+    }
+    .card-text {
+      margin-left: 10px !important;
+    }
+    a {
+      bottom: 25px;
     }
   }
 }

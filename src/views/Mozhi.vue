@@ -68,14 +68,14 @@
           >
         </div>
       </div>
-      <div class="row flex-column flex-sm-row" style="margin-top: 200px;">
+      <div class="row" style="margin-top: 200px;">
         <div class="col-sm-6 col-12 t4" style="height: 50%; overflow: hidden;">
           <img
             src="../assets/mo-4.jpg"
           >
         </div>
         <v-spacer></v-spacer>
-        <div class="col-md-5 col text-center text-sm-left t4">
+        <div class="col-md-5 col-12 text-center text-sm-left t4">
           <h3>松煙墨</h3>
           <p class="mt-5">（松煙是松樹油燃燒後收集其煙所制的墨）的品種有：阿膠松煙、五老松煙、小松煙等。松煙墨汁烏黑無光，略呈冷色古人常用於渲染頭髮、鬚眉，是書寫小楷字和工筆繪畫的佳品。它的配方比例按照季節氣候進行調整，以適合四季的氣候變換。</p>
         </div>

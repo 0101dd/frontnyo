@@ -81,7 +81,7 @@
           >
         </div>
       </div>
-      <h1 class="mt-16">如何挑選宣紙</h1>
+      <h1 class="mt-16 t5">如何挑選宣紙</h1>
       <div class="row">
         <div class="mx-auto col-sm-6 col-12">
           <p class="font-weight-black text-center">薄紙宜畫、厚紙宜書；單宣宜畫、夾宣宜書。但不絕對，還有個人喜好。</p>

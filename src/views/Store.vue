@@ -5,28 +5,28 @@
     <div id="router-ink"></div>
     <v-container>
       <div class="row flex-wrap">
-        <div class="col-6 d-flex" v-for="(item, i) in items" :key="i">
-        <v-card class="d-flex pa-5"
-        elevation="5"
-        style="background: var(--accent);">
-        <iframe
-          :src="item.iframe"
-          width="300"
-          height="300"
-          style="border:0; margin-top: 10px;"
-          loading="lazy">
-        </iframe>
-        <div class="card-text" style="width: 300px; margin-left: 30px;">
-          <p class="store">{{ item.store }}</p>
-          <p><span>地址：</span> {{ item.address }}</p>
-          <p><span>電話：</span>{{ item.phone }}</p>
-          <p><span>營業時間：</span></p>
-          <p><span>星期一~五：</span>{{ item.workday }}</p>
-          <p><span>星期六：</span>{{ item.week }}</p>
-          <p><span>星期日：</span>{{ item.week2 }}</p>
-         <a :href="item.src">詳細資訊</a>
-        </div>
-      </v-card>
+        <div class="col-12 col-sm-6 d-flex" v-for="(item, i) in items" :key="i">
+          <v-card class="d-sm-flex pa-5"
+          elevation="5"
+          style="background: var(--accent);">
+            <iframe
+              :src="item.iframe"
+              width="300"
+              height="300"
+              style="border:0; margin-top: 10px;"
+              loading="lazy">
+            </iframe>
+            <div class="card-text" style="width: 300px; margin-left: 30px;">
+              <p class="store">{{ item.store }}</p>
+              <p><span>地址：</span> {{ item.address }}</p>
+              <p><span>電話：</span>{{ item.phone }}</p>
+              <p><span>營業時間：</span></p>
+              <p><span>星期一~五：</span>{{ item.workday }}</p>
+              <p><span>星期六：</span>{{ item.week }}</p>
+              <p><span>星期日：</span>{{ item.week2 }}</p>
+              <a :href="item.src">詳細資訊</a>
+            </div>
+          </v-card>
         </div>
       </div>
     </v-container>
