@@ -1,6 +1,10 @@
 <template>
 <div id="users">
   <h1 class="text-center">會員管理</h1>
+  <router-link to="/admin/adminPro">會員管理</router-link>
+  <router-link to="/admin/adminOrder">訂單管理</router-link>
+  <router-link to="/admin/adminProduct">商品管理</router-link>
+  <router-link to="/admin/adminQ">常見問題</router-link>
   <div class="container">
     <v-data-table
       :headers="headers"
@@ -79,6 +83,9 @@ export default {
 // }
 h1 {
   margin: 100px 0 50px 0;
+}
+a {
+  display: none;
 }
 h1::before {
   content: '';

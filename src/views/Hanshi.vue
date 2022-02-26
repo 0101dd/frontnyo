@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background: var(--accent); margin-top: 64px;">
+  <v-app style="background: var(--accent); padding-top: 64px;">
     <div id="hanshi">
       <img src="../assets/shan2-beijing.png" class="shan2-bejing">
       <img src="../assets/wenlu.png" class="wenlu">

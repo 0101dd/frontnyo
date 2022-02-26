@@ -1,6 +1,10 @@
 <template>
 <div id="order">
   <h1 class="text-center">訂單查詢</h1>
+  <router-link to="/dashboard/users">會員主頁</router-link>
+  <router-link to="/dashboard/cart">購物清單</router-link>
+  <router-link to="/dashboard/order">訂單查詢</router-link>
+  <router-link to="/dashboard/userWorks">作品管理</router-link>
   <div class="container">
     <v-data-table
       :headers="headers"
@@ -70,6 +74,9 @@ export default {
 //   height: 100vh;
 //   background: var(--accent);
 // }
+a {
+  display: none;
+}
 h1 {
   margin: 100px 0 50px 0;
 }

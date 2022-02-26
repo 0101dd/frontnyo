@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background: var(--accent); margin-top: 64px;">
+  <v-app style="background: var(--accent); padding-top: 64px;">
     <div id="huaqi">
       <img src="../assets/meihua-beijing.png" class="meihua-bejing">
       <img src="../assets/wenlu.png" class="wenlu">
@@ -23,7 +23,7 @@
         <div class="origin-text">
           <h3>花氣熏人帖原文</h3>
           <div class="row flex-wrap">
-            <div class="mx-auto col-6">
+            <div class="mx-auto col-12">
               <p class="pa-5">花氣薰人欲破禪，心情其實過中年。春來詩思何所似，八節灘頭上水船。</p>
             </div>
           </div>

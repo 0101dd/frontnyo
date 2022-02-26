@@ -1,5 +1,10 @@
 <template>
-<div id="users">
+<div id="users-info">
+  <h1 class="text-center" style="font-family: 'HanyiSentyTang';">會員主頁</h1>
+  <router-link to="/dashboard/users">會員主頁</router-link>
+  <router-link to="/dashboard/cart">購物清單</router-link>
+  <router-link to="/dashboard/order">訂單查詢</router-link>
+  <router-link to="/dashboard/userWorks">作品管理</router-link>
   <div class="container">
     <div class="row">
       <div class="col left-info">
@@ -8,8 +13,8 @@
         <h1 class="email-title">信箱：</h1>
         <h1 class="pl-5">{{ user.email }}</h1>
       </div>
-      <div class="col">
-         <!-- <v-form
+      <!-- <div class="col">
+         <v-form
           ref="form"
           v-model="valid"
           @submit.prevent="created"
@@ -80,8 +85,8 @@
               >
                 修改
               </v-btn>
-        </v-form> -->
-      </div>
+        </v-form>
+      </div> -->
     </div>
   </div>
 </div>
@@ -173,13 +178,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#users {
+#users-info {
+  &>h1 {
+    margin-top: 100px;
+  }
   h1 {
     font-family: Arial;
     &::before {
       display: none;
     }
   }
+}
+a {
+  display: none;
 }
 .account-title, .email-title {
   color: var(--info) !important;
@@ -189,7 +200,8 @@ export default {
 }
 
 .container {
-  width: 100%;
+  width: 70%;
+  height: 100%;
 }
 
 .left-info {
@@ -200,10 +212,10 @@ export default {
     color: var(--accent);
   }
 }
-.col:last-child {
-  background: white;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 50px;
-}
+// .col:last-child {
+//   background: white;
+//   border-radius: 10px;
+//   margin: 10px;
+//   padding: 50px;
+// }
 </style>

@@ -1,6 +1,10 @@
 <template>
-<div id="adminQ">
+<div id="admin-product">
   <h1 class="text-center">商品管理</h1>
+  <router-link to="/admin/adminPro">會員管理</router-link>
+  <router-link to="/admin/adminOrder">訂單管理</router-link>
+  <router-link to="/admin/adminProduct">商品管理</router-link>
+  <router-link to="/admin/adminQ">常見問題</router-link>
   <div class="container">
     <v-data-table
       :headers="headers"
@@ -58,7 +62,7 @@
       <!-- 新增按鈕 plus----------------------------- -->
       <template v-slot:activator="{ on, attrs }">
         <v-btn
-          class="mx-2"
+          class="mx-2 plus"
           fab
           icon
           large
@@ -77,7 +81,7 @@
       <!-- 新增框 --------------------------------------------------- -->
       <v-card>
         <v-card-text>
-          <div class="container" style="display: block; width: 500px; height: 650px;">
+          <div class="container form-container" style="display: block; width: 500px; height: 650px;">
             <v-card-title>
               <p class="text-h5 mt-6 mx-auto font-weight-black">
                 <!-- {{ form._id.length > 0 ? '商品編輯' : '商品新增' }} -->
@@ -434,6 +438,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  display: none;
+}
 h1 {
   margin: 100px 0 50px 0;
 }

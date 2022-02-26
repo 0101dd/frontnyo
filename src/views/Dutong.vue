@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background: var(--accent); margin-top: 64px;">
+  <v-app style="background: var(--accent); padding-top: 64px;">
     <div id="dutong">
       <img src="../assets/shan-bejing.png" class="shan-bejing">
       <img src="../assets/wenlu.png" class="wenlu">
@@ -84,7 +84,7 @@ p {
 
 .bg {
   // background: linear-gradient(-165deg, var(--accent) 2%, var(--primary) 70%);
-  background: #665b44;
+  background: var(--accent);
   width: 100vw;
   height: 100vh;
   position: relative;

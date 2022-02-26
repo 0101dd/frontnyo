@@ -5,8 +5,8 @@
       <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
         <div class="content">
+          <h2 class="ml-16">孫過庭</h2>
           <h1 class="d-inline">書譜</h1>
-          <h2 class="d-inline ml-16">孫過庭</h2>
           <h5 class="mb-5">卷 紙本 縱：26.5公分 橫：900.8公分</h5>
           <hr>
           <div class="row">

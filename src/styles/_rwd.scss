@@ -370,9 +370,14 @@
     display: none;
   }
   // [shupu...] -------------------------
-  #zixutie {
+  #zixutie, #shupu, #kuaixue, #dutong,
+  #huaqi, #hanshi, #nongfangshi, #shubotuquan
+  {
     .container {
       height: initial;
+    }
+    h1 {
+      font-size:4.2rem;
     }
     hr {
       width: 100%;
@@ -403,14 +408,26 @@
       bottom: 200px;
     }
   }
+  #kuaixue {
+    h1 {
+      font-size:4.2rem;
+    }
+  }
   #dutong, #huaqi {
     img {
-      height: 45vh;
+      height: initial !important;
+      margin-bottom: -6px;
+    }
+    .bg {
+      height: initial;
     }
   }
   #hanshi {
     h1 {
-      font-size: 4.5rem;
+      font-size: 3.6rem;
+    }
+    h3 {
+      font-size: 2.4rem;
     }
   }
   // [store] -------------------------
@@ -501,5 +518,111 @@
     a {
       bottom: 25px;
     }
+  }
+  // [adminPro] ----------------------------
+  #users, #admin-order, #admin-product, #adminQ {
+    .v-data-table {
+      width: 90%;
+    }
+    .container {
+      margin-bottom: 160px;
+    }
+    h1+a {
+      margin-left: 60px;
+    }
+    a {
+      display: inline-block;
+      margin-top: -10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      color: var(--accent);
+      background: var(--primary);
+      padding: 5px 10px;
+      border: 1.5px solid var(--primary);
+      border-radius: 18px;
+      transition: 0.5s;
+      &:hover {
+        border: 1.5px solid var(--primary);
+        background: var(--accent);
+        color: var(--primary);
+        transition: 0.5s;
+      }
+    }
+  }
+  #admin-product, #adminQ {
+    .plus {
+      bottom: 80px !important;
+      right: 0 !important;
+      width: 55px !important;
+      height: 55px !important;
+    }
+    .v-data-table__mobile-row__cell {
+      width: 280px !important;
+    }
+  }
+  // [dashboard] ------------------
+  #users-info {
+    .left-info {
+      width: 90vw;
+    }
+    h1.pl-5 {
+      font-size: 3rem;
+    }
+    .container {
+      margin-top: 10px;
+      height: initial;
+    }
+  }
+  #users-info, #cart, #order, #user-works {
+    width: 100vw;
+    .container {
+      margin-bottom: 160px;
+    }
+    .v-data-table {
+      width: 90%;
+    }
+    .v-data-table__mobile-row__cell {
+      width: 280px !important;
+    }
+    h1+a {
+      margin-left: 60px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: -10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      color: var(--accent);
+      background: var(--primary);
+      padding: 5px 10px;
+      border: 1.5px solid var(--primary);
+      border-radius: 18px;
+      transition: 0.5s;
+      &:hover {
+        border: 1.5px solid var(--primary);
+        background: var(--accent);
+        color: var(--primary);
+        transition: 0.5s;
+      }
+    }
+    .plus {
+      bottom: 80px !important;
+      right: 0 !important;
+      width: 55px !important;
+      height: 55px !important;
+    }
+  }
+  #cart {
+    .go-cart {
+      right: 20px !important;
+      bottom: 80px !important;
+    }
+  }
+  .form-container {
+    width: 380px !important;
+  }
+  .img-inputer {
+    width: 350px !important;
   }
 }

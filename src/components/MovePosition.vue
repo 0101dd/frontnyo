@@ -27,6 +27,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$breakpoint-xs: 500px;
+@mixin xs {
+  @media (max-width: $breakpoint-xs) {
+    @content;
+  }
+}
   .move-back, .move-top {
     height: 50px;
     width: 50px;
@@ -45,6 +51,9 @@ export default {
     right: 0;
     height: 100px;
     width: 100px;
+    @include xs {
+      bottom: 450px;
+    }
   }
 
   .button:hover .move-back,
@@ -60,9 +69,15 @@ export default {
 
   .move-back {
     bottom: 420px;
+    @include xs {
+      bottom: 480px;
+    }
   }
 
   .move-top {
     bottom: 480px;
+    @include xs {
+      bottom: 540px;
+    }
   }
 </style>

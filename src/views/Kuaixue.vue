@@ -5,8 +5,8 @@
       <img src="../assets/wenlu.png" class="wenlu">
       <div class="container">
         <div class="content">
+          <h2 class="ml-16">王羲之</h2>
           <h1 class="d-inline">快雪時晴帖</h1>
-          <h2 class="d-inline ml-16">王羲之</h2>
           <h5 class="mb-5">冊 紙本 縱：23公分 橫：14.8公分</h5>
           <hr>
           <div class="row">
