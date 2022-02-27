@@ -91,10 +91,10 @@
     <!-- --------------------------------------------------------- -->
     <div id="menu-sm" style="position: relative;">
         <v-btn
-          color="secondary"
+          color="secondary menu-sm-icon"
           fab
           @click="sheet = !sheet"
-          style="position: fixed; left: 420px; top: 730px; z-index: 111;"
+          style="position: fixed; left: 50px; top: 730px; z-index: 111;"
         >
         <v-icon>mdi-menu</v-icon>
         </v-btn>
@@ -172,7 +172,7 @@
           color="error"
           @click="sheet = !sheet"
           :ripple="false"
-          plain="true"
+          :plain="true"
           x-large
           style="position: absolute; bottom: 20px; left: 60%; transform: translateX(-50%);"
         >
@@ -185,7 +185,7 @@
           color="primary"
           @click="sheet = !sheet"
           :ripple="false"
-          plain="true"
+          :plain="true"
           x-large
           style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);"
           to="/"

@@ -7,7 +7,7 @@
   <router-link to="/dashboard/userWorks">作品管理</router-link>
   <div class="container">
     <div class="row">
-      <div class="col left-info">
+      <div class="col-12 col-sm-12 left-info">
         <h1 class="account-title">帳號：</h1>
         <h1 class="pl-5">{{ user.account }}</h1>
         <h1 class="email-title">信箱：</h1>

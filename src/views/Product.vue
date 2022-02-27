@@ -2,10 +2,10 @@
 <div id="product">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col col-sm-12">
         <img :src="image">
       </div>
-      <div class="col">
+      <div class="col col-sm-12">
         <h3>{{ name }}</h3>
         <p class="pb-3" style="white-space: break-spaces;">{{ description }}</p>
         <p class="price">{{ '$' + price }}</p>

@@ -170,7 +170,7 @@ export default {
           width: '350px',
           value: 'question'
         },
-        { text: '回答敘述', align: 'center', class: 'primary white--text subtitle-1', width: '550px', value: 'answer' },
+        { text: '回答敘述', align: 'center', class: 'primary white--text subtitle-1', width: '450px', value: 'answer' },
         { text: '操作', align: 'center', class: 'primary white--text subtitle-1', value: 'operate', sortable: false }
       ]
     }

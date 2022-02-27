@@ -48,9 +48,15 @@ export default {
 
 <style lang="scss" scoped>
 
-$breakpoint-xs: 600px;
+$breakpoint-xs: 500px;
+$breakpoint-sm: 960px;
 @mixin xs {
   @media (max-width: $breakpoint-xs) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
     @content;
   }
 }
@@ -70,9 +76,14 @@ $breakpoint-xs: 600px;
     top: 25%;
     margin-left: -150px;
     margin-top: -150px;
+    @include sm {
+      width: 550px !important;
+      height: 550px !important;
+      left: 38%;
+    }
     @include xs {
       width: 300px !important;
-      height: 300px;
+      height: 300px !important;
       left: 50%;
     }
     .swiper-slide {

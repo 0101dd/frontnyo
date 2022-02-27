@@ -1,5 +1,6 @@
 @import '_reset.scss';
 @import '_variables.scss';
+@import '_rwd-sm.scss';
 @import '_rwd.scss';
 
 // sweet alert ----------------------------
@@ -145,9 +146,6 @@ hr {
 
 #menu-sm {
   display: none;
-  @include xs {
-    display: block;
-  }
 }
 
 // [home] box hover --------------------------
