@@ -16,17 +16,6 @@
       <template v-slot:item.product.image="{ item }">
         <img :src="item.product.image" style="width: 100px; vertical-align: middle; padding: 5px 0;">
       </template>
-      <!-- 編輯按鈕-------------------------------------------- -->
-      <template v-slot:item.operate="{ item }">
-      <v-icon
-        middle
-        class="mr-5"
-        color="primary"
-        @click="editProduct(item)"
-      >
-        mdi-pencil
-      </v-icon>
-      </template>
     </v-data-table>
   </div>
   <v-btn
@@ -51,8 +40,7 @@ export default {
       headers: [
         { text: '商品圖片', align: 'center', value: 'product.image', class: 'primary white--text subtitle-1' },
         { text: '名稱', align: 'center', value: 'product.name', class: 'primary white--text subtitle-1' },
-        { text: '數量', align: 'center', value: 'quantity', class: 'primary white--text subtitle-1' },
-        { text: '操作', align: 'center', value: 'operate', class: 'primary white--text subtitle-1' }
+        { text: '數量', align: 'center', value: 'quantity', class: 'primary white--text subtitle-1' }
       ]
     }
   },
