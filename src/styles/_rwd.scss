@@ -4,20 +4,8 @@
   }
 }
 
-@mixin md {
-  @media (max-width: $breakpoint-md) {
-    @content;
-  }
-}
-
 @mixin lg {
   @media (max-width: $breakpoint-lg) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media (max-width: $breakpoint-xl) {
     @content;
   }
 }
@@ -126,6 +114,9 @@
   }
   // [maobi] ---------------------------------
   #maobi {
+    #router-ink2 {
+      top: 6% !important;
+    }
     .container {
       padding-top: 13rem !important;
       .row:nth-child(1) {
@@ -181,6 +172,9 @@
 
 // [mozhi] ---------------------------------
   #mozhi {
+    #router-ink2 {
+      top: 7% !important;
+    }
     .container {
       padding-top: 10rem !important;
       .t2:nth-child(1),.t4:nth-child(1) {
@@ -224,6 +218,9 @@
   }
 // [zhi] ---------------------------------
   #zhi {
+    #router-ink2 {
+      top: 10% !important;
+    }
     .container {
       padding-top: 10rem !important;
       .t2:nth-child(1),.t4:nth-child(1) {
@@ -276,6 +273,9 @@
   }
 // [xuexi] ---------------------------------
   #xuexi {
+    #router-ink2 {
+      top: 7% !important;
+    }
     .container {
       padding-top: 10rem !important;
       .t2:nth-child(1),.t4:nth-child(1) {
@@ -471,9 +471,11 @@
       height: 100%;
       padding-top: 30px;
       padding-bottom: 40px;
+      margin: 50px 70px 0 70px;
     }
     .v-btn {
       right: 50px;
+      bottom: 120px;
     }
     .price {
       width: 32%;
@@ -481,6 +483,7 @@
     }
     .quantity {
       left: 65px;
+      bottom: 90px;
       width: 140px;
     }
     hr {
@@ -507,9 +510,13 @@
   }
   // [my-work-page] -----------------
   #my-work-page {
+    #router-ink2 {
+      top: 9% !important;
+    }
     .container {
       padding-top: 50px;
       width: 90vw;
+      margin: 40px 40px 0 20px;
     }
     p {
       width: 80%;

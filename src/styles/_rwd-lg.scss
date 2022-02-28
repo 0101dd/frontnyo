@@ -1,0 +1,246 @@
+@mixin lg {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@include lg {
+  // #my-work-page{
+  //   background: violet !important;
+  // }
+  .menu-right-space {
+    width: 350px !important;
+  }
+  .menu-left-space {
+    width: 350px !important;
+  }
+  // [home] -----------------------------------
+  #home {
+    #target {
+      line-height: 1.5;
+    }
+    .information {
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-left: 150px;
+    }
+  }
+  // [book]... ---------------------------
+  #book {
+    .container {
+      height: 100%;
+      margin-top: 5%;
+      margin-bottom: 100px;
+      .col {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  // [question] -----------------
+  #question {
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .list {
+      width: 70%;
+    }
+  }
+  // [productPage]---------------------
+  #product-page {
+    .container {
+      height: 100%;
+      margin-top: 5%;
+      margin-bottom: 100px;
+      .col {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  // [product/:id] ------------------
+  #product {
+    .quantity {
+      left: 240px;
+    }
+    .v-btn {
+      right: 70px;
+    }
+  }
+  // [store] -------------------------
+  #store {
+    .container {
+      padding-top: 64px;
+    }
+    iframe {
+      width: 250px !important;
+    }
+    .card-text {
+      margin-left: 10px !important;
+    }
+    a {
+      bottom: 25px;
+    }
+  }
+  // [dashboard] -------------------------------------
+  #users-info, #cart, #order, #user-works {
+    .v-data-table {
+      width: 90%;
+    }
+  }
+  #cart {
+    .go-cart {
+      right: 150px !important;
+      bottom: 350px !important;
+    }
+  }
+  // [adminPro] ----------------------------
+  #users, #admin-order, #admin-product, #adminQ {
+    .v-data-table {
+      width: 90%;
+    }
+  }
+  // [shupu...] ---------------------------------
+  #zixutie {
+    .container {
+      height: 60%;
+    }
+    .swiper-button-prev {
+      left: 70px !important;
+    }
+    .swiper-button-next {
+      right: 75px !important;
+    }
+    .hongyun {
+      left: -490px !important;
+    }
+    .hongyun2 {
+      right: -490px !important;
+    }
+  }
+  #shupu {
+    .container {
+      height: 90.2%;
+    }
+    .swiper-button-prev {
+      left: 55px !important;
+    }
+    .swiper-button-next {
+      right: 65px !important;
+    }
+    .hongyun {
+      left: -505px !important;
+    }
+    .hongyun2 {
+      right: -505px !important;
+    }
+  }
+  #kuaixue {
+    .container {
+      height: 55%;
+    }
+    .swiper-button-prev {
+      left: 185px !important;
+    }
+    .swiper-button-next {
+      right: 190px !important;
+    }
+    .hongyun {
+      left: -375px !important;
+    }
+    .hongyun2 {
+      right: -375px !important;
+    }
+  }
+  #dutong {
+    .container {
+      height: 70%;
+    }
+    .swiper-button-prev {
+      left: 110px !important;
+    }
+    .swiper-button-next {
+      right: 120px !important;
+    }
+    .hongyun {
+      left: -450px !important;
+    }
+    .hongyun2 {
+      right: -450px !important;
+    }
+  }
+  #huaqi {
+    .container {
+      height: 67%;
+    }
+    .swiper-button-prev {
+      left: 130px !important;
+    }
+    .swiper-button-next {
+      right: 130px !important;
+    }
+    .hongyun {
+      left: -430px !important;
+    }
+    .hongyun2 {
+      right: -430px !important;
+    }
+  }
+  #hanshi {
+    .container {
+      height: 62%;
+    }
+    .swiper-button-prev {
+      left: 120px !important;
+    }
+    .swiper-button-next {
+      right: 120px !important;
+    }
+    .hongyun {
+      left: -440px !important;
+    }
+    .hongyun2 {
+      right: -440px !important;
+    }
+  }
+  #nongfangshi {
+    .container {
+      height: 57.5%;
+    }
+    .swiper-button-prev {
+      left: 90px !important;
+    }
+    .swiper-button-next {
+      right: 90px !important;
+    }
+    .hongyun {
+      left: -475px !important;
+    }
+    .hongyun2 {
+      right: -475px !important;
+    }
+  }
+  #shubotuquan {
+    .container {
+      height: 50%;
+    }
+    .swiper-button-prev {
+      left: 90px !important;
+    }
+    .swiper-button-next {
+      right: 90px !important;
+    }
+    .hongyun {
+      left: -475px !important;
+    }
+    .hongyun2 {
+      right: -475px !important;
+    }
+  }
+}

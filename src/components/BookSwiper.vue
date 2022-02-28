@@ -50,6 +50,8 @@ export default {
 
 $breakpoint-xs: 500px;
 $breakpoint-sm: 960px;
+$breakpoint-md: 1264px;
+$breakpoint-lg: 1700px;
 @mixin xs {
   @media (max-width: $breakpoint-xs) {
     @content;
@@ -57,6 +59,11 @@ $breakpoint-sm: 960px;
 }
 @mixin sm {
   @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
     @content;
   }
 }
@@ -76,6 +83,9 @@ $breakpoint-sm: 960px;
     top: 25%;
     margin-left: -150px;
     margin-top: -150px;
+    @include md {
+      left: 35%;
+    }
     @include sm {
       width: 550px !important;
       height: 550px !important;

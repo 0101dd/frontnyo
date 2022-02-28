@@ -5,7 +5,7 @@
     <div id="router-ink"></div>
     <v-container>
       <div class="row flex-wrap">
-        <div class="col-12 col-sm-12 d-flex" v-for="(item, i) in items" :key="i">
+        <div class="col-12 col-sm-12 col-lg-6 d-flex" v-for="(item, i) in items" :key="i">
           <v-card class="d-sm-flex pa-5"
           elevation="5"
           style="background: var(--accent);">

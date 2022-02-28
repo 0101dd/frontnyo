@@ -14,7 +14,7 @@
       </li>
       <!-- <li> ｜</li> -->
     </ul>
-    <v-spacer style="width: 450px"></v-spacer>
+    <v-spacer class="menu-left-space" style="width: 450px"></v-spacer>
       <ul>
         <li><router-link to="/book">精選字帖</router-link></li>
         <v-menu
@@ -49,6 +49,7 @@
         <li><router-link to="/ProductPage">客製專區</router-link></li>
         <li><router-link to="/store">店家資訊</router-link></li>
       </ul>
+      <v-spacer class="menu-right-space" style="width: 550px;"></v-spacer>
       <v-menu
         open-on-hover
         bottom
@@ -363,9 +364,10 @@ ul {
 
 .account-outline {
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: -535px;
+  // position: absolute;
+  // top: 0;
+  // right: -540px;
+  // left: 80px;
   &:hover {
     transition: 0.5s;
     transform: translateY(-6px);
