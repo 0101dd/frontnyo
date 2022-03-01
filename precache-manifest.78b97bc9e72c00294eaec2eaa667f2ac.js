@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6c984711e19335668c5",
-    "url": "css/admin.357d1839.css"
+    "revision": "064fbfbc9315255bb43e",
+    "url": "css/admin.c40cd8d4.css"
   },
   {
     "revision": "20ed4d84fd243eb636a8",
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "css/admin~dashboard~login~product~register.c9f5a90d.css"
   },
   {
-    "revision": "2c06382d931ea42dae6b",
+    "revision": "28023497f50a92b073e7",
     "url": "css/app.8988055f.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "css/chunk-vendors.a2d6f721.css"
   },
   {
-    "revision": "7bedf0722f762ced6c75",
-    "url": "css/dashboard.4d86d540.css"
+    "revision": "751b3b38c74e56962288",
+    "url": "css/dashboard.ff18fe92.css"
   },
   {
     "revision": "3c5eaa36b14c02120ec2",
@@ -304,12 +304,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/zitie.511de237.png"
   },
   {
-    "revision": "6816eccb943b6e3129d85ce8da6ce17a",
+    "revision": "28099618f91bea06d0e212210fada849",
     "url": "index.html"
   },
   {
-    "revision": "a6c984711e19335668c5",
-    "url": "js/admin.1a21cceb.js"
+    "revision": "064fbfbc9315255bb43e",
+    "url": "js/admin.5b5fd7fb.js"
   },
   {
     "revision": "20ed4d84fd243eb636a8",
@@ -320,8 +320,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/admin~dashboard~login~product~register.a8a0b001.js"
   },
   {
-    "revision": "2c06382d931ea42dae6b",
-    "url": "js/app.b6a358ab.js"
+    "revision": "28023497f50a92b073e7",
+    "url": "js/app.299be7dc.js"
   },
   {
     "revision": "d7c647816761ed1e527a",
@@ -332,8 +332,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/chunk-vendors.9c895dfb.js"
   },
   {
-    "revision": "7bedf0722f762ced6c75",
-    "url": "js/dashboard.04c82fd8.js"
+    "revision": "751b3b38c74e56962288",
+    "url": "js/dashboard.96410d7d.js"
   },
   {
     "revision": "3c5eaa36b14c02120ec2",
