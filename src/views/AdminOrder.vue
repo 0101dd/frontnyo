@@ -9,6 +9,8 @@
     <v-data-table
       :headers="headers"
       :items="orders"
+      loading
+      loading-text="加載中......."
       :items-per-page="5"
       ref="table"
       class="elevation-3"

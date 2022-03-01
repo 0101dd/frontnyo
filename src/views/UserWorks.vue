@@ -10,6 +10,8 @@
       :headers="headers"
       :items="works"
       :items-per-page="5"
+      loading
+      loading-text="加載中......."
       ref="table"
       class="elevation-3"
     >
