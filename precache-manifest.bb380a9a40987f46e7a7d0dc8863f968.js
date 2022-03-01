@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "css/admin~dashboard~login~product~register.c9f5a90d.css"
   },
   {
-    "revision": "5163b517223c5ec36ab2",
+    "revision": "3d187194ca844c982505",
     "url": "css/app.8988055f.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "css/chunk-vendors.a2d6f721.css"
   },
   {
-    "revision": "d793873b0580f7aa5a2f",
-    "url": "css/dashboard.399af5a8.css"
+    "revision": "32bc45f942e927decebe",
+    "url": "css/dashboard.4a5a30d0.css"
   },
   {
     "revision": "3c5eaa36b14c02120ec2",
@@ -304,7 +304,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/zitie.511de237.png"
   },
   {
-    "revision": "58182926c3cce3afcbdb34dd27900972",
+    "revision": "60ca7d95ce8344d9f1d0e182f66a785b",
     "url": "index.html"
   },
   {
@@ -320,8 +320,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/admin~dashboard~login~product~register.a8a0b001.js"
   },
   {
-    "revision": "5163b517223c5ec36ab2",
-    "url": "js/app.b9006c32.js"
+    "revision": "3d187194ca844c982505",
+    "url": "js/app.2e3d2598.js"
   },
   {
     "revision": "d7c647816761ed1e527a",
@@ -332,8 +332,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/chunk-vendors.9c895dfb.js"
   },
   {
-    "revision": "d793873b0580f7aa5a2f",
-    "url": "js/dashboard.5af99fbd.js"
+    "revision": "32bc45f942e927decebe",
+    "url": "js/dashboard.e2ab305a.js"
   },
   {
     "revision": "3c5eaa36b14c02120ec2",
