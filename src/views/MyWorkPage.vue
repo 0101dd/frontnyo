@@ -1,6 +1,5 @@
 <template>
 <div id="my-work-page" style="background: var(--accent);">
-<div id="router-ink2" style="top: 7%;"></div>
   <div class="container">
     <div class="row flex-column-reverse">
       <div class="col"

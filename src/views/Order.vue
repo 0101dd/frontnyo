@@ -16,10 +16,10 @@
     <template v-slot:item.date="{ item }">
       {{ new Date(item.date).toLocaleString('zh-tw') }}
     </template>
-    <template v-slot:item.products="{ item }">
+    <template v-slot:item.products.product="{ item }">
       <ul>
-        <li v-for="i in item.products" :key="i">
-        {{ i.product.name }}
+        <li class="product" v-for="i in item.products[0]" :key="'product' + i">
+        {{ i.name }}
         </li>
       </ul>
     </template>
@@ -43,7 +43,7 @@ export default {
       headers: [
         { text: '日期', align: 'center', value: 'date', class: 'primary white--text subtitle-1' },
         { text: '單號', align: 'center', value: 'products.0._id', class: 'primary white--text subtitle-1' },
-        { text: '名稱', align: 'center', value: 'products', class: 'primary white--text subtitle-1' },
+        { text: '名稱', align: 'center', value: 'products.product', class: 'primary white--text subtitle-1' },
         { text: '數量', align: 'center', value: 'products.quantity', class: 'primary white--text subtitle-1' }
       ]
     }
@@ -56,7 +56,8 @@ export default {
         }
       })
       this.orders = data.result
-      // console.log(this.orders)
+      console.log('1' + JSON.stringify(this.orders))
+      console.log('2' + data)
     } catch (error) {
       this.$swal({
         icon: 'error',

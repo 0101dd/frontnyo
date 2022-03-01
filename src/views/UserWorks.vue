@@ -330,7 +330,7 @@ export default {
         }
       }
       try {
-        const { data } = await this.api.patch('/works/deleteWorks/' + this.form._id, fd, {
+        const { data } = await this.api.patch('/userworks/deleteWorks/' + this.form._id, fd, {
           headers: {
             authorization: 'Bearer ' + this.user.token
           }

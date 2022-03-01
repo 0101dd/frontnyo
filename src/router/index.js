@@ -46,7 +46,8 @@ const routes = [
     name: 'myWorkPage',
     component: () => import(/* webpackChunkName: "myWorkPage" */ '../views/MyWorkPage.vue'),
     meta: {
-      title: '作品專區 | 書彙齋'
+      title: '作品專區 | 書彙齋',
+      transition: 'overlay-left-right'
     }
   },
   {
@@ -264,7 +265,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "admin" */ '../views/AdminPro.vue'),
         meta: {
           login: true,
-          admin: true,
+          // admin: true,
           title: '會員管理｜書彙齋',
           transition: 'overlay-left-right'
         }
@@ -275,7 +276,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "admin" */ '../views/AdminOrder.vue'),
         meta: {
           login: true,
-          admin: true,
+          // admin: true,
           title: '訂單管理｜書彙齋',
           transition: 'overlay-left-right'
         }
@@ -286,7 +287,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "admin" */ '../views/AdminProduct.vue'),
         meta: {
           login: true,
-          admin: true,
+          // admin: true,
           title: '商品管理｜書彙齋',
           transition: 'overlay-left-right'
         }
@@ -297,7 +298,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "admin" */ '../views/AdminQ.vue'),
         meta: {
           login: true,
-          admin: true,
+          // admin: true,
           title: '常見問題管理｜書彙齋',
           transition: 'overlay-left-right'
         }
