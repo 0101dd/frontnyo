@@ -289,7 +289,7 @@ export default {
               authorization: 'Bearer ' + this.user.token
             }
           })
-          this.works.unshift(data.result)
+          this.works.push(data.result)
           this.dialog = true
         } else {
           const { data } = await this.api.patch('/userworks/' + this.form._id, fd, {
