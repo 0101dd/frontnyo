@@ -10,7 +10,7 @@
       :headers="headers"
       :items="products"
       :items-per-page="3"
-      loading
+      :loading="loadTable"
       loading-text="加載中......."
       ref="table"
       class="elevation-3"
@@ -221,6 +221,7 @@
 export default {
   data () {
     return {
+      loadTable: true,
       dialog: false,
       dialogDelete: false,
       editDialog: false,
@@ -412,6 +413,7 @@ export default {
         }
       })
       this.products = data.result
+      this.loadTable = false
     } catch (error) {
       this.$swal({
         icon: 'error',

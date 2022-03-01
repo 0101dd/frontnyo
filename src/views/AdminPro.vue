@@ -10,7 +10,7 @@
       :headers="headers"
       :items="users"
       :items-per-page="10"
-      loading
+      :loading="loadTable"
       loading-text="加載中......."
       ref="table"
       class="elevation-3"
@@ -24,6 +24,7 @@
 export default {
   data () {
     return {
+      loadTable: true,
       users: [],
       form: {
         account: '',
@@ -50,6 +51,7 @@ export default {
         }
       })
       this.users = data.result
+      this.loadTable = false
     } catch (error) {
       this.$swal({
         icon: 'error',

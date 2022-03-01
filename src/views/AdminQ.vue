@@ -10,7 +10,7 @@
       :headers="headers"
       :items="arrayQ"
       :items-per-page="5"
-      loading
+      :loading="loadTable"
       loading-text="加載中......."
       ref="table"
       class="elevation-3"
@@ -151,6 +151,7 @@
 export default {
   data () {
     return {
+      loadTable: true,
       dialog: false,
       dialogDelete: false,
       valid: true,
@@ -316,6 +317,7 @@ export default {
         }
       })
       this.arrayQ = data.result
+      this.loadTable = false
     } catch (error) {
       this.$swal({
         icon: 'error',

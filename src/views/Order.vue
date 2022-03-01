@@ -10,7 +10,7 @@
       :headers="headers"
       :items="orders"
       :items-per-page="5"
-      loading
+      :loading="loadTable"
       loading-text="加載中......."
       ref="table"
       class="elevation-3"
@@ -41,6 +41,7 @@
 export default {
   data () {
     return {
+      loadTable: true,
       orders: [],
       headers: [
         { text: '日期', align: 'center', value: 'date', class: 'primary white--text subtitle-1' },
@@ -58,8 +59,9 @@ export default {
         }
       })
       this.orders = data.result
-      console.log('1' + JSON.stringify(this.orders))
-      console.log('2' + data)
+      this.loadTable = false
+      // console.log('1' + JSON.stringify(this.orders))
+      // console.log('2' + data)
     } catch (error) {
       this.$swal({
         icon: 'error',

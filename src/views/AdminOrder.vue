@@ -9,7 +9,7 @@
     <v-data-table
       :headers="headers"
       :items="orders"
-      loading
+      :loading="loadTable"
       loading-text="加載中......."
       :items-per-page="5"
       ref="table"
@@ -41,6 +41,7 @@
 export default {
   data () {
     return {
+      loadTable: true,
       orders: [],
       headers: [
         { text: '日期', align: 'center', value: 'date', class: 'primary white--text subtitle-1' },
@@ -59,6 +60,7 @@ export default {
         }
       })
       this.orders = data.result
+      this.loadTable = false
       // console.log(this.orders)
     } catch (error) {
       if (error.response) {

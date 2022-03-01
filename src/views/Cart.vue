@@ -10,7 +10,7 @@
       :headers="headers"
       :items="products"
       :items-per-page="5"
-      loading
+      :loading="loadTable"
       loading-text="加載中......."
       ref="table"
       class="elevation-3"
@@ -38,6 +38,7 @@
 export default {
   data () {
     return {
+      loadTable: true,
       products: [],
       headers: [
         { text: '商品圖片', align: 'center', value: 'product.image', class: 'primary white--text subtitle-1' },
@@ -73,6 +74,7 @@ export default {
         }
       })
       this.products = data.result
+      this.loadTable = false
       // console.log(this.products)
     } catch (error) {
       this.$swal({
